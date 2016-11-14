@@ -520,6 +520,11 @@ footer span.copyright {
   text-transform: uppercase;
   text-transform: none;
 }
+
+.logo{
+	padding-left:2%;
+	padding-right 2%;
+}
 .btn:focus,
 .btn:active,
 .btn.active,
