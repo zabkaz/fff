@@ -217,6 +217,9 @@ fieldset[disabled] .btn-primary.active {
   color: #FF9022;
   background-color: #222222;
 }
+.navbar-custom .navbar-nav a:visited{
+	color: white;
+}
 @media (min-width: 768px) {
   .navbar-custom {
     background-color: transparent;
@@ -348,10 +351,18 @@ section h3.section-subheading {
 	font-weight: 300;
 }
 .reason-heading {
-  margin: 15px 0;
   font-weight: 500;
   font-size: 22px;
   text-transform: none;
+}
+.lower1{
+	padding-top: 1%;
+}
+.lower2{
+	padding-top: 2%;
+}
+.pictogram{
+	 background:transparent url("img/picto/02.png") center top no-repeat;
 }
 .description{
   font-size: 16px;
@@ -360,13 +371,18 @@ section h3.section-subheading {
 	height: 40px;
 	width: 40px;
 }
-.reasons{
-	
+.nondashed{
+	 padding-bottom: 3%;
+	 padding-top: 2%;	
 }
 .dashed1, .dashed2, .dashed3{
 	 border-bottom: 1px dashed black;
 	 padding-bottom: 3%;
 	 padding-top: 2%;
+}
+.wider{
+	 padding-bottom: 4%;
+	 padding-top: 4%;
 }
 @media (min-width: 768px) {
 	.dashed1{
