@@ -167,6 +167,7 @@ fieldset[disabled] .btn-primary.active {
 .navbar-custom {
   background-color: none;
   border-color: transparent;
+  background-color: #222222;
 }
 .navbar-custom .navbar-brand {
   color: #FF9022;
@@ -186,12 +187,13 @@ fieldset[disabled] .btn-primary.active {
   border-color: #FF9022;
   font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  color: white;
+  color: #FF9022;
   font-size: 12px;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  color: #FF9022;
+  color: white;
+  background-color: #FF9022;
 }
 .navbar-custom .nav li a {
   font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
