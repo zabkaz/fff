@@ -235,6 +235,7 @@ fieldset[disabled] .btn-primary.active {
   .navbar-custom .navbar-nav > .active > a {
     border-radius: 3px;
   }
+  
 }
 @media (min-width: 768px) {
   .navbar-custom.affix {
@@ -360,13 +361,17 @@ section h3.section-subheading {
 }
 .dashed1{
 	 border-bottom: 1px dashed black;
-	 border-right: 1px dashed black;
 }
 .dashed2{
 	 border-bottom: 1px dashed black;
 }
-.dashed3{
+@media (min-width: 768px) {
+	.dashed1{
 	 border-right: 1px dashed black;
+	}
+	 .dashed3{
+	 border-right: 1px dashed black;
+	}
 }
 .violet{
 	background-color: #6D2F7C;
