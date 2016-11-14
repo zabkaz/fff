@@ -356,14 +356,17 @@ section h3.section-subheading {
 .description{
   font-size: 16px;
 }
+.freeSpace{
+	height: 40px;
+	width: 40px;
+}
 .reasons{
 	
 }
-.dashed1{
+.dashed1, .dashed2, .dashed3{
 	 border-bottom: 1px dashed black;
-}
-.dashed2{
-	 border-bottom: 1px dashed black;
+	 padding-bottom: 3%;
+	 padding-top: 2%;
 }
 @media (min-width: 768px) {
 	.dashed1{
@@ -371,6 +374,7 @@ section h3.section-subheading {
 	}
 	 .dashed3{
 	 border-right: 1px dashed black;
+	 border-bottom: none;
 	}
 }
 .violet{
