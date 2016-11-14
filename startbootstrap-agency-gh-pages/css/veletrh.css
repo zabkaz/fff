@@ -27,14 +27,25 @@ p.large {
 .date{
 	color: #FF9022;
 }
+.divided{
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+}
 .login{
 	margin:-15px;
 	margin-left: +15px;
 	background-color: #FF9022;
 	border-width: 0px;
 	color: white;
+    text-transform: uppercase;
+    padding: 6px 20px;
 }
-.login:hover{
+.login:hover,
+.login:active,
+.login.active,
+.login:focus,
+.login:active:focus, .btn.active:focus
+{
 	background-color: #ee7600;
 	border-width: 0px;
 	color: white;
@@ -116,51 +127,45 @@ fieldset[disabled] .btn-primary.active {
   color: #FF9022;
   background-color: white;
 }
-.strip{	
-	height: 70%;
-	margin-left: -15px;
-	margin-right: -15px;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	background-color: rgba(0,0,0,0.5);
-}
 .button-box {
 	display: table;
     margin: 0 auto;
 	float:none;
 	text-align: center;
 }
-.btn-login {
+.btn-participate {
   color: white;
   background-color: #6D2F7C;
   border-color: #6D2F7C;
-  font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   border-radius: 4px;
   font-size: 18px;
   padding: 20px 40px;
 }
-.btn-login:hover,
-.btn-login:focus,
-.btn-login:active,
-.btn-login.active,
-.open .dropdown-toggle.btn-login {
+.btn-participate:hover,
+.btn-participate:focus,
+.btn-participate:active,
+.btn-participate.active,
+.open .dropdown-toggle.btn-participate {
   color: white;
   background-color: #FF9022;
   border-color: #FF9022;
+  text-decoration: none;
 }
-.btn-login:active,
-.btn-login.active,
-.open .dropdown-toggle.btn-login {
+.btn-participate:active,
+.btn-participate.active,
+.open .dropdown-toggle.btn-participate {
   background-image: none;
+  text-decoration: none;
 }
-.btn-login .badge {
+.btn-participate .badge {
   color: #FF9022;
   background-color: white;
+  text-decoration: none;
 }
 .navbar-custom {
-  background-color: #222222;
+  background-color: none;
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
@@ -174,10 +179,10 @@ fieldset[disabled] .btn-primary.active {
   color: #FF9022;
 }
 .navbar-custom .navbar-collapse {
-  border-color: #6D2F7C;
+   border-color: #FF9022;
+   background-color: none;
 }
 .navbar-custom .navbar-toggle {
-  background-color: #FF9022;
   border-color: #FF9022;
   font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -186,7 +191,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #FF9022;
+  color: #FF9022;
 }
 .navbar-custom .nav li a {
   font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -201,14 +206,14 @@ fieldset[disabled] .btn-primary.active {
   outline: none;
 }
 .navbar-custom .navbar-nav > .active > a {
-  border-radius: 0;
-  color: white;
-  background-color: #FF9022;
+  background-color: #222222;
+  color: #FF9022;
+
 }
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #6D2F7C;
+  color: #FF9022;
+  background-color: #222222;
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -249,6 +254,7 @@ header {
   -o-background-size: cover;
   text-align: center;
   color: white;
+  text-align: center;
 }
 header .intro-text {
   padding-top: 100px;
@@ -258,7 +264,7 @@ header .intro-text .intro-lead-in {
   font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 22px;
   line-height: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 header .intro-text .intro-heading {
   font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -266,27 +272,34 @@ header .intro-text .intro-heading {
   font-weight: 700;
   font-size: 50px;
   line-height: 50px;
-  margin-bottom: 25px;
 }
 @media (min-width: 768px) {
   header .intro-text {
     padding-top: 300px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
   }
   header .intro-text .intro-lead-in {
     font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 30px;
     line-height: 40px;
-    margin-bottom: 25px;
+
   }
   header .intro-text .intro-heading {
     font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 75px;
+    font-size: 120px;
     line-height: 75px;
     margin-bottom: 50px;
   }
+}
+.strip{	
+	height: 70%;
+	margin-left: -15px;
+	margin-right: -15px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: rgba(0,0,0,0.5);
 }
 section {
   padding: 80px 0;
@@ -342,6 +355,16 @@ section h3.section-subheading {
 }
 .reasons{
 	margin-bottom: 40px; 
+}
+.dashed1{
+	 border-bottom: 1px dashed black;
+	 border-right: 1px dashed black;
+}
+.dashed2{
+	 border-bottom: 1px dashed black;
+}
+.dashed3{
+	 border-right: 1px dashed black;
 }
 .violet{
 	background-color: #6D2F7C;
@@ -469,11 +492,9 @@ footer span.copyright {
 
 ::-moz-selection {
   text-shadow: none;
-  background: #6D2F7C;
 }
 ::selection {
   text-shadow: none;
-  background: #6D2F7C;
 }
 img::selection {
   background: transparent;
@@ -482,5 +503,5 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #6D2F7C;
+  webkit-tap-highlight-color: #222222;
 }
