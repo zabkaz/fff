@@ -372,26 +372,36 @@ section h3.section-subheading {
 	width: 40px;
 }
 .nondashed{
-	 padding-bottom: 3%;
-	 padding-top: 2%;	
+	 padding-bottom: 4%;
+	 padding-top: 4%;	
 }
 .dashed1, .dashed2, .dashed3{
 	 border-bottom: 1px dashed black;
-	 padding-bottom: 3%;
-	 padding-top: 2%;
-}
-.wider{
 	 padding-bottom: 4%;
 	 padding-top: 4%;
 }
 @media (min-width: 768px) {
 	.dashed1{
 	 border-right: 1px dashed black;
+	 padding-bottom: 2%;
+	 padding-top: 2%;
+	}
+	.dashed2{
+	 padding-bottom: 2%;
+	 padding-top: 2%;
 	}
 	 .dashed3{
 	 border-right: 1px dashed black;
 	 border-bottom: none;
 	}
+	.nondashed{
+	 padding-bottom: 2;
+	 padding-top: 2%;
+	}
+	.wider{
+	 padding-bottom: 4%;
+	 padding-top: 4%;
+}
 }
 .violet{
 	background-color: #6D2F7C;
