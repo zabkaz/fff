@@ -9,14 +9,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>JobChallenge</title>
+    <title>Chci se zucasnit</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Font -->
 	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Theme CSS -->
-    <link href="css/veletrh.css" rel="stylesheet">
+    <link href="css/uchazec.css" rel="stylesheet">
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC30vh00SoAtmQERjf42ougkmDS6V_YytE"></script>
 	<script type="text/javascript" src="js/mapa.js"> </script>
 	<link rel="icon" href="img/jobchIco.png" type="image/png" sizes="16x16">
@@ -34,29 +34,23 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><img src="img/jobchS.png" class="mainLogo"></a>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="img/jobchS.png" class="mainLogo"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="uchazec.html">Chci se zucastnit</a>
+                   <li>
+                        <a class="page-scroll" href="#page-top">Chci se zucastnit</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">Chci vystavovat</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#reason">Proč přijít</a>
+                        <a class="page-scroll" href="#reasonReg">Proč se registrovat</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#info">Kdy a kde</a>
                     </li>
                  
 					<li>
-                        <a class="page-scroll" href="#contact">Kontakt</a>
+                        <a class="page-scroll" href="#contact">Nabitý program</a>
                     </li>
 					<li>							
                         <a class="page-scroll" href="#"><button type="button" class="btn btn-default login">Přihlaš se</button></a>
@@ -69,115 +63,48 @@
     <!-- Header -->
     <header>
         <div class="container-fluid">
-            <div class="intro-text">
-				<div class="intro-heading">10.ročník</div>
-                <div class="intro-lead-in">Veletrhu pracovních příležitostí JobChallange</div>
-				<div class="intro-lead-in date">
-					<span>9. listopad 2016</span>
-					<span class="divided"> | </span>
-					<span>Fajt Gallery v Brně</span>
-				</div>				
-                
-            </div>
-			<div class="strip">
-					<div class="button-box col-xs-12 col-md-6">
-					<a href="uchazec.html" class="page-scroll btn-participate col-xs-5">Chci se zúčastnit</a>
-					<a href="#" class="page-scroll col-xs-2"></a>
-					<a href="#" class="page-scroll btn-participate col-xs-5 ">Chci vystavovat</a>
-				</div>
-			</div>
+            <div class="header-text">
+				<div class="uchazec-heading">Proč by si se měl registrovat?</div>
+                <div class="intro-lead-in">Včasnou registrací na webu ale získáš celou řadu výhod.</div>                
+            </div>			
         </div>
     </header>
 
-    <!-- Reasons Section -->
-    <section id="reason" class="bg-light-gray">
-        <div class="container">
-		
-            <div class="row">			
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Proč přijít na Veletrh JobChallenge?</h2>
-                    <h3 class="section-subheading text-muted darker">Je to jeden z největších veletrhů práce v ČR</h3>
-				</div>
-				<div class="col-lg-8 container2">
-					<h4 class="text-detailed">Veletrh JobChallenge ti umožní setkat se s&nbspatraktivními zaměstnavateli a zjistit, jakými všemi směry se můžeš ubírat ve své budoucí kariéře.</h4>
-                </div>
-            </div>
-			
-			<div class="table-reasons">
-			
-				<div class="row text-center reasons">
-					<div class="col-md-6 dashed1">
-						<div class="col-md-3">
-							<i><img src="img/picto/01.png"></img></i>
+    <!-- Reasons of registration Section -->
+    <section id="reasonReg" class="bg-white">
+        <div class="container">		
+            <div class="row">				
+				<div class="col-md-4 ">
+						<div class="pictoReason">
+							<img src="img/picto/07.png" width="200" class="pictoItem"></img>
 						</div>
-						<div class="col-md-9 text-left ">
-							<span class="reason-heading">Poznej své zaměstnavatele<br/></span>
-							<span class="text-soft description">Seznam se s&nbspvíce než 90 společnostmi z&nbsprůzných oborů činnosti, které tě mohou zaměstnat.</span>						
+						<div class="pictoText">
+							<div class="reasonReg-heading">Veletržní soutěž</div>
+							<div class="text-soft description reg">Automaticky se zapojíš do velké veletržní soutěže o atraktivní ceny.</div>						
 						</div>
-					</div>
-					<div class="col-md-6 dashed2">
-						<div class="col-md-3 ">
-							<a >
-								<img src="img/picto/02.png" 
-									onmouseover="this.src='img/picto/02orange.png'"
-									onmouseout="this.src='img/picto/02.png'" />
-							</a>
+				</div>				
+				<div class="col-md-4 ">
+						<div class="pictoReason">
+							<img src="img/picto/08.png" width="200" class="pictoItem"></img>
 						</div>
-						<div class="col-md-9 text-left">
-							<span class="reason-heading">Navaž první kontakty<br/></span>
-							<span class="text-soft description">Začni budovat osobní kontakty, které se ti budou hodit. Seznam se s&nbspvystavovateli tváří v&nbsptvář.</span>
-							
+						<div class="pictoText">
+							<div class="reasonReg-heading">Balíček personálních testů</div>
+							<div class="text-soft description reg">Všichni registrovaní dostanou testovací balíček v hodnotě 650 Kč zcela zdarma!</div>						
 						</div>
-					</div>               
-				</div>
-	
-				<div class="row text-center reasons">
-					<div class="col-md-6 dashed1 wider">
-						<div class="col-md-3">
-							<a >
-								<img src="img/picto/03.png" 
-									onmouseover="this.src='img/picto/03orange.png'"
-									onmouseout="this.src='img/picto/03.png'" />
-							</a>
+				</div> 				
+				<div class="col-md-4 ">
+						<div class="pictoReason">
+							<img src="img/picto/09.png" width="200" class="pictoItem"></img>
 						</div>
-						<div class="col-md-9 text-left">
-							<span class="reason-heading">Navštív skvělé přednášky<br/></span>
-							<span class="text-soft description">Rozšiř si své znalosti a dovednosti na přednáškách inspirativních řečníků, podnikatelů a HR manažerů.</span>
+						<div class="pictoText">
+							<div class="reasonReg-heading">Databáze životopisů</div>
+							<div class="text-soft description reg">Zástupci společností se dostanou k vašim životopisům ještě před veletržním dnem.</div>						
 						</div>
-					</div>
-					<div class="col-md-6 dashed2 wider">
-					<div class="col-md-3">
-							<i><img src="img/picto/04.png"></img></i>
-						</div>
-						<div class="col-md-9 text-left">
-							<span class="reason-heading">Vylaď svůj životopis<br/></span>
-							<span class="text-soft description">Nechte vylepšit životopis od profesionálních konzultantů přímo na veletrhu.</span>
-						</div>
-					</div>               
-				</div>
-				
-				<div class="row text-center reasons">
-					<div class="col-md-6 dashed3">
-						<div class="col-md-3">
-							<i><img src="img/picto/05.png"></img></i>
-						</div>
-						<div class="col-md-9 text-left">
-							<span class="reason-heading">Relaxuj v chill-out zóně<br/></span>
-							<span class="text-soft description">Dej si pauzu. Přečti si knihu, zahraj deskové hry a načerpej síly k dalšímu oslovování zaměstnavatelů.</span>
-							
-						</div>
-					</div>
-					<div class="col-md-6 nondashed">
-						<div class="col-md-3">
-							<i><img src="img/picto/06.png"></img></i>
-						</div>
-						<div class="col-md-9 text-left">
-							<span class="reason-heading">Oslav s námi narozeniny<br/></span>
-							<span class="text-soft description">Přidej se k nám na oslavě jubilejního 10. výročí veletrhu. Čeká tě spousta malých překvapení a hodnotných cen!</span>
-						</div>
-					</div>               
 				</div>				
             </div>
+			<div class="row col-lg-12">
+				<button type="button" class="btn btn-default login big">Chci se zdarma registrovat</button>
+			</div>
         </div>
     </section>
 

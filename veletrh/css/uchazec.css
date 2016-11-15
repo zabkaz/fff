@@ -187,7 +187,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-custom .navbar-collapse {
    border-color: #FF9022;
-   background-color: transparent;
+   background-color: none;
 }
 .navbar-custom .navbar-toggle {
   border-color: #FF9022;
@@ -581,3 +581,40 @@ body {
 	padding-top: 100px;
 	padding-bottom: 180px;
  }
+#reasonReg{
+	padding-top: 0px; 
+ }
+ .row{
+	 text-align: center;
+	 margin: 0 auto;
+ }
+ .pictoReason{
+	margin: 0 auto;
+	margin-top: -28%;
+ }
+ .pictoItem{
+	border: 15px solid white; 
+	border-radius: 50%;
+	background-color: white;
+ }
+ .reasonReg-heading{
+	font-weight: 500;
+	font-size: 22px;
+	text-transform: none;
+	margin-bottom: 2%;
+ }
+.reg{
+	width: 80%;
+	margin: 0 auto;
+}
+.big{
+	padding: 30px 20px;
+	font-size: 24px;
+	text-transform: none;
+	margin: 0 auto;
+	margin-top: 5%;
+	float: none;
+	display:block;
+	border-radius: 8px;
+}
+ 
