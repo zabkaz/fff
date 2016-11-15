@@ -617,4 +617,13 @@ body {
 	display:block;
 	border-radius: 8px;
 }
+.small{
+	font-size: 20px;
+	line-height: 1.1;
+	font-weight: 500;
+	margin-bottom: 5%;
+}
+.imgLecture{
+	margin-bottom: 7%;
+}
  
