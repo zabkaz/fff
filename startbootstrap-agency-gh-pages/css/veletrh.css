@@ -58,13 +58,13 @@ a.active {
   outline: none;
 }
 a {
-  color: #FF9022;
+  color: black;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #FF9022;
+  color: black;
 }
 h1{
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -408,7 +408,6 @@ section h3.section-subheading {
 }
 #map{
 	height: 500px;
-	width: 100%;
 	margin: 0 auto;
 }
 .mapaAdresa{
