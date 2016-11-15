@@ -140,8 +140,8 @@ fieldset[disabled] .btn-primary.active {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   border-radius: 4px;
-  font-size: 18px;
-  padding: 20px 40px;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 .btn-participate:hover,
 .btn-participate:focus,
@@ -163,6 +163,12 @@ fieldset[disabled] .btn-primary.active {
   color: #FF9022;
   background-color: white;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+	.btn-participate {
+		  padding: 20px 40px;
+		  font-size: 22px;
+	}
 }
 .navbar-custom {
   background-color: none;
@@ -308,14 +314,15 @@ header .intro-text .intro-heading {
 	background-color: rgba(0,0,0,0.5);
 }
 section {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 section h2.section-heading {
-  font-size: 40px;
+  font-size: 32px;
   margin-top: 0;
+  line-height: 1.2;
 }
 section h3.section-subheading {
-  font-size: 22px;
+  font-size: 18px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
   margin-bottom: 40px; 
@@ -327,6 +334,22 @@ section h3.section-subheading {
   background-position: center;
   background-repeat: no-repeat;
 } */
+@media (min-width: 768px) {
+	section {
+		padding: 80px 0;
+	}
+	section h2.section-heading {
+		font-size: 40px;
+		margin-top: 0;
+	}
+	section h3.section-subheading {
+		font-size: 22px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		text-transform: none;
+		margin-bottom: 40px;
+		line-height: 1.4;
+	}
+}
 .darker{
 	font-weight: 400;
 }
