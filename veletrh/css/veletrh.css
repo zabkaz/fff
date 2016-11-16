@@ -32,7 +32,9 @@ p.large {
   font-size: 16px;
 }
 .mainLogo{
-	margin: -15px;	
+	margin-left: -5px;
+	margin-top: -12px;
+	width: 130px;
 }
 .date{
 	color: #FF9022;
@@ -362,7 +364,7 @@ section h3.section-subheading {
 	display: table;
     margin: 0 auto;
 	float:none;
-	margin-bottom: 60px; 
+	margin-bottom: 30px; 
 }
 .text-detailed{
 	font-size: 20px;
@@ -400,37 +402,44 @@ section h3.section-subheading {
 	 padding-bottom: 4%;
 	 padding-top: 4%;
 }
-
-@media (min-width: 768px) {
-	.dashed1{
-	 border-right: 2px dashed #bdbdbd;
-	 padding-bottom: 2%;
-	 padding-top: 2%;
-	}
-	.dashed2{
-	 padding-bottom: 2%;
-	 padding-top: 2%;
-	}
-	 .dashed3{
-	 border-right: 2px dashed #bdbdbd;
-	 border-bottom: none;
-	}
-	.nondashed{
-	 padding-bottom: 2%;
-	 padding-top: 2%;
-	}
-	.wider{
-	 padding-bottom: 4%;
-	 padding-top: 4%;
-	}
-	.narrower{
+.narrower{
 	width: 90%;
 	margin: 0 auto;
 	display: block;
+}
+@media (min-width: 768px) {
+	.container2{
+		margin-bottom: 60px; 
+	}
+	.dashed1{
+		border-right: 2px dashed #bdbdbd;
+		padding-bottom: 2%;
+		padding-top: 2%;
+	}
+	.dashed2{
+		padding-bottom: 2%;
+		padding-top: 2%;
+	}
+	 .dashed3{
+		border-right: 2px dashed #bdbdbd;
+		border-bottom: none;
+	}
+	.nondashed{
+		padding-bottom: 2%;
+		padding-top: 2%;
+	}
+	.wider{
+		padding-bottom: 4%;
+		padding-top: 4%;
+	}
+	.narrower{
+		width: 90%;
+		margin: 0 auto;
+		display: block;
 	}
 	.dashed4{
-	border-right: 2px dashed #bdbdbd;
-	border-bottom: none;
+		border-right: 2px dashed #bdbdbd;
+		border-bottom: none;
 	}
 }
 .violet{
@@ -561,7 +570,7 @@ footer span.copyright {
 }
 .bottomStrip{
 	background-color: #6D2F7C;
-	padding-bottom: 3%;
+	padding-bottom: 60px;
 }
 .btn:focus,
 .btn:active,
@@ -569,7 +578,11 @@ footer span.copyright {
 .btn:active:focus {
   outline: none;
 }
-
+@media (min-width: 768px) {	
+	.bottomStrip{
+		padding-bottom: 50px;
+	}
+}
 ::-moz-selection {
   text-shadow: none;
 }
@@ -586,58 +599,80 @@ body {
   webkit-tap-highlight-color: #222222;
 }
  /* Uchazec neprihlaseny */
- .uchazec-heading{
-	padding-bottom: 0.5%;
-	font-size: 54px;
- }
- .header-text{
-	padding-top: 100px;
-	padding-bottom: 180px;
- }
 #reasonReg{
 	padding-top: 0px; 
  }
+.aspirant-heading{
+	padding-bottom: 0.5%;
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 1.2;
+}
+.aspirant-subtitle{
+	font-size: 22px;
+	font-weight: 300;
+	padding-top: 3%;
+	line-height: 1.2;
+}
+.header-text{
+	padding-top: 100px;
+	padding-bottom: 180px;
+}
 .row{
-	 text-align: center;
-	 margin: 0 auto;
- }
-.pictoReason{
+	text-align: center;
 	margin: 0 auto;
-	margin-top: -28%;
  }
+ .reason1{
+	margin-top: -28%; 
+ }
+ .reasonReg-heading{
+	font-weight: 400;
+	font-size: 24px;
+	text-transform: none;
+	margin-bottom: 2%;
+	
+}
+.header-text{
+	padding-bottom: 120px;
+}
+.reasonMobile{
+	border-bottom: 2px dashed #bdbdbd;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+.reasonMobile-nondashed{
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+.pictoText{
+	padding-bottom: 2%;
+}
 .pictoItem{
 	border: 15px solid white; 
 	border-radius: 50%;
 	background-color: white;
  }
-.reasonReg-heading{
-	font-weight: 500;
-	font-size: 22px;
-	text-transform: none;
-	margin-bottom: 2%;
- }
-.photoBg{
-	background-image: url('../img/photo/bg02.png');
-	background-position: center;
-	background-repeat: no-repeat;
- }
- .programme-heading{
-	 font-size: 34px;
- }
 .reg{
 	width: 85%;
 	margin: 0 auto;
 }
+.photoBg{
+	background-image: url('../img/photo/bg02.png');
+	background-repeat: no-repeat;
+ }
+.programme-heading{
+	 font-size: 34px;
+ }
 .big{
 	padding: 20px 30px;
-	font-size: 24px;
+	font-size: 20px;
 	text-transform: none;
 	margin: 0 auto;
 	margin-top: 8%;
 	margin-bottom: 3%;
 	float: none;
 	display:block;
-	border-radius: 8px;
+	border-radius: 8px;	
 }
 .small{
 	font-size: 20px;
@@ -648,7 +683,44 @@ body {
 .imgLecture{
 	margin-bottom: 10%;
 }
-.pictoText{
-	padding-bottom: 2%;
-}
+@media (min-width: 768px) {	
+	.aspirant-heading{
+		padding-bottom: 0.5%;
+		font-size: 54px;
+	}
+	.aspirant-subtitle{
+		font-size: 24px;
+		font-weight: 400;
+		padding-top: 1%;
+		line-height: 1.2;
+	}
+	.header-text{
+		padding-top: 100px;
+		padding-bottom: 180px;
+	}
+	.pictoReason{
+		margin: 0 auto;
+		margin-top: -28%;
+	}
+	.reasonReg-heading{
+		font-weight: 500;
+		font-size: 22px;
+		text-transform: none;
+		margin-bottom: 2%;
+	}
+	.reasonMobile{
+		border-bottom: none;
+	    padding-bottom: 0;
+		padding-top: 0;
+	}
+	.reasonMobile-nondashed{
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+	.big{
+		font-size: 24px;
+	}
+ }
+
+
  
