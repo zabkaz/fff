@@ -1,6 +1,12 @@
 body {
   overflow-x: hidden;
   font-family: 'Poppins',Helvetica, Arial, sans-serif;
+  background: url('../img/photo/bg.jpg') no-repeat center fixed; 
+  background-size:cover;	  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 .text-soft {
   color: #777777;
@@ -13,6 +19,9 @@ body {
 }
 .space{
 	margin-bottom: 40px; 
+}
+.pointer{
+	cursor: pointer;
 }
 p {
   font-size: 14px;
@@ -74,7 +83,10 @@ h2{
   margin: 0 auto;
 }
 .bg-light-gray {
-  background-color: #eeeeee;
+	background-color: #eeeeee;
+}
+.bg-white{
+	background-color: white;
 }
 .btn-primary {
   color: white;
@@ -249,14 +261,6 @@ fieldset[disabled] .btn-primary.active {
   }
 }
 header {
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
   text-align: center;
   color: white;
   text-align: center;
@@ -533,8 +537,6 @@ section#contact .text-danger {
 footer {
   padding: 25px 0;
   text-align: center;
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   -webkit-background-size: cover;
