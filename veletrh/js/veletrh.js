@@ -1,8 +1,6 @@
-// Agency Theme JavaScript
-
 (function($) {
-    "use strict"; // Start of use strict
-
+    "use strict"; 
+	
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -15,7 +13,7 @@
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
-        offset: 51
+        offset: 31
     });
 
     // Closes the Responsive Menu on Menu Item Click

@@ -17,11 +17,20 @@ body {
 .text-inverse{
 	color: white;
 }
+.text-left{
+	text-align: left;
+}
 .space{
-	margin-bottom: 40px; 
+	padding-bottom: 40px; 
+}
+.spaceBigger{
+	padding-bottom: 5%; 
 }
 .pointer{
 	cursor: pointer;
+}
+.border-radius{
+	border-radius: 4px;
 }
 p {
   font-size: 14px;
@@ -80,6 +89,9 @@ h1{
 }
 h2{
   font-weight: 400;
+}
+.padding{
+	padding-bottom: 2%;
 }
 .img-centered {
   margin: 0 auto;
@@ -359,6 +371,7 @@ section h3.section-subheading {
 	background-color: white;
 	padding: 5%;
 	padding-top:6%;
+	border-radius: 4px;
 }
 .container2{
 	display: table;
@@ -398,7 +411,7 @@ section h3.section-subheading {
 	 padding-top: 4%;	
 }
 .dashed1, .dashed2, .dashed3, .dashed4{
-	 border-bottom: 2px dashed #bdbdbd;
+	 border-bottom: 2px dashed #cccccc;
 	 padding-bottom: 4%;
 	 padding-top: 4%;
 }
@@ -418,7 +431,7 @@ section h3.section-subheading {
 		margin-bottom: 60px; 
 	}
 	.dashed1{
-		border-right: 2px dashed #bdbdbd;
+		border-right: 2px dashed #cccccc;
 		padding-bottom: 2%;
 		padding-top: 2%;
 	}
@@ -427,7 +440,7 @@ section h3.section-subheading {
 		padding-top: 2%;
 	}
 	 .dashed3{
-		border-right: 2px dashed #bdbdbd;
+		border-right: 2px dashed #cccccc;
 		border-bottom: none;
 	}
 	.nondashed{
@@ -623,8 +636,8 @@ body {
 }
  /* Uchazec neprihlaseny */
 #reasonReg{
-	padding-top: 0px; 
- }
+	padding: 0 0; 
+}
 .aspirant-heading{
 	padding-bottom: 0.5%;
 	font-size: 36px;
@@ -642,21 +655,13 @@ body {
 	padding-bottom: 25%;
 }
 .row{
-	text-align: center;
 	margin: 0 auto;
- }
- .reason1{
-	margin-top: -28%; 
  }
  .reasonReg-heading{
 	font-weight: 400;
 	font-size: 24px;
 	text-transform: none;
-	margin-bottom: 2%;
-	
-}
-.header-text{
-	padding-bottom: 120px;
+	margin-bottom: 2%;	
 }
 .reasonMobile{
 	border-bottom: 2px dashed #bdbdbd;
@@ -682,11 +687,20 @@ body {
 .photoBg{
 	background-image: url('../img/photo/bg01.png');
 	background-repeat: no-repeat;
-	 background-size:cover;	  
+	background-size:cover;	  
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+ }
+ .photoBg2{
+	background-image: url('../img/photo/bg02.png');
+	background-repeat: no-repeat;
+	background-size:cover;	  
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover; 
  }
 .programme-heading{
 	 font-size: 34px;
@@ -696,8 +710,8 @@ body {
 	font-size: 20px;
 	text-transform: none;
 	margin: 0 auto;
-	margin-top: 8%;
-	margin-bottom: 3%;
+	margin-top: 2%;
+	margin-bottom: 5%;
 	float: none;
 	display:block;
 	border-radius: 8px;	
@@ -719,15 +733,14 @@ body {
 	.aspirant-subtitle{
 		font-size: 24px;
 		font-weight: 400;
-		padding-top: 1%;
+		padding-top: 0.2%;
 		line-height: 1.2;
 	}
 	.header-text{
-		padding-top: 100px;
-		padding-bottom: 180px;
+		padding-top: 8%;
+		padding-bottom: 12%;
 	}
 	.pictoReason{
-		margin: 0 auto;
 		margin-top: -28%;
 	}
 	.reasonReg-heading{
@@ -748,7 +761,74 @@ body {
 	.big{
 		font-size: 24px;
 	}
- }
+
+  /* Vystavovatel neprihlaseny */
+.heading-exhibitors{
+	margin-top: -5%;
+	padding-bottom: 2%;
+}
+.faq-heading{
+	padding-top: 6%;
+	padding-bottom: 4%;
+}
+.faq-group{
+	width: 90%;
+	margin: 0 auto;
+}
+.faq-text{
+	padding-bottom: 4%;
+}
+.faq-button{
+	color: black;
+}
+.panel{
+	-webkit-box-shadow: none; 
+    box-shadow: none;
+	border: none;
+}
+.panel-title{
+	font-size: 22px;
+	font-weight: 500;
+}
+.panel-title:hover {
+	color: #FF9022;
+}
+.wrapperPanel{
+	overflow: hidden;
+}
+.faq-img{
+	width: 30px;
+	height: 30px;
+	background-image: url('../img/picto/minus.png');	
+	float: left;
+}
+.collapsed .faq-img{
+	background-image: url('../img/picto/plus.png');
+	width: 30px;
+	height: 30px;
+}
+.faq-title{
+	 overflow: hidden; 
+	 padding-left: 15px;
+	 padding-top: 2px;
+}
+.panel-body{
+	padding-left: 62px;
+	padding-right: 62px;
+	font-size: 17px;
+	font-weight: 400;
+}
+.dashed-line{
+	padding-top: 2%;
+	border-bottom: 2px dashed #cccccc;
+	width: 95%;
+	margin: 0 auto;
+}
 
 
+
+
+
+}
+ 
  
