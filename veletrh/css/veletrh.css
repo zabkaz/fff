@@ -654,10 +654,7 @@ body {
 	padding-top: 20%;
 	padding-bottom: 25%;
 }
-.row{
-	margin: 0 auto;
- }
- .reasonReg-heading{
+.reasonReg-heading{
 	font-weight: 400;
 	font-size: 24px;
 	text-transform: none;
@@ -679,6 +676,7 @@ body {
 	border: 15px solid white; 
 	border-radius: 50%;
 	background-color: white;
+	margin: 0 auto;
  }
 .reg{
 	width: 85%;
@@ -741,7 +739,9 @@ body {
 		padding-bottom: 12%;
 	}
 	.pictoReason{
-		margin-top: -28%;
+		display: block;
+		margin: 0 auto;
+		margin-top: -28%;		
 	}
 	.reasonReg-heading{
 		font-weight: 500;
