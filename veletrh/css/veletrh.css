@@ -824,11 +824,46 @@ body {
 	width: 95%;
 	margin: 0 auto;
 }
-
-
-
-
-
+  /* Uchazec prihlaseny */
+ .table-item{
+	 padding-bottom: 9%;
+	 padding-top: 5%;
+	 margin-top: 10%;
+ }
+.table-heading{
+	font-size: 24px;
+	font-weight: 500;
+}
+.pink{
+	color:#ab166a;
+}
+.orange{
+	color:#FF9022;
+}
+.green{
+	color:#0b8f79;
+}
+.lecture-time{
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+}
+.lecture-title{
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 2%;
+	padding-bottom: 7%;
+}
+.button-free{
+	padding: 10px 20px;
+	background-color: #FF9022;
+	border-radius: 4px;
+	color: white;
+}
+.button-free:hover, .button-free:active{
+	background-color: #6D2F7C;
+	color: white;
+}
 }
  
  
