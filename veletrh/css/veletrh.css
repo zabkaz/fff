@@ -81,6 +81,7 @@ a.active {
 }
 a{
 	text-decoration: none;
+	color: black;
 }
 h1{
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -97,7 +98,7 @@ h2{
   margin: 0 auto;
 }
 .bg-light-gray {
-	background-color: #eeeeee;
+	background-color: #f3f3f3;
 }
 .bg-white{
 	background-color: white;
@@ -193,6 +194,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: none;
   border-color: transparent;
   background-color: #222222;
+  padding-right: 6px;
 }
 .navbar-custom .navbar-brand {
   color: #FF9022;
@@ -825,15 +827,7 @@ body {
 	margin: 0 auto;
 }
   /* Uchazec prihlaseny */
- .table-item{
-	 padding-bottom: 9%;
-	 padding-top: 5%;
-	 margin-top: 10%;
- }
-.table-heading{
-	font-size: 24px;
-	font-weight: 500;
-}
+
 .pink{
 	color:#ab166a;
 }
@@ -843,27 +837,58 @@ body {
 .green{
 	color:#0b8f79;
 }
+.table-heading{
+		font-size: 16px;
+		font-weight: 500;
+	}
 .lecture-time{
 	text-align: center;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: 600;
 }
 .lecture-title{
 	font-size: 20px;
 	font-weight: 500;
+	margin: 0 auto;
 	margin-top: 2%;
 	padding-bottom: 7%;
+	width: 80%;	
 }
-.button-free{
+.table-item a{
+	font-size: 16px;
+	font-weight: 600;
+	color: #6D2F7C;
+}
+.button-free, .table-item .button-free{
+	color: white;
 	padding: 10px 20px;
 	background-color: #FF9022;
 	border-radius: 4px;
-	color: white;
+	font-weight: 500;
 }
 .button-free:hover, .button-free:active{
 	background-color: #6D2F7C;
 	color: white;
 }
+.capacity{
+	padding-top: 5%;
+}
+.oneLine{
+	padding-top: 15px;
+	padding-bottom: 38px;
+}
+@media (min-width: 768px){
+	 .table-item{
+		padding-bottom: 9%;
+		padding-top: 5%;
+		margin-top: 10%;
+	}
+	.table-heading{
+		font-size: 24px;
+		font-weight: 500;
+	}
+}
+
 }
  
  
