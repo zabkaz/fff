@@ -661,6 +661,7 @@ body {
 	font-size: 24px;
 	text-transform: none;
 	margin-bottom: 2%;	
+	text-align: center;
 }
 .reasonMobile{
 	border-bottom: 2px dashed #bdbdbd;
@@ -678,11 +679,14 @@ body {
 	border: 15px solid white; 
 	border-radius: 50%;
 	background-color: white;
+	display: block;
 	margin: 0 auto;
  }
 .reg{
 	width: 85%;
+	display: block;
 	margin: 0 auto;
+	text-align: center;
 }
 .photoBg{
 	background-image: url('../img/photo/bg01.png');
@@ -710,8 +714,8 @@ body {
 	font-size: 20px;
 	text-transform: none;
 	margin: 0 auto;
-	margin-top: 2%;
-	margin-bottom: 5%;
+	margin-top: 4%;
+	margin-bottom: 6%;
 	float: none;
 	display:block;
 	border-radius: 8px;	
@@ -728,7 +732,7 @@ body {
 @media (min-width: 768px) {	
 	.aspirant-heading{
 		padding-bottom: 0.5%;
-		font-size: 54px;
+		font-size: 60px;
 	}
 	.aspirant-subtitle{
 		font-size: 24px;
