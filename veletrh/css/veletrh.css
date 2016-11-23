@@ -47,7 +47,7 @@ p.large {
   font-size: 16px;
 }
 .mainLogo{
-	margin-left: -5px;
+	margin-left: 5px;
 	margin-top: -12px;
 	width: 130px;
 }
@@ -59,8 +59,9 @@ p.large {
 	padding-right: 0.5%;
 }
 .login{
-	margin-left: 20px;
+	margin-left: 15px;
 	margin-top: 8px;
+	margin-bottom: 15px;
 	background-color: #FF9022;
 	border-width: 0px;
 	color: white;
@@ -195,12 +196,17 @@ fieldset[disabled] .btn-primary.active {
 		  padding: 20px 40px;
 		  font-size: 22px;
 	}
+	.login{
+	margin-left: 20px;
+	margin-bottom: 0px;
+	}
 }
 .navbar-custom {
   background-color: none;
   border-color: transparent;
   background-color: #222222;
   padding-right: 6px;
+  padding-left: 15px;
 }
 .navbar-custom .navbar-brand {
   color: #FF9022;
@@ -251,7 +257,7 @@ fieldset[disabled] .btn-primary.active {
   background-color: transparent;
 }
 .navbar-custom .navbar-nav a:visited{
-	color: white;
+	color: white;	
 }
 @media (min-width: 768px) {
   .navbar-custom {
@@ -899,63 +905,20 @@ body {
 	}
 }
 
- /* MODAL WINDOW */
+ /* MODAL WINDOW For Large Screen*/
  
- .modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgb(0,0,0); 
-    background-color: #cccccc;
-}
-.modal-content {
-	margin: 5% auto 15% auto;
-	border: 1px solid #888;
-	width: 80%;
-}
-	
-@media (min-width: 768px) {
-	.modal-content {
-		margin: 5% auto 15% auto;
-		border: 1px solid #888;
-		width: 600px;
-		height: 600px;
-		border-radius: 50%;
-	}	
-	.modal {  
-	background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.6);
-    padding-top: 60px;
-	}
-	.animate {
-    -webkit-animation: popup 0.6s;
-    animation: popup 0.6s
-	}
-	@-webkit-keyframes popup {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-	}    
-	@keyframes popup {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-	}
-	.login-heading{	
-	color: black;
-	text-align:center;
+ .login-heading{
+	font-size: 28px;
 	font-weight: 400;
-	margin: 10px 0 30px;
+	margin: 30px 0 30px;
 	text-transform: none;	
-	}
-	input {
+	text-align: center;
+}
+input {
 	margin: 0 auto;
 	font-size: 22px;
 	display: block;
-	width: 60%;
-	height: 100%;
+	width: 80%;
 	padding: 5px 10px;
 	background: #e5e5e5;
 	background-image: none;
@@ -963,8 +926,8 @@ body {
 	color: #b5b5b5;
 	border-radius: 8px;
 }
-	input[type=password] {
-	width: 65%;  
+input[type=password] {
+	width: 240px;  
     background-image: url('../img/picto/password.png');
     background-repeat: no-repeat;  
     background-position: 8px 7px;
@@ -973,8 +936,8 @@ body {
     padding-left: 38px;
 	margin: 0 auto;
 }
-	input[type=login] {
-	width:65%;
+input[type=login] {
+	width: 240px;
     background-image: url('../img/picto/login.png');
     background-repeat: no-repeat;
     background-position: 8px 7px;
@@ -985,7 +948,7 @@ body {
 }
 input[type=submit] {
     margin: 0 auto;
-    width: 50%;
+    width: 240px;
 	height: 50px;
 	background-color: #FF9022;
 	border-color:#FF9022;
@@ -1066,7 +1029,64 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .registraciaWrapper:hover{
 	background-color: #909090;
 }
-.buttonX{
+
+@media (min-width: 768px) {
+	.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgb(0,0,0); 
+    background-color: #cccccc;
+	}
+	.modal-content {
+		margin: 5% auto 15% auto;
+		border: 1px solid #888;
+		width: 600px;
+		height: 600px;
+		border-radius: 50%;
+	}	
+	.animate {
+    -webkit-animation: popup 0.6s;
+    animation: popup 0.6s
+	}
+	@-webkit-keyframes popup {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+	}    
+	@keyframes popup {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+	}
+	.login-heading{	
+	color: black;
+	text-align:center;
+	font-weight: 400;
+	margin: 10px 0 30px;
+	text-transform: none;	
+	}
+	input {
+	font-size: 22px;
+	width: 60%;
+	height: 100%;
+	padding: 5px 10px;
+	border: 2px solid #cccccc;
+	border-radius: 8px;
+	}
+	input[type=login] {
+	width:65%;
+	}
+	input[type=password] {
+	width:65%;
+	}
+	input[type=submit] {
+    width: 50%;
+	height: 50px;
+	}
+	.buttonX{
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -1078,7 +1098,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     display: inline-block;
 	margin-left: 450px;
 	margin-top: 30px;
-}
+	}
 }
 
 }

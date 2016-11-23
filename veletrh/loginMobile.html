@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Chci se zucasnit</title>
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/veletrh.css" rel="stylesheet">
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC30vh00SoAtmQERjf42ougkmDS6V_YytE"></script>
+	<script type="text/javascript" src="js/mapa.js"> </script>
+	<link rel="icon" href="img/jobchIco.png" type="image/png" sizes="16x16">
+ 
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container menu">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="img/jobchS.png" class="mainLogo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   <li>
+                        <a class="page-scroll" href="#page-top">Chci se zucastnit</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#reasonReg">Proč se registrovat</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info">Kdy a kde</a>
+                    </li>
+                 
+					<li>
+                        <a class="page-scroll" href="#contact">Nabitý program</a>
+                    </li>
+					<li>
+						<span class="hidden-xs hidden-sm">
+							<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlaš se</button>
+						</span>
+						<span class="visible-xs visible-sm">
+							<a href="loginMobile.html" class="btn btn-default login">Přihlaš se</a>
+						</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+	<!-- Login Form -->
+	<section>		
+	<div class="container bg-light-gray">	
+		<form class="sing-in" action="login.php" method="post" name="login_form" id="login_form"> >							
+                <h1 class="login-heading">Přihlaš se</h1> 
+					<div class="field-wrap">							
+                     	<input type="login" id="main_login" name="username" placeholder='Login' required autocomplete="off"/>
+                    </div>
+                          
+                    <div class="field-wrap">
+                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' required autocomplete="off"/>
+                    </div>
+					<div class="spaceSmall"></div>	  
+                    <input type="submit" value="Přihlasit" onclick="return probe_login()">
+                    <span id="login_err">Nesprávný login nebo heslo </span>
+                </form>
+				
+				<div class="wrapper">
+					<div class="registraciaNapis">Jěšte nejsi zaregistrovaný/á?</div>            
+					<div class="registraciaWrapper" >             		
+						<a href="#" onclick='processing()'><span class="registracia">Zaregistruj se</span></a>
+					</div>           
+				</div> 
+            </div>		
+	    </form>
+	</div>
+	</section>
+	
+	
+    <footer>
+        <div class="container">
+            <div class="row"> 
+				<div class="col-md-1">
+					<a href="index.html"><img src="img/jobch.png" width="220" class="footerJobch"></img></a>
+				</div>	
+				<div class="col-md-1">	</div> 				
+                <div class="col-md-8">
+                    <a href="https://www.muni.cz/" target="_blank" class="logo"><img src="img/footer/logoMuni.png" width="100"/></a>
+					<a href="http://mendelu.cz/" target="_blank" class="logo"><img src="img/footer/logoMendel.png" width="80" /></a>
+					<a href="https://www.vutbr.cz/" target="_blank" class="logo"><img src="img/footer/logoVut.png" width="110"/></a>
+                </div>
+				<div class="col-md-2">	</div>               
+            </div>
+			<div class="col-md-12">
+                    <span class="copyright">Copyright &copy; Zuzana Majláthová 2017</span>
+                </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/veletrh.min.js"></script>
+
+	
+</body>
+
+</html>
