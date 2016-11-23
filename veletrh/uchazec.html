@@ -10,10 +10,9 @@
     <meta name="author" content="">
 
     <title>Chci se zucasnit</title>
-
-    <!-- Bootstrap Core CSS -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Theme CSS -->
+
     <link href="css/veletrh.css" rel="stylesheet">
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC30vh00SoAtmQERjf42ougkmDS6V_YytE"></script>
 	<script type="text/javascript" src="js/mapa.js"> </script>
@@ -26,7 +25,7 @@
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
+        <div class="container menu">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,7 +50,7 @@
                         <a class="page-scroll" href="#contact">Nabitý program</a>
                     </li>
 					<li>							
-                        <a class="page-scroll" href="#"><button type="button" class="btn btn-default login">Přihlaš se</button></a>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlaš se</button>
                     </li>
                 </ul>
             </div>
@@ -67,8 +66,8 @@
             </div>			
         </div>
     </header>
-
-    <!-- Reasons of registration Section -->
+	
+	<!-- Reasons of registration Section -->
     <section id="reasonReg" class="bg-white">
         <div class="container">		
             <div class="row">				
@@ -236,7 +235,7 @@
             </div>            
         </div>
     </section>
-
+	
 	<div class="bottomStrip" > </div>
   
     <footer>
@@ -272,6 +271,52 @@
     <!-- Theme JavaScript -->
     <script src="js/veletrh.min.js"></script>
 
+	
 </body>
+
+<!-- The Modal Window Login-->
+	<div id="id01" class="modal bg-light-gray">
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>			
+		<form class="modal-content animate" action="action_page.php">
+		
+			<div id="sing-in">   
+                <h1 class="login-heading">Přihlaš se</h1>                          
+                <form action="login.php" method="post" name="login_form" id="login_form"> 
+					<div class="field-wrap">							
+                     	<input type="login" id="main_login" name="username" placeholder='Login' required autocomplete="off"/>
+                    </div>
+                          
+                    <div class="field-wrap">
+                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' required autocomplete="off"/>
+                    </div>
+					<div class="spaceSmall"></div>	  
+                    <input type="submit" value="Přihlasit" onclick="return probe_login()">
+                    <span id="login_err">Nesprávný login nebo heslo </span>
+                </form>
+				
+				<div class="wrapper">
+					<div class="registraciaNapis">Jěšte nejsi zaregistrovaný/á?</div>            
+					<div class="registraciaWrapper" >             		
+						<a href="#" onclick='processing()'><span class="registracia">Zaregistruj se</span></a>
+					</div>           
+				</div> 
+            </div>
+		
+			
+		
+	    </form>
+	</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </html>

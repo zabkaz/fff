@@ -59,7 +59,8 @@ p.large {
 	padding-right: 0.5%;
 }
 .login{
-	margin-left: +15px;
+	margin-left: 20px;
+	margin-top: 8px;
 	background-color: #FF9022;
 	border-width: 0px;
 	color: white;
@@ -911,11 +912,7 @@ body {
     padding-top: 60px;
 }
 .modal-content {
-    margin: 5% auto 15% auto;
-    border: 1px solid #888;
-    width: 500px;
-	height: 500px;
-	border-radius: 50%;
+    
 }
 .animate {
     -webkit-animation: popup 0.6s;
@@ -935,20 +932,6 @@ body {
 	font-weight: 300;
 	margin: 60px 0 20px;
 	text-transform: none;	
-}
-button.buttonX{
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background-color: #cccccc;
-    border: none;
-    padding: 2px 2px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-	margin-left: 60%;
-	margin-top: 2%;
-
 }
 input {
 	margin: 0 auto;
@@ -994,8 +977,8 @@ input[type=submit] {
 }
 input[type=submit]:hover,
 input[type=submit]:focus {
-	background-color: #6D2F7C;
-	border-color:#6D2F7C;
+	background-color: #ee7600;
+	border-color:#ee7600;
 	color: white;	
 }
 input:focus {
@@ -1059,6 +1042,18 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .registraciaWrapper a{
 	text-decoration: none;
 	color: white;
+}
+.registraciaWrapper:hover{
+	background-color: #909090;
+}
+@media (min-width: 768px) {
+	.modal-content {
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 600px;
+	height: 600px;
+	border-radius: 50%;
+}
 }
 
 }
