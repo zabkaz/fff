@@ -901,16 +901,7 @@ body {
 
  /* MODAL WINDOW */
  
-
-@media (min-width: 768px) {
-	.modal-content {
-		margin: 5% auto 15% auto;
-		border: 1px solid #888;
-		width: 600px;
-		height: 600px;
-		border-radius: 50%;
-	}
-	.modal {
+ .modal {
     display: none; 
     position: fixed;
     z-index: 1;
@@ -919,6 +910,24 @@ body {
     width: 100%; 
     height: 100%; 
     background-color: rgb(0,0,0); 
+    background-color: #cccccc;
+}
+.modal-content {
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 80%;
+}
+	
+@media (min-width: 768px) {
+	.modal-content {
+		margin: 5% auto 15% auto;
+		border: 1px solid #888;
+		width: 600px;
+		height: 600px;
+		border-radius: 50%;
+	}	
+	.modal {  
+	background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.6);
     padding-top: 60px;
 	}

@@ -49,8 +49,13 @@
 					<li>
                         <a class="page-scroll" href="#contact">Nabitý program</a>
                     </li>
-					<li>							
-                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlaš se</button>
+					<li>
+						<span class="hidden-xs hidden-sm">
+							<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlaš se</button>
+						</span>
+						<span class="visible-xs visible-sm">
+							<a href="loginMobile.html" class="btn btn-default login">Přihlaš se</a>
+						</span>
                     </li>
                 </ul>
             </div>
@@ -280,7 +285,7 @@
 		
 		<form class="modal-content animate" action="action_page.php">
 		
-			<div id="sing-in col-lg-12 col-xs-12">   
+			<div id="sing-in col-lg-12">   
 				<span onclick="document.getElementById('id01').style.display='none'" class="buttonX"> <img src="img/picto/cross.png" width="10"/></span>
                 <h1 class="login-heading">Přihlaš se</h1>                          
                 <form action="login.php" method="post" name="login_form" id="login_form"> 
