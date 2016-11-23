@@ -23,6 +23,9 @@ body {
 .space{
 	padding-bottom: 40px; 
 }
+.spaceSmall{
+	padding-bottom: 20px; 
+}
 .spaceBigger{
 	padding-bottom: 5%; 
 }
@@ -31,6 +34,9 @@ body {
 }
 .border-radius{
 	border-radius: 4px;
+}
+.menu{
+	padding: 0px;
 }
 p {
   font-size: 14px;
@@ -53,7 +59,6 @@ p.large {
 	padding-right: 0.5%;
 }
 .login{
-	margin:-15px;
 	margin-left: +15px;
 	background-color: #FF9022;
 	border-width: 0px;
@@ -250,7 +255,7 @@ fieldset[disabled] .btn-primary.active {
 @media (min-width: 768px) {
   .navbar-custom {
     background-color: transparent;
-    padding: 25px 0;
+    padding: 10px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
@@ -891,6 +896,169 @@ body {
 		font-size: 24px;
 		font-weight: 500;
 	}
+}
+ /* MODAL WINDOW */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+.modal-content {
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 500px;
+	height: 500px;
+	border-radius: 50%;
+}
+.animate {
+    -webkit-animation: popup 0.6s;
+    animation: popup 0.6s
+}
+@-webkit-keyframes popup {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}    
+@keyframes popup {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.login-heading{	
+	color: black;
+	text-align:center;
+	font-weight: 300;
+	margin: 60px 0 20px;
+	text-transform: none;	
+}
+button.buttonX{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: #cccccc;
+    border: none;
+    padding: 2px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	margin-left: 60%;
+	margin-top: 2%;
+
+}
+input {
+	margin: 0 auto;
+	font-size: 22px;
+	display: block;
+	width: 60%;
+	height: 100%;
+	padding: 5px 10px;
+	background: #e5e5e5;
+	background-image: none;
+	border: 2px solid #cccccc;
+	color: #b5b5b5;
+	border-radius: 8px;
+}
+input[type=password] {
+	width: 65%;  
+    background-image: url('../img/picto/password.png');
+    background-repeat: no-repeat;  
+    background-position: 8px 7px;
+	padding-top: 10px;
+    background-size: 22px;
+    padding-left: 38px;
+	margin: 0 auto;
+}
+input[type=login] {
+	width:65%;
+    background-image: url('../img/picto/login.png');
+    background-repeat: no-repeat;
+    background-position: 8px 7px;
+    background-size: 22px;
+    padding-left: 38px;
+    border-radius: 8px;
+	margin: 0 auto;
+}
+input[type=submit] {
+    margin: 0 auto;
+    width: 50%;
+	height: 50px;
+	background-color: #FF9022;
+	border-color:#FF9022;
+	border-radius: 8px;
+	color: white;
+}
+input[type=submit]:hover,
+input[type=submit]:focus {
+	background-color: #6D2F7C;
+	border-color:#6D2F7C;
+	color: white;	
+}
+input:focus {
+    outline:0;
+    border-color:#6D2F7C;
+	background-color: white;
+	color: #6D2F7C;
+    border-radius: 8px;
+	border-width: 2px;
+}
+input[type=login]:focus{
+	background-image: url('../img/picto/loginFialova.png');
+}
+input[type=password]:focus{
+	background-image: url('../img/picto/passwordFialova.png');
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: #e5e5e5;
+    background-image: url(images/login.png);
+    background-repeat: no-repeat;
+    color: #939393;
+}
+#login_err{
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	margin-top: 15px;
+	margin-bottom: -15px;
+	display: none;
+}
+.field-wrap {
+  width:75%;
+  position:relative;
+  margin: 0 auto;
+  padding-top: 1%;
+  padding-bottom: 2%;
+  text-align: center;
+  display: block;
+}
+.registraciaNapis{
+	margin-top: 20px;
+    font-size: 16px;
+	color: black;
+	text-align: center;	
+	padding-bottom: 3%;
+}
+.registraciaWrapper{	
+	text-align: center;
+	width: 50%;
+	border-radius: 8px;
+	margin: 0 auto;	
+    background-color: #b5b5b5;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    cursor: pointer;
+	font-size: 20px;
+	text-decoration: none; 
+}
+.registraciaWrapper a{
+	text-decoration: none;
+	color: white;
 }
 
 }
