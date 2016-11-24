@@ -357,12 +357,6 @@ section h3.section-subheading {
   margin-bottom: 40px; 
   line-height: 1.4;
 }
-/* section#reason {
-  background-color: #222222;
-  background-image: url('../img/map-image.png');
-  background-position: center;
-  background-repeat: no-repeat;
-} */
 @media (min-width: 768px) {
 	section {
 		padding: 80px 0;
@@ -378,7 +372,6 @@ section h3.section-subheading {
 		margin-bottom: 40px;
 		line-height: 1.4;
 	}
-
 }
 .darker{
 	font-weight: 400;
@@ -485,8 +478,6 @@ section h3.section-subheading {
 }
 #map{
 	height: 500px;
-	margin-left: -30px;
-	margin-right: -30px;
 }
 .mapaAdresa{
 	width: 150px;	
@@ -1096,13 +1087,13 @@ select:focus {
     background-color: rgba(0,0,0,0.7);
 	}
 	.first-row{
-	display: none;
+	display: block;
 	}
 	.second-row{
 	display: none;
 	}
 	.third-row{
-	display: block;
+	display: none;
 	}
 	.modal-content {
 		margin: 5% auto 15% auto;
