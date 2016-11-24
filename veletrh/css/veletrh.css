@@ -54,9 +54,6 @@ p.large {
 	margin-top: -12px;
 	width: 130px;
 }
-.date{
-	color: #FF9022;
-}
 .divided{
 	padding-left: 0.5%;
 	padding-right: 0.5%;
@@ -209,8 +206,6 @@ fieldset[disabled] .btn-primary.active {
   background-color: none;
   border-color: transparent;
   background-color: #222222;
-  padding-right: 6px;
-  padding-left: 15px;
 }
 .navbar-custom .navbar-brand {
   color: #FF9022;
@@ -302,17 +297,22 @@ header .intro-text {
   padding-bottom: 15%;
 }
 header .intro-text .intro-lead-in, header .header-text .intro-lead-in {
-  font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 22px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 22px;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
 }
 header .intro-text .intro-heading {
   font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 58px;
   line-height: 50px;
+  padding-bottom: 20px;
+}
+header .intro-text .date{
+	color: #FF9022;
+	font-size: 19px;
 }
 @media (min-width: 768px) {
   header .intro-text {
@@ -323,7 +323,8 @@ header .intro-text .intro-heading {
     font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 30px;
     line-height: 40px;
-
+	margin-bottom: 15px;
+	width: 100%;
   }
   header .intro-text .intro-heading {
     font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -333,6 +334,7 @@ header .intro-text .intro-heading {
     line-height: 75px;
     margin-bottom: 2.5%;
   }
+  
 }
 .strip{	
 	height: 70%;
