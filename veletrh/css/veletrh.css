@@ -8,6 +8,9 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+a, button, input[type="submit"] {
+cursor: pointer;
+}
 .text-soft {
   color: #5f5f5f;
 }
@@ -27,7 +30,7 @@ body {
 	padding-bottom: 20px; 
 }
 .spaceBigger{
-	padding-bottom: 5%; 
+	padding-bottom: 60px;; 
 }
 .pointer{
 	cursor: pointer;
@@ -197,8 +200,9 @@ fieldset[disabled] .btn-primary.active {
 		  font-size: 22px;
 	}
 	.login{
-	margin-left: 20px;
-	margin-bottom: 0px;
+		margin-left: 20px;
+		margin-bottom: 0px;
+		margin-top: 8px;
 	}
 }
 .navbar-custom {
@@ -259,7 +263,7 @@ fieldset[disabled] .btn-primary.active {
 .navbar-custom .navbar-nav a:visited{
 	color: white;	
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar-custom {
     background-color: transparent;
     padding: 10px 0;
@@ -374,6 +378,7 @@ section h3.section-subheading {
 		margin-bottom: 40px;
 		line-height: 1.4;
 	}
+
 }
 .darker{
 	font-weight: 400;
@@ -617,6 +622,8 @@ footer span.copyright {
 .logo{
 	padding-left:3%;
 	padding-right: 3%;
+	max-width: 100px; 
+    height: auto;
 }
 .bottomStrip{
 	background-color: #6D2F7C;
@@ -905,7 +912,7 @@ body {
 	}
 }
 
- /* MODAL WINDOW For Large Screen*/
+ /* Login Form*/
  
  .login-heading{
 	font-size: 28px;
@@ -1004,14 +1011,14 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     font-size: 18px;
 	color: black;
 	text-align: center;	
-	padding-bottom: 3%;
+	padding-bottom: 20px;
 }
 .wrapper{
 	padding-top: 4%;
 }
 .registraciaWrapper{	
 	text-align: center;
-	width: 50%;
+	width: 240px;
 	border-radius: 8px;
 	margin: 0 auto;	
     background-color: #b5b5b5;
@@ -1029,8 +1036,54 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .registraciaWrapper:hover{
 	background-color: #909090;
 }
+.spaceMobile{
+	padding-top: 50px;
+	margin-top: -40px;
+}
+.circle{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.circle.active{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.progress_bar {
+  width: 80px;
+  margin: 0 auto;
+  display: block;  
+}
+select {
+  color: #939393;
+  margin: 0 auto;
+  font-size: 22px;
+  display: block;
+  width: 70%;
+  padding: 5px 10px;
+  background-color: #e5e5e5;
+  border: 1px solid #a0b3b0;
+  border-radius: 8px;
+  border: 2px solid #cccccc;
+  transition:border-color .25s ease, box-shadow .25s ease;  
+}
 
+select:focus { 
+	outline:0;
+    border-color:#6e2f7c;
+	background-color: white;
+	color: #6e2f7c;
+}
 @media (min-width: 768px) {
+	#sign-in{
+	display: block;
+	}
+	#sign-up{
+	display: none;  
+	}
 	.modal {
     display: none; 
     position: fixed;
@@ -1040,7 +1093,16 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     width: 100%; 
     height: 100%; 
     background-color: rgb(0,0,0); 
-    background-color: #cccccc;
+    background-color: rgba(0,0,0,0.7);
+	}
+	.first-row{
+	display: none;
+	}
+	.second-row{
+	display: none;
+	}
+	.third-row{
+	display: block;
 	}
 	.modal-content {
 		margin: 5% auto 15% auto;
@@ -1062,12 +1124,38 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     to {transform: scale(1)}
 	}
 	.login-heading{	
+	font-size: 35px;
 	color: black;
 	text-align:center;
 	font-weight: 400;
-	margin: 10px 0 30px;
+	margin: 0 0 30px;
 	text-transform: none;	
 	}
+	#reg_button1, #reg_button2{
+    margin: 0 auto;
+    width: 45%;
+	height: 50px;
+	background-color: #FF9022;
+	border-color: #FF9022;
+	border-radius: 8px;
+	color: white;
+	}
+	#reg_button1:hover, #reg_button1:focus,
+	#reg_button2:hover, #reg_button2:focus{
+	background-color: #ee7600;
+	border-color:#ee7600;
+	color: white;	
+	}
+
+input[type=number] {
+	width: 25%;
+	text-align: center;
+}
+
+textarea {
+  border:2px solid #a0b3b0;
+  resize: vertical;
+}
 	input {
 	font-size: 22px;
 	width: 60%;
@@ -1086,6 +1174,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     width: 50%;
 	height: 50px;
 	}
+	.registraciaWrapper{	
+	width: 50%;
+    padding: 10px 16px;   
+	font-size: 20px;
+	}
 	.buttonX{
 	width: 40px;
 	height: 40px;
@@ -1097,7 +1190,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     text-decoration: none;
     display: inline-block;
 	margin-left: 450px;
-	margin-top: 30px;
+	margin-top: 40px;
+	cursor: pointer;
 	}
 }
 
