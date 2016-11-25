@@ -258,6 +258,20 @@ fieldset[disabled] .btn-primary.active {
 .navbar-custom .navbar-nav a:visited{
 	color: white;	
 }
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
 @media (min-width: 1000px) {
   .navbar-custom {
     background-color: transparent;
@@ -456,10 +470,6 @@ section h3.section-subheading {
 	 .dashed3{
 		border-right: 2px dashed #cccccc;
 		border-bottom: none;
-	}
-	.nondashed{
-		padding-bottom: 2%;
-		padding-top: 2%;
 	}
 	.wider{
 		padding-bottom: 4%;
@@ -854,18 +864,22 @@ body {
 	color:#0b8f79;
 }
 .header-aspirant{
-	padding-top: 150px;
+	padding-top: 200px;
+}
+.mascot-wink{
+	width: 80px;
 }
 .mascot{
 	position: absolute;
-	margin-top: -90px;
-	margin-left: 25%;
+	margin-top: -70px;
+	animation: come-in 3s linear;
 }
 #mascot-animation > img{
 	position: absolute;
     color: transparent;
     opacity: 0;
-	margin-top: -110px;
+	margin-top: -80px;
+
     -webkit-backface-visibility: hidden;
     -webkit-animation: imageAnimation 6s linear infinite 0s;
     -moz-animation: imageAnimation 6s linear infinite 0s;
@@ -879,11 +893,20 @@ body {
     -o-animation-delay: 2s;
     -ms-animation-delay: 2s;
     animation-delay: 2s; 
-}
+} 
 .bubble{
 	position: absolute;
 	margin-top: -130px;
-	margin-left: 130px;
+	margin-left: 90px;
+	animation: show-bubble 1s linear;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+	opacity: 0;
+	-webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards;
+   -o-animation-fill-mode:forwards; 
+   -ms-animation-fill-mode:forwards; 
+   animation-fill-mode:forwards; 
 }
 .table-heading{
 		font-size: 16px;
@@ -929,6 +952,22 @@ body {
 	padding-bottom: 38px;
 }
 @media (min-width: 768px){
+	.header-aspirant{
+		padding-top: 150px;
+	}
+	.bubble{
+	margin-top: -130px;
+	margin-left: 120px;
+	}
+	.mascot-wink{
+		width: 110px;
+	}
+	.mascot{
+	margin-top: -90px;
+	}
+	#mascot-animation > img{
+	margin-top: -110px;
+	}
 	.header-aspirant{
 		padding-top: 200px;
 	}
@@ -1274,6 +1313,44 @@ textarea {
     17% { opacity: 1 }
     25% { opacity: 0 }
     100% { opacity: 0 }
+}
+
+@keyframes come-in {
+ from {
+    transform-origin: center;
+	transform: translate3d(-1000%, 0, 0) rotate3d(0, 0, 1, -1000deg);
+	visibility: visible;
+  }
+
+  to {
+	transform: translate3d(0, 0, 0);
+    transform: none;
+  }
+}
+
+.come-in {
+  animation-name: come-in;
+}
+
+@keyframes show-bubble {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+ 
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.show-bubble {
+  animation-name: show-bubble;
 }
 
 }
