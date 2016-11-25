@@ -59,7 +59,6 @@ p.large {
 	padding-right: 0.5%;
 }
 .login{
-	margin-left: 15px;
 	margin-top: 8px;
 	margin-bottom: 15px;
 	background-color: #FF9022;
@@ -67,6 +66,7 @@ p.large {
 	color: white;
     text-transform: uppercase;
     padding: 6px 20px;
+	letter-spacing: 1px;
 }
 .login:hover,
 .login:active,
@@ -219,7 +219,6 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-custom .navbar-collapse {
    border-color: #FF9022;
-   background-color: none;
 }
 .navbar-custom .navbar-toggle {
   border-color: #FF9022;
@@ -874,6 +873,12 @@ body {
 	margin-top: -70px;
 	animation: come-in 3s linear;
 }
+.wink01{
+	background-image: url('../img/mascot/mascot01.png') no-repeat center fixed; 
+}
+.wink02{
+	background-image: url('../img/mascot/mascot03.png') no-repeat center fixed; 
+}
 #mascot-animation > img{
 	position: absolute;
     color: transparent;
@@ -881,19 +886,33 @@ body {
 	margin-top: -80px;
 
     -webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 6s linear infinite 0s;
-    -moz-animation: imageAnimation 6s linear infinite 0s;
-    -o-animation: imageAnimation 6s linear infinite 0s;
-    -ms-animation: imageAnimation 6s linear infinite 0s;
-    animation: imageAnimation 6s linear infinite 0s; 
+    -webkit-animation: imageAnimation 12s linear infinite 0s;
+    -moz-animation: imageAnimation 12s linear infinite 0s;
+    -o-animation: imageAnimation 12s linear infinite 0s;
+    -ms-animation: imageAnimation 12s linear infinite 0s;
+    animation: imageAnimation 12s linear infinite 0s; 
 }
-#mascot-animation > img:nth-child(2)  {
+#mascot-animation > img:nth-child(2) {
     -webkit-animation-delay: 2s;
     -moz-animation-delay: 2s;
     -o-animation-delay: 2s;
     -ms-animation-delay: 2s;
     animation-delay: 2s; 
 } 
+#mascot-animation > img:nth-child(3) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s; 
+}
+#mascot-animation:hover:after{
+	content: url('../img/mascot/mascot02small.png'); 
+	width: 110px;
+    display: block;
+	cursor: pointer;
+	margin-top: -110px;
+}
 .bubble{
 	position: absolute;
 	margin-top: -130px;
