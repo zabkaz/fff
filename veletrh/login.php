@@ -18,7 +18,7 @@ $result = $connection->query($sql);
 $rows = $result->num_rows;
 if ($rows == 1) {
 $_SESSION['login_user']=$username; 
-header("location: uchazecPrihlaseny.php"); 
+header("location: uchazecPrihlaseny.html"); 
 } else {
 $error = "Username or Password is invalid";
 header("location: uchazec.php");
