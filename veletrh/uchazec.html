@@ -264,17 +264,13 @@
                 </div>
         </div>
     </footer>
-
-
+	
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
     <!-- Theme JavaScript -->
     <script src="js/veletrh.min.js"></script>
 
@@ -292,10 +288,10 @@
                 <h1 class="login-heading">Přihlaš se</h1>                          
                 <form action="login.php" method="post" name="login_form" id="login_form"> 
 					<div class="field-wrap">							
-                     	<input type="login" id="main_login" name="username" placeholder='Login' autocomplete=”off” required/>
+                     	<input type="login" id="main_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete=”off” required/>
                     </div>                          
                     <div class="field-wrap">
-                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' required autocomplete=”off”/>
+                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" required autocomplete=”off”/>
                     </div>
 					<div class="spaceSmall"></div>	  
                     <input type="submit" value="Přihlásit" onclick="return probe_login()">
@@ -303,8 +299,8 @@
                 </form>
 				
 				<div class="wrapper">
-					<div class="registraciaNapis">Jěšte nejsi zaregistrovaný/á?</div>            
-					<div class="registraciaWrapper" >             		
+					<div class="registration-subheading">Jěšte nejsi zaregistrovaný/á?</div>            
+					<div class="registration-wrapper" >             		
 						<a href="#" onclick='processing()'><span class="registracia">Zaregistruj se</span></a>
 					</div>           
 				</div> 
@@ -321,97 +317,94 @@
                 </div>
 				<div class="space"></div>
                 <form action="register.php" method="post" name="reg_form" autocomplete=”off” >
-                        <div class="first-row" id="first-row">                          
-                          <div class="field-wrap">	
-							  <input type="login" name="login1" value="" style="display: none" /> 
-                              <input type="login" id="ver_login" name="username" placeholder='Login' autocomplete="off" required/>
-                          </div>
+                    <div class="first-row" id="first-row">                          
+                        <div class="field-wrap">	
+							<input type="login" name="login1" value="" style="display: none" /> 
+                            <input type="login" id="ver_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete="off" required/>
+                        </div>
             
-                          <div class="field-wrap">
-							  <input type="password" name="password0" value="" style="display: none" /> 
-                              <input type="password" name="password" placeholder='Heslo' autocomplete="off" required/>
-                          </div>
-						  <div class="spaceSmall"></div>	  
-                          <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
+                        <div class="field-wrap">
+							<input type="password" name="password0" value="" style="display: none" /> 
+                            <input type="password" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" autocomplete="off" required/>
+                        </div>
+						<div class="spaceSmall"></div>	  
+                        <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
+                    </div>
+
+                    <div class="second-row" id="second-row">                            
+                        <div class="field-wrap">
+                            <input id="reg_name" type="text" name="f_name" placeholder='Jméno' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno'" required autocomplete="off" />
+                        </div>
+        
+						<div class="field-wrap">
+							<input type="text" name="l_name" placeholder='Přijímení' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Přijímení'" required autocomplete="off"/>
+						</div>
+
+						<div class="field-wrap">
+							<input id="reg_email" type="email" name="email" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" required autocomplete="off"/>
+						</div>
+						<div class="spaceSmall"></div>	
+						<input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
+                    </div>
+
+                    <div class="third-row" id="third-row">
+						<div class="field-wrap tretie">                           
+                            <select name="studium">                                 
+								<optgroup label="Druh studia">
+									<option value="" selected>Druh studia</option>
+									<option value="bakalar">bakalářské</option>
+									<option value="magister">magisterské/inženýrske</option>                                
+									<option value="doktorant">doktorantské</option>
+									<option value="absolvent">absolvent</option>
+                                </optgroup>
+                            </select>
+                        </div>
+        
+                        <div class="field-wrap tretie">
+                            <select name="univerzita"> 								
+                                <optgroup label="Univerzita">
+									<option value="" selected>Univerzita</option>
+									<option value="MU">MUNI</option>
+									<option value="VUT">VUT</option>
+									<option value="Mendel">Mendelu</option>
+									<option value="Ina">Jiná</option>
+                                </optgroup>
+                            </select>
                         </div>
 
-                        <div class="second-row" id="second-row">                            
-                            <div class="field-wrap">
-                                <input id="reg_name" type="text" name="f_name" placeholder='Jméno' required autocomplete="off" />
-                            </div>
-        
-                            <div class="field-wrap">
-                                <input type="text" name="l_name" placeholder='Přijímení' required autocomplete="off"/>
-                            </div>
-
-                            <div class="field-wrap">
-                                <input id="reg_email" type="email" name="email" placeholder='E-mail' required autocomplete="off"/>
-                            </div>
-							<div class="spaceSmall"></div>	
-                            <input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
-                        </div>
-
-                        <div class="third-row" id="third-row">
-                            <div class="field-wrap tretie">                           
-                                <select name="studium">
-                                  <!-- <option selected="selected" disabled="disabled">Studium</option> -->
-                                  <optgroup label="Druh studia">
-								  <option value="" selected>Druh studia</option>
-                                  <option value="bakalar">bakalářské</option>
-                                  <option value="magister">magisterské/inženýrske</option>                                
-                                  <option value="doktorant">doktorantské</option>
-                                  <option value="absolvent">absolvent</option>
-                                  </optgroup>
-                                </select>
-                            </div>
-        
-                            <div class="field-wrap tretie">
-                                <select name="univerzita"> 								
-                                  <optgroup label="Univerzita">
-								  <option value="" selected>Univerzita</option>
-                                  <option value="MU">MUNI</option>
-                                  <option value="VUT">VUT</option>
-                                  <option value="Mendel">Mendelu</option>
-                                  <option value="Ina">Jiná</option>
-                                  </optgroup>
-                                </select>
-                            </div>
-
-                            <div class="field-wrap tretie">
-                                <select name="fakulta">
-                                  <optgroup label="Fakulta">
-								  <option value="" selected>Fakulta</option>
-                                  <option value="FI">FI</em></option>
-                                  <option value="ESF">ESF</option> 
+                        <div class="field-wrap tretie">
+                            <select name="fakulta">
+                                <optgroup label="Fakulta">
+									<option value="" selected>Fakulta</option>
+									<option value="FI">FI</em></option>
+									<option value="ESF">ESF</option> 
                                     <option value="ESF">FF</option>  
-                                  <option value="Ina">PřF</option> 
-                                  <option value="Ina">Jiná</option>
-                                  </optgroup>
-                                </select>
-                            </div>
-
-                            <div class="field-wrap tretie">
-                                <input type="number" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
-                            </div>                            
-                            <div class="spaceSmall"></div>	
-                            <input id="register" name="submit" type="submit" value="Registruj" class="registracia">
-                         
+									<option value="Ina">PřF</option> 
+									<option value="Ina">Jiná</option>
+                                </optgroup>
+                            </select>
                         </div>
-			</div>		
-	    </div>
+
+                        <div class="field-wrap tretie">
+                            <input type="number" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
+                        </div>                            
+                        <div class="spaceSmall"></div>	
+                        <input id="register" name="submit" type="submit" value="Registruj" class="registracia">                         
+                    </div>
+					<script src="js/login.js"></script>
+					<script>
+					// Get the modal
+					var modal = document.getElementById('id01');
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+					}
+					</script>
+				</form>	
+			</div>	
+		</div>
 	</div>
-
- <script src="js/login.js"></script>
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
 </html>

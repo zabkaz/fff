@@ -1002,7 +1002,6 @@ body {
 }
 
  /* Login Form*/
- 
  .login-heading{
 	font-size: 28px;
 	font-weight: 400;
@@ -1095,7 +1094,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   text-align: center;
   display: block;
 }
-.registraciaNapis{
+.registration-subheading{
 	margin-top: 20px;
     font-size: 18px;
 	color: black;
@@ -1105,7 +1104,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .wrapper{
 	padding-top: 4%;
 }
-.registraciaWrapper{	
+.registration-wrapper{	
 	text-align: center;
 	width: 240px;
 	border-radius: 8px;
@@ -1118,11 +1117,11 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	font-size: 20px;
 	text-decoration: none; 
 }
-.registraciaWrapper a{
+.registration-wrapper a{
 	text-decoration: none;
 	color: white;
 }
-.registraciaWrapper:hover{
+.registration-wrapper:hover{
 	background-color: #909090;
 }
 .spaceMobile{
@@ -1131,9 +1130,9 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 }
 .circle{
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
   margin-left: 2px;
   margin-right: 2px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -1142,7 +1141,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .progress_bar {
-  width: 80px;
+  width: 65px;
   margin: 0 auto;
   display: block;  
 }
@@ -1159,12 +1158,29 @@ select {
   border: 2px solid #cccccc;
   transition:border-color .25s ease, box-shadow .25s ease;  
 }
-
 select:focus { 
 	outline:0;
     border-color:#6e2f7c;
 	background-color: white;
 	color: #6e2f7c;
+}
+.first-row{
+	display: block;
+}
+.second-row{
+	display: none;
+}
+.third-row{
+	display: none;
+}
+.fourth-row{
+	display: none;
+}
+.registration-heading{
+		
+}
+.more-circles{
+	width: 88px; 
 }
 @media (min-width: 768px) {
 	#sign-in{
@@ -1183,19 +1199,7 @@ select:focus {
     height: 100%; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.7);
-	}
-	.first-row{
-	display: block;
-	}
-	.second-row{
-	display: none;
-	}
-	.third-row{
-	display: none;
-	}
-	.fourth-row{
-	display: none;
-	}
+	}	
 	.modal-content {
 		margin: 5% auto 15% auto;
 		border: 1px solid #888;
@@ -1220,12 +1224,12 @@ select:focus {
 	color: black;
 	text-align:center;
 	font-weight: 400;
-	margin: 0 0 30px;
+	margin: 0 0 22px;
 	text-transform: none;	
 	}
-	#reg_button1, #reg_button2{
+	#reg_button1, #reg_button2, #reg_button3{
     margin: 0 auto;
-    width: 45%;
+    width: 295px;
 	height: 50px;
 	background-color: #FF9022;
 	border-color: #FF9022;
@@ -1233,40 +1237,45 @@ select:focus {
 	color: white;
 	}
 	#reg_button1:hover, #reg_button1:focus,
-	#reg_button2:hover, #reg_button2:focus{
+	#reg_button2:hover, #reg_button2:focus,
+	#reg_button3:hover, #reg_button3:focus{
 	background-color: #ee7600;
 	border-color:#ee7600;
 	color: white;	
 	}
-
-input[type=number] {
+	input[type=number] {
 	width: 25%;
 	text-align: center;
-}
-
-textarea {
-  border:2px solid #a0b3b0;
-  resize: vertical;
-}
+	}
+	textarea {
+	border:2px solid #a0b3b0;
+	resize: vertical;
+	}
 	input {
 	font-size: 22px;
-	width: 60%;
+	width: 295px;
 	height: 100%;
 	padding: 5px 10px;
 	border: 2px solid #cccccc;
 	border-radius: 8px;
 	}
 	input[type=login] {
-	width:65%;
+	width: 295px;
 	}
 	input[type=password] {
-	width:65%;
+	width: 295px;
 	}
 	input[type=submit] {
-    width: 50%;
+    width: 295px;
 	height: 50px;
 	}
-	.registraciaWrapper{	
+	.registration-heading{
+	font-size: 22px;
+	text-align: center;
+	padding-bottom: 16px;
+	padding-top: 10px;
+	}
+	.registration-wrapper{	
 	width: 50%;
     padding: 10px 16px;   
 	font-size: 20px;
@@ -1284,8 +1293,12 @@ textarea {
 	margin-left: 450px;
 	margin-top: 40px;
 	cursor: pointer;
-	}
+	}	
 }
+.slim{
+	padding-bottom: 5px;
+	}
+
  /* ----- Animations -------------------------------- */
 @-webkit-keyframes imageAnimation { 
     0% { opacity: 0;
