@@ -307,8 +307,7 @@
 			</div>
 			
 			<div id="sign-up">  
-				<div class="spaceBigger"></div>
-				<div class="spaceSmall"></div>
+				<span onclick="document.getElementById('id01').style.display='none'" class="buttonX"> <img src="img/picto/cross.png" width="10"/></span>
                 <h1 class="login-heading">Registrace</h1>
                 <div class="progress_bar">	
 						<div class="circle active"></div>
@@ -349,14 +348,12 @@
 
                     <div class="third-row" id="third-row">
 						<div class="field-wrap tretie">                           
-                            <select name="studium">                                 
-								<optgroup label="Druh studia">
-									<option value="" selected>Druh studia</option>
+                            <select name="studium" class="option-style">  
+									<option value="" selected disabled>Druh studia</option>
 									<option value="bakalar">bakalářské</option>
 									<option value="magister">magisterské/inženýrske</option>                                
 									<option value="doktorant">doktorantské</option>
-									<option value="absolvent">absolvent</option>
-                                </optgroup>
+									<option value="absolvent">absolvent</option>                           
                             </select>
                         </div>
         
