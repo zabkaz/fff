@@ -24,7 +24,6 @@
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container menu">
@@ -38,18 +37,17 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                   <li>
-                        <a class="page-scroll" href="#page-top">Chci se zucastnit</a>
+                    <li>
+                        <a class="page-scroll" href="#">Chci se zucastnit</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#reasonReg">Proč se registrovat</a>
+                        <a class="page-scroll" href="#reasons-registration">Proč se registrovat</a>				
+                    </li>                                
+                 	<li>
+                        <a class="page-scroll" href="#prog">Nabitý program</a>
                     </li>
-                    <li>
+                 	<li>
                         <a class="page-scroll" href="#info">Kdy a kde</a>
-                    </li>
-                 
-					<li>
-                        <a class="page-scroll" href="#contact">Nabitý program</a>
                     </li>
 					<li>
 						<span class="hidden-xs hidden-sm hidden-md">
@@ -59,13 +57,13 @@
 							<a href="loginMobile.html" class="btn btn-default login">Přihlaš se</a>
 						</span>
                     </li>
-                </ul>
+                </ul>			
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="reasons-registration">
         <div class="container-fluid">
             <div class="header-text">
 				<div class="aspirant-heading">Proč by si se měl registrovat?</div>
@@ -107,7 +105,12 @@
 				</div>				
             </div>
 			<div class="row col-lg-12">
-				<button type="button" class="btn btn-default login big">Chci se zdarma registrovat</button>
+				<span class="hidden-xs hidden-sm hidden-md">
+					<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login big">Chci se zdarma registrovat</button>
+				</span>
+				<span class="visible-xs visible-sm visible-md">
+					<a href="loginMobile.html" class="btn btn-default login big">Chci se zdarma registrovat</a>
+				</span>
 			</div>
         </div>
     </section>
@@ -115,7 +118,7 @@
 	<div class="bottomStrip" > </div>
 	
 	<!-- Programme Section -->
-    <section id="programme" class="bg-white photoBg">
+    <section id="prog" class="bg-white photoBg">
         <div class="container">
             <div class="row">
 				<div class="col-lg-12">
