@@ -1193,6 +1193,9 @@ select:focus {
 	.third-row{
 	display: none;
 	}
+	.fourth-row{
+	display: none;
+	}
 	.modal-content {
 		margin: 5% auto 15% auto;
 		border: 1px solid #888;

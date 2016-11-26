@@ -57,7 +57,7 @@ function verify_login(){
 function next_reg_1() {
   el1 = document.getElementById("first-row");
   el2 = document.getElementById("second-row");  
-
+  
   var pass = document.forms["reg_form"]["password"].value;
   var username = document.forms["reg_form"]["username"].value;  
   
