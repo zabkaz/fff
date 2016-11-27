@@ -8,7 +8,7 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
-a, button, input[type="submit"] {
+a, button, input{
 cursor: pointer;
 }
 .text-soft {
@@ -19,9 +19,6 @@ cursor: pointer;
 }
 .text-inverse{
 	color: white;
-}
-.text-left{
-	text-align: left;
 }
 .space{
 	padding-bottom: 40px; 
@@ -47,7 +44,7 @@ p {
   margin: 0 0 8px;
 }
 p.large {
-  font-size: 16px;
+  font-size: 17px;
 }
 .mainLogo{
 	margin-left: 5px;
@@ -85,6 +82,7 @@ a:active,
 a.active {
   outline: none;
   text-decoration: none;
+  color: #FF9022;
 }
 a{
 	text-decoration: none;
@@ -351,13 +349,13 @@ header .intro-text .date{
     margin-bottom: 2.5%;
   }  
   }  
-}
 .strip{	
-	margin-left: -15px;
-	margin-right: -15px;
-	padding-top: 2%;
-	padding-bottom: 2%;
-	background-color: rgba(0,0,0,0.5);
+    height: 70%;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgba(0,0,0,0.5);
 }
 section {
   padding: 40px 0;
@@ -1300,6 +1298,168 @@ select:focus {
 .slim{
 	padding-bottom: 5px;
 	}
+	
+	
+ /* Vystavovatel prihlaseny*/	
+	
+.order{
+	margin-top: 1%;
+	margin-bottom: 3%;
+	margin: 0 auto;	
+}
+.order-title{
+	font-size: 25px;			
+	text-align: left;
+	font-weight: bold;
+	color: black;
+	padding-bottom: 3%;
+}
+.order-subtitle{
+	font-size: 18px;			
+	padding-bottom: 1%;
+	font-weight: 600;
+	margin-left: -15px;
+}
+.order-detail{
+	font-size: 16px;	
+	font-weight: 400;
+}
+.radio-btn{
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+}
+input[type="radio"] {
+    height:20px;
+    border-radius:50%;
+    outline:none; 	
+	margin: 0 auto;
+	margin-bottom: 15px;	
+}
+input[type="number"] {
+    width: 60px;
+    height: 30px;
+	text-align: left;
+	font-size: 16px;
+	margin: 0 auto;	
+}
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+	margin: 0;
+	margin: 0 auto;
+}
+.order-align, .order-align2{
+	text-align: center;
+	margin: 0 auto;
+}
+
+#top-view{
+	display: block;
+	margin: 0 auto;
+}
+.stands{
+	margin: 0 auto;
+	margin-top: -444px;
+	z-index: 25;
+	width: 900px;
+	height: 444px;
+}
+.stanok{
+	fill: #bdbdbd;
+}
+.stanok:hover{
+	fill: #6D2F7C;
+	cursor: pointer;
+}
+.selected{
+	fill: #6D2F7C;
+}
+.stanokUlozit{
+	margin: 0 auto;
+    width: 12%;
+	background-color: #6D2F7C;
+	border-radius: 25px;
+	cursor: pointer;
+	text-decoration: none;  
+	font-family: 'webFont', sans-serif;
+	font-size: 20px;
+	color: white;	
+	
+	padding: 1%;
+	border-bottom: 5px solid #572563;
+    text-shadow: 0px -2px #572563;
+	 transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+.stanokUlozit:hover{
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	box-shadow: 0 0 1px rgba(0,0,0, .75);
+	background-color: #4c2056;
+}
+
+@media (min-width: 570px)) {
+	input[type="radio"], input[type="number"], input[type="checkbox"]  {	
+	margin: 0;
+	}
+}
+@media (min-width: 768px) {
+	.order{
+	margin-top: 1%;
+	margin-bottom: 3%;
+	margin: 0 auto;	
+	}
+	.order-align{
+	text-align: left;
+	}
+	.order-align2{
+	text-align: right;
+	}
+	.order-title{
+	font-size: 25px;			
+	text-align: left;
+	font-weight: bold;
+	color: black;
+	padding-bottom: 3%;
+	}
+	.order-subtitle{
+	font-size: 18px;			
+	padding-bottom: 1%;
+	font-weight: 600;
+	}
+	.order-detail{
+	font-size: 16px;	
+	font-weight: 400;
+	}
+	.radio-btn{
+	text-align: left;
+	display: block;
+	margin: left;
+	}
+	input[type="radio"] {
+	width: 20px;
+    height: 20px;
+	margin:0;
+	margin-top: 3px; 
+    margin-bottom: 10px;
+	}	
+	input[type="number"] {
+    width: 60px;
+    height: 30px;
+	text-align: center;
+	font-size: 16px;  
+	margin: 0;
+	margin-bottom: 2%;
+	}
+	input[type="checkbox"] {
+    width: 20px;
+    height: 20px; 
+	margin: 0;
+	}
+}
+	
+	
 
  /* ----- Animations -------------------------------- */
 @-webkit-keyframes imageAnimation { 
