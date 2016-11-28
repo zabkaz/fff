@@ -54,8 +54,8 @@
                     </li>
 					<li>
 						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Nickname</button>						
-						<div class="collapse wrapper-user-collapse" id="collapseExample">					
-								<a href="">Profil</a> | <a href="">Odhlásit</a>
+						<div class="collapse wrapper-user-collapse dropdown-user" id="collapseExample">					
+								<a class="page-scroll" href="">Profil</a><span class="navbar-symbol text-inverse"> | </span><a class="page-scroll" href="">Odhlásit</a>
 						</div>		
                     </li>
                 </ul>
@@ -372,53 +372,50 @@
                     <h3 class="section-subheading light">Nyní si můžete jednoduše zvolit približnou pozici stánku na výstavní ploše JobChallenge.</h3>	
                 </div>
             </div>	
-			<div id="top-view"><img src="img/map.png" id="top-view" width="900" />
-        <div class="stands">      
-        	<svg width="900" height="444">					
-				 <rect class="stanok stanok1 <?php echo ($place_id == 1 ? 'selected' : '');?>" x="495" y="259" width="100" height="20" rx="6" ry="6" id="stanok1"
+		<div id="top-view">			   
+			<svg class="image-view">					
+				 <rect class="stanok stanok1 <?php echo ($place_id == 1 ? 'selected' : '');?>" x="60%" y="59%" width="10%" height="5%" rx="4" ry="4" id="stanok1"
 				 		onclick="selectPlace('1', <?php echo $user_id; ?>)"  />							
-				 <rect class="stanok stanok2 <?php echo ($place_id == 2 ? 'selected' : '');?>" x="385" y="259" width="100" height="20" rx="6" ry="6" id="stanok2"
+				 <rect class="stanok stanok2 <?php echo ($place_id == 2 ? 'selected' : '');?>" x="49%" y="59%" width="10%" height="5%" rx="4" ry="4" id="stanok2"
 				 		onclick="selectPlace('2', <?php echo $user_id; ?>)" />	
-				 <rect class="stanok stanok3 <?php echo ($place_id == 3 ? 'selected' : '');?>" x="275" y="259" width="100" height="20" rx="6" ry="6" id="stanok3" 
+				 <rect class="stanok stanok3 <?php echo ($place_id == 3 ? 'selected' : '');?>" x="38%" y="59%" width="10%" height="5%" rx="4" ry="4" id="stanok3" 
 				 		onclick="selectPlace('3', <?php echo $user_id; ?>)" />
-				 <rect class="stanok stanok4 <?php echo ($place_id == 4 ? 'selected' : '');?>"  x="275" y="177" width="100" height="20" rx="6" ry="6" id="stanok4"
+						
+				 <rect class="stanok stanok4 <?php echo ($place_id == 4 ? 'selected' : '');?>"  x="60%" y="39%" width="10%" height="5%" rx="4" ry="4" id="stanok4"
 				 		onclick="selectPlace('4', <?php echo $user_id; ?>)"/>
-				 <rect class="stanok stanok5 <?php echo ($place_id == 5 ? 'selected' : '');?>" x="385" y="177" width="100" height="20" rx="6" ry="6" id="stanok5" 
+				 <rect class="stanok stanok5 <?php echo ($place_id == 5 ? 'selected' : '');?>" x="49%" y="39%" width="10%" height="5%" rx="4" ry="4" id="stanok5" 
 				 		onclick="selectPlace('5', <?php echo $user_id; ?>)" />
-				 <rect class="stanok stanok6 <?php echo ($place_id == 6 ? 'selected' : '');?>" x="495" y="177" width="100" height="20" rx="6" ry="6" id="stanok6" 
+				 <rect class="stanok stanok6 <?php echo ($place_id == 6 ? 'selected' : '');?>" x="38%" y="39%" width="10%" height="5%" rx="4" ry="4" id="stanok6" 
 				 	    onclick="selectPlace('6', <?php echo $user_id; ?>)" />				
 				 
-				 <rect class="stanok stanok7 <?php echo ($place_id == 7 ? 'selected' : '');?>" x="426" y="306" width="100" height="20" rx="6" ry="6" id="stanok7" 
+				 <rect class="stanok stanok7 <?php echo ($place_id == 7 ? 'selected' : '');?>" x="55%" y="69%" width="10%" height="5%" rx="4" ry="4" id="stanok7" 
 				 		onclick="selectPlace('7', <?php echo $user_id; ?>)" />				
-				 <rect class="stanok stanok8 <?php echo ($place_id == 8 ? 'selected' : '');?>" x="316" y="306" width="100" height="20" rx="6" ry="6" id="stanok8"
+				 <rect class="stanok stanok8 <?php echo ($place_id == 8 ? 'selected' : '');?>" x="44%" y="69%" width="10%" height="5%" rx="4" ry="4" id="stanok8"
 				 		onclick="selectPlace('8', <?php echo $user_id; ?>)" />					
-				 <rect class="stanok stanok9 <?php echo ($place_id == 9 ? 'selected' : '');?>" x="206" y="306" width="100" height="20" rx="6" ry="6" id="stanok9"
+				 <rect class="stanok stanok9 <?php echo ($place_id == 9 ? 'selected' : '');?>" x="33%" y="69%" width="10%" height="5%" rx="4" ry="4" id="stanok9"
 				 		onclick="selectPlace('9', <?php echo $user_id; ?>)" />					
-				 <rect class="stanok stanok10 <?php echo ($place_id == 10 ? 'selected' : '');?>" x="96" y="306" width="100" height="20" rx="6" ry="6" id="stanok10"
-				 		onclick="selectPlace('10', <?php echo $user_id; ?>)" />					
-				 
-				 <rect class="stanok stanok11 <?php echo ($place_id == 11 ? 'selected' : '');?>" x="96" y="263" width="100" height="20" rx="6" ry="6" id="stanok11"
+				 <rect class="stanok stanok10 <?php echo ($place_id == 10 ? 'selected' : '');?>" x="22%" y="69%" width="10%" height="5%" rx="4" ry="4" id="stanok10"
+				 		onclick="selectPlace('10', <?php echo $user_id; ?>)" />		
+				 <rect class="stanok stanok11 <?php echo ($place_id == 11 ? 'selected' : '');?>" x="11%" y="69%" width="10%" height="5%" rx="4" ry="4" id="stanok11"
 				 		onclick="selectPlace('11', <?php echo $user_id; ?>)" />	
 				 
-				 <rect class="stanok stanok13 <?php echo ($place_id == 13 ? 'selected' : '');?>" x="226" y="130" width="100" height="20" rx="6" ry="6" id="stanok13"
+				 <rect class="stanok stanok13 <?php echo ($place_id == 13 ? 'selected' : '');?>" x="26%" y="29%" width="10%" height="5%" rx="4" ry="4" id="stanok13"
 				 		onclick="selectPlace('13', <?php echo $user_id; ?>)" />					
-				 <rect class="stanok stanok14 <?php echo ($place_id == 14 ? 'selected' : '');?>" x="365" y="130" width="100" height="20" rx="6" ry="6" id="stanok14"
+				 <rect class="stanok stanok14 <?php echo ($place_id == 14 ? 'selected' : '');?>" x="41%" y="29%" width="10%" height="5%" rx="4" ry="4" id="stanok14"
 				 		onclick="selectPlace('14', <?php echo $user_id; ?>)"/>					
-				 <rect class="stanok stanok15 <?php echo ($place_id == 15 ? 'selected' : '');?>" x="475" y="130" width="100" height="20" rx="6" ry="6" id="stanok15"
+				 <rect class="stanok stanok15 <?php echo ($place_id == 15 ? 'selected' : '');?>" x="52%" y="29%" width="10%" height="5%" rx="4" ry="4" id="stanok15"
 				 		onclick="selectPlace('15', <?php echo $user_id; ?>)" />								 				 
-				 <rect class="stanok stanok16 <?php echo ($place_id == 16 ? 'selected' : '');?>" x="648" y="130" width="100" height="20" rx="6" ry="6" id="stanok16"
+				 <rect class="stanok stanok16 <?php echo ($place_id == 16 ? 'selected' : '');?>" x="74%" y="29%" width="10%" height="5%" rx="4" ry="4" id="stanok16"
 				 		onclick="selectPlace('16', <?php echo $user_id; ?>)" />					
-				 <rect class="stanok stanok17 <?php echo ($place_id == 17 ? 'selected' : '');?>" x="758" y="130" width="100" height="20" rx="6" ry="6" id="stanok17"
+				 <rect class="stanok stanok17 <?php echo ($place_id == 17 ? 'selected' : '');?>" x="85%" y="29%" width="10%" height="5%" rx="4" ry="4" id="stanok17"
 				 		onclick="selectPlace('17', <?php echo $user_id; ?>)" />					
 				 
-				 <rect class="stanok stanok18 <?php echo ($place_id == 18 ? 'selected' : '');?>" x="758" y="175" width="100" height="20" rx="6" ry="6" id="stanok18"
+				 <rect class="stanok stanok18 <?php echo ($place_id == 18 ? 'selected' : '');?>" x="85%" y="39%" width="10%" height="5%" rx="4" ry="4" id="stanok18"
 				 		onclick="selectPlace('18', <?php echo $user_id; ?>)" />					
-				 <rect class="stanok stanok19 <?php echo ($place_id == 19 ? 'selected' : '');?>" x="648" y="175" width="100" height="20" rx="6" ry="6" id="stanok19"
+				 <rect class="stanok stanok19 <?php echo ($place_id == 19 ? 'selected' : '');?>" x="74%" y="39%" width="10%" height="5%" rx="4" ry="4" id="stanok19"
 				 		onclick="selectPlace('19', <?php echo $user_id; ?>)" />								 			
-			</svg>  
-            
-           <script type="text/javascript" src="js/exhibition.js"></script> 
-       </div>
+			</svg>              
+			<script type="text/javascript" src="js/exhibition.js"></script> 
         </div>
     </section>
 

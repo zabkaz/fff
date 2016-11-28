@@ -1,12 +1,9 @@
 body {
-  overflow-x: hidden;
-  font-family: 'Poppins',Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   background: url('../img/photo/bg02darker.jpg') no-repeat center fixed; 
-  background-size:cover;	  
+  background-size: cover;	  
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
 }
 a, button, input{
 cursor: pointer;
@@ -716,7 +713,6 @@ body {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	-o-background-size: cover;
  }
  .photoBg2{
 	background-image: url('../img/photo/bg02.png');
@@ -724,11 +720,10 @@ body {
 	background-size:cover;	  
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover; 
+	background-size: cover; 
  }
 .programme-heading{
-	 font-size: 34px;
+	font-size: 34px;
  }
 .big{
 	padding: 20px 30px;
@@ -1300,7 +1295,13 @@ select:focus {
 	
 	
  /* Vystavovatel prihlaseny*/	
-	
+ .dropdown-user{
+	margin-top: 10px;
+ }
+ .navbar-symbol{
+	font-weight: 600;
+	letter-spacing: 1px;
+ }
 .order{
 	margin-top: 1%;
 	margin-bottom: 3%;
@@ -1353,18 +1354,6 @@ input[type="checkbox"] {
 	text-align: center;
 	margin: 0 auto;
 }
-
-#top-view{
-	display: block;
-	margin: 0 auto;
-}
-.stands{
-	margin: 0 auto;
-	margin-top: -444px;
-	z-index: 25;
-	width: 900px;
-	height: 444px;
-}
 .stanok{
 	fill: #bdbdbd;
 }
@@ -1398,7 +1387,32 @@ input[type="checkbox"] {
 	box-shadow: 0 0 1px rgba(0,0,0, .75);
 	background-color: #4c2056;
 }
+.image-view{
+	background: url('../img/map-md.png'); 
+	background-size: cover;	  
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	height: 124px;
+	width: 250px;
+	margin: 0 auto;
+	display: block;
+}
 
+@media (min-width: 500px){
+	.image-view{
+	background: url('../img/map-md.png'); 
+	height: 247px;
+	width: 500px;
+
+	}
+}
+@media (min-width: 1000px){
+	.image-view{
+	background: url('../img/map-lg.png');
+	height: 493px;
+	width: 1000px;
+	}
+}
 @media (min-width: 570px)) {
 	input[type="radio"], input[type="number"], input[type="checkbox"]  {	
 	margin: 0;
