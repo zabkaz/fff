@@ -64,15 +64,16 @@
    
 	<!-- Login Form -->
 	<section>		
-	<div class="container bg-light-gray">	
-		<form class="sing-in" action="login.php" method="post" name="login_form" id="login_form"> >							
+	<div class="container bg-light-gray">			
+		<div id="sign-in" class="col-lg-12"> 
+				<form class="sing-in" action="login.php" method="post" name="login_form" id="login_form"> 
                 <h1 class="login-heading">Přihlaš se</h1> 
 					<div class="field-wrap">							
-                     	<input type="login" id="main_login" name="username" placeholder='Login' required autocomplete="off"/>
+                     	<input type="login" id="main_login" name="username" placeholder='Login' class="bg-gray" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" required autocomplete="off"/>
                     </div>
                           
                     <div class="field-wrap">
-                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' required autocomplete="off"/>
+                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' class="bg-gray" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" required autocomplete="off"/>
                     </div>
 					<div class="spaceSmall"></div>	  
                     <input type="submit" value="Přihlásit" onclick="return probe_login()">
@@ -80,19 +81,102 @@
                 </form>
 				
 				<div class="wrapper">
-					<div class="registraciaNapis">Jěšte nejsi zaregistrovaný/á?</div>            
-					<div class="registraciaWrapper" >             		
+					<div class="registration-subheading">Jěšte nejsi zaregistrovaný/á?</div>            
+					<div class="registration-wrapper" >             		
 						<a href="#" onclick='processing()'><span class="registracia">Zaregistruj se</span></a>						
 					</div>           
 				</div> 
 				<div class="spaceBigger"></div>
-            </div>		
-	    </form>
+        </div>		
+		<div id="sign-up">  
+			<div class="space"></div>
+                <h1 class="login-heading">Registrace</h1>
+                <div class="progress_bar">	
+						<div class="circle active"></div>
+						<div class="circle"></div>
+						<div class="circle"></div>
+                </div>
+				<div class="space"></div>
+                <form action="register.php" method="post" name="reg_form" autocomplete=”off” >
+                    <div class="first-row" id="first-row">                          
+                        <div class="field-wrap">	
+							<input type="login" name="login1" value="" style="display: none" /> 
+                            <input type="login" id="ver_login" class="bg-gray" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete="off" required/>
+                        </div>
+            
+                        <div class="field-wrap">
+							<input type="password" name="password0" value="" style="display: none" /> 
+                            <input type="password" name="password" class="bg-gray" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" autocomplete="off" required/>
+                        </div>
+						<div class="spaceSmall"></div>	  
+                        <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
+						<div class="spaceBigger"></div>
+                    </div>
+
+                    <div class="second-row" id="second-row">                            
+                        <div class="field-wrap">
+                            <input id="reg_name" type="text" name="f_name" class="bg-gray" placeholder='Jméno' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno'" required autocomplete="off" />
+                        </div>
+        
+						<div class="field-wrap">
+							<input type="text" name="l_name" class="bg-gray" placeholder='Přijímení' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Přijímení'" required autocomplete="off"/>
+						</div>
+
+						<div class="field-wrap">
+							<input id="reg_email" type="email" name="email" class="bg-gray" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" required autocomplete="off"/>
+						</div>
+						<div class="spaceSmall"></div>	
+						<input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
+						<div class="spaceBigger"></div>
+                    </div>
+
+                    <div class="third-row" id="third-row">
+						<div class="field-wrap tretie">                           
+                            <select name="studium" class="option-style bg-gray">  
+									<option value="" selected disabled>Druh studia</option>
+									<option value="bakalar">bakalářské</option>
+									<option value="magister">magisterské/inženýrske</option>                                
+									<option value="doktorant">doktorantské</option>
+									<option value="absolvent">absolvent</option>                           
+                            </select>
+                        </div>
+        
+                        <div class="field-wrap tretie">
+                            <select name="univerzita" class="bg-gray"> 								
+									<option value="" selected disabled>Univerzita</option>
+									<option value="MU">MUNI</option>
+									<option value="VUT">VUT</option>
+									<option value="Mendel">Mendelu</option>
+									<option value="Ina">Jiná</option>
+                            </select>
+                        </div>
+
+                        <div class="field-wrap tretie">
+                            <select name="fakulta"  class="bg-gray">
+									<option value="" selected disabled>Fakulta</option>
+									<option value="FI">FI</em></option>
+									<option value="ESF">ESF</option> 
+                                    <option value="ESF">FF</option>  
+									<option value="Ina">PřF</option> 
+									<option value="Ina">Jiná</option>
+                            </select>
+                        </div>
+
+                        <div class="field-wrap tretie">
+                            <input type="number" class="number-registration bg-gray" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
+                        </div>                            
+                        <div class="spaceSmall"></div>	
+                        <input id="register" name="submit" type="submit" value="Registruj" class="registracia">    
+						<div class="spaceBigger"></div>						
+                    </div>
+					<script src="js/login.js"></script>
+				</form>	
+			</div>
 	</div>
 	</section>
 	
 	<div class="spaceMobile violet "></div>
-    <footer>
+    <footer class="bg-photo-main">
         <div class="container">
             <div class="row"> 
 				<div class="col-md-1 hidden-xs hidden-sm">
@@ -108,7 +192,7 @@
             </div>
 			<div class="col-md-12">
                     <span class="copyright">Copyright &copy; Zuzana Majláthová 2017</span>
-                </div>
+             </div>
         </div>
     </footer>
 

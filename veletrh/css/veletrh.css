@@ -1,9 +1,9 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background: url('../img/photo/bg02darker.jpg') no-repeat center fixed; 
   background-size: cover;	  
   -webkit-background-size: cover;
   -moz-background-size: cover;
+  width: 100%;
 }
 a, button, input{
 cursor: pointer;
@@ -96,6 +96,29 @@ h2{
 .padding{
 	padding-bottom: 2%;
 }
+.photoBg{
+	background-image: url('../img/photo/bg01.png');
+	background-repeat: no-repeat;
+	background-size:cover;	  
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+ }
+.photoBg2{
+	background-image: url('../img/photo/bg02.png');
+	background-repeat: no-repeat;
+	background-size:cover;	  
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover; 
+ }
+.bg-photo-main{
+   background-image: url('../img/photo/bg02darker.jpg');
+  background-size: cover;	  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+
+}
 .img-centered {
   margin: 0 auto;
 }
@@ -104,6 +127,9 @@ h2{
 }
 .bg-white{
 	background-color: white;
+}
+.bg-gray{
+	background-color: #dadada;
 }
 .btn-primary {
   color: white;
@@ -706,22 +732,6 @@ body {
 	margin: 0 auto;
 	text-align: center;
 }
-.photoBg{
-	background-image: url('../img/photo/bg01.png');
-	background-repeat: no-repeat;
-	background-size:cover;	  
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
- }
- .photoBg2{
-	background-image: url('../img/photo/bg02.png');
-	background-repeat: no-repeat;
-	background-size:cover;	  
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover; 
- }
 .programme-heading{
 	font-size: 34px;
  }
@@ -1011,10 +1021,9 @@ input{
 	width: 80%;
 	padding: 5px 10px;
 	background: #f4f4f4;
-	background-image: none;
 	border: 2px solid #d1d1d1;
-	color: #a3a3a3;
-	border-radius: 4px;
+	color: #939393;
+	border-radius: 8px;
 }
 input[type=password] {
 	width: 240px;  
@@ -1081,7 +1090,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 	display: none;
 }
 .field-wrap {
-  width:75%;
   position:relative;
   margin: 0 auto;
   padding-top: 1%;
@@ -1145,7 +1153,7 @@ select {
   margin: 0 auto;
   font-size: 22px;
   display: block;
-  width: 70%;
+  width: 295px;
   padding: 5px 10px;
   background-color: #e5e5e5;
   border: 1px solid #a0b3b0;
@@ -1159,14 +1167,17 @@ select:focus {
 	background-color: white;
 	color: #6e2f7c;
 }
+.number-registration{
+	width: 295px;
+}
 .first-row{
-	display: block;
+	display: none;
 }
 .second-row{
 	display: none;
 }
 .third-row{
-	display: none;
+	display: block;
 }
 .fourth-row{
 	display: none;
@@ -1177,13 +1188,29 @@ select:focus {
 .more-circles{
 	width: 88px; 
 }
-@media (min-width: 768px) {
-	#sign-in{
+#sign-in{
 	display: block;
-	}
-	#sign-up{
+}
+#sign-up{
 	display: none;  
-	}
+}
+#reg_button1, #reg_button2, #reg_button3{
+    margin: 0 auto;
+    width: 295px;
+	height: 50px;
+	background-color: #FF9022;
+	border-color: #FF9022;
+	border-radius: 8px;
+	color: white;
+}
+#reg_button1:hover, #reg_button1:focus,
+#reg_button2:hover, #reg_button2:focus,
+#reg_button3:hover, #reg_button3:focus{
+	background-color: #ee7600;
+	border-color:#ee7600;
+	color: white;	
+}
+@media (min-width: 768px) {	
 	.modal {
     display: none; 
     position: fixed;
@@ -1223,24 +1250,9 @@ select:focus {
 	text-transform: none;	
 	}
 	#reg_button1, #reg_button2, #reg_button3{
-    margin: 0 auto;
     width: 295px;
 	height: 50px;
-	background-color: #FF9022;
-	border-color: #FF9022;
-	border-radius: 8px;
-	color: white;
 	}
-	#reg_button1:hover, #reg_button1:focus,
-	#reg_button2:hover, #reg_button2:focus,
-	#reg_button3:hover, #reg_button3:focus{
-	background-color: #ee7600;
-	border-color:#ee7600;
-	color: white;	
-	}
-	input[type=number] {
-	width: 25%;
-	text-align: center;
 	}
 	textarea {
 	border:2px solid #a0b3b0;
@@ -1251,7 +1263,6 @@ select:focus {
 	width: 295px;
 	height: 100%;
 	padding: 5px 10px;
-
 	}
 	input[type=login] {
 	width: 295px;
@@ -1270,7 +1281,7 @@ select:focus {
 	padding-top: 10px;
 	}
 	.registration-wrapper{	
-	width: 50%;
+	width: 295px;
     padding: 10px 16px;   
 	font-size: 20px;
 	}
@@ -1295,6 +1306,8 @@ select:focus {
 	
 	
  /* Vystavovatel prihlaseny*/	
+ 
+ 
  .dropdown-user{
 	margin-top: 10px;
  }
@@ -1325,6 +1338,12 @@ select:focus {
 #collapse-order{
 	padding-top: 2%;
 }
+.counter{
+	width: 60px;
+    height: 30px;
+	text-align: center;
+	padding-bottom: 3%;
+}
 .radio-btn{
 	margin: 0 auto;
 	text-align: center;
@@ -1337,13 +1356,7 @@ input[type="radio"] {
 	margin: 0 auto;
 	margin-bottom: 15px;	
 }
-input[type="number"] {
-    width: 60px;
-    height: 30px;
-	text-align: left;
-	font-size: 16px;
-	margin: 0 auto;	
-}
+
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
