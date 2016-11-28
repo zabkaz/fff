@@ -1392,21 +1392,19 @@ input[type="checkbox"] {
 	background-size: cover;	  
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
-	height: 124px;
-	width: 250px;
+	height: 247px;
+	width: 500px;
 	margin: 0 auto;
 	display: block;
 }
-
-@media (min-width: 500px){
+@media (min-width: 700px){
 	.image-view{
 	background: url('../img/map-md.png'); 
-	height: 247px;
-	width: 500px;
-
+	height: 345px;
+	width: 700px;
 	}
 }
-@media (min-width: 1000px){
+@media (min-width: 1100px){
 	.image-view{
 	background: url('../img/map-lg.png');
 	height: 493px;

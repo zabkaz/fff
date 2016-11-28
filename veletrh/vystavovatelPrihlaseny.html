@@ -367,13 +367,13 @@
     <section id="place" class="bg-light-gray">
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading space">Zde si můžete vybrat umístnění stánku</h2>
+                <div class="col-lg-12 text-center hidden-xs">
+                    <h2 class="section-heading space ">Zde si můžete vybrat umístnění stánku</h2>
                     <h3 class="section-subheading light">Nyní si můžete jednoduše zvolit približnou pozici stánku na výstavní ploše JobChallenge.</h3>	
                 </div>
             </div>	
 		<div id="top-view">			   
-			<svg class="image-view">					
+			<svg class="image-view hidden-xs">					
 				 <rect class="stanok stanok1 <?php echo ($place_id == 1 ? 'selected' : '');?>" x="60%" y="59%" width="10%" height="5%" rx="4" ry="4" id="stanok1"
 				 		onclick="selectPlace('1', <?php echo $user_id; ?>)"  />							
 				 <rect class="stanok stanok2 <?php echo ($place_id == 2 ? 'selected' : '');?>" x="49%" y="59%" width="10%" height="5%" rx="4" ry="4" id="stanok2"
@@ -416,6 +416,12 @@
 				 		onclick="selectPlace('19', <?php echo $user_id; ?>)" />								 			
 			</svg>              
 			<script type="text/javascript" src="js/exhibition.js"></script> 
+			<div class="visible-xs place">
+				<div class="col-xs-12 text-center visible-xs">
+                    <h2 class="section-heading space">Výstavní plocha</h2>
+                    <h3 class="section-subheading light">Nyní si můžete prohlídnout aktuální plánek pro letošní ročník <a href='jobch_planik.pdf' target="_blank" class="link"><b>zde.</b></a> Pokud si chcete vybrat přibližnou pozici vašeho stánku, otevřete si tuto stránku na větší obrazovce.</h3>	
+				</div>
+			</div>
         </div>
     </section>
 
