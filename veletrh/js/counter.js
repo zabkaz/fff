@@ -1,11 +1,3 @@
-
-$(".btn-services").click(function () {
-    $objednavka = $(this);
-    $objednanie = $objednavka.next();
-    $objednanie.slideToggle(500);
-});
-
-
 //counter
 $(".counter").bind('keyup mouseup', function() {	
     $count = $(this);
