@@ -1510,7 +1510,103 @@ input[type="checkbox"] {
 	margin: 0;
 	}
 }
+
+ /* ----- Profile -------------------------------- */
+
+.cancel a:hover, .cancel a:active{
+	color: white;
+}
+
+.profilPopis{
+	font-size: 16px;
+	color: black;
+	padding-top: 4%;
+	padding-left: 2%;	
+}
+
+.profilNadpis{
+	font-size: 20px;
+	color: black;
+	padding-top: 3%;
+}
+
+.wrapperProfil{
+	margin: 0 auto; 
+	display: flex;
+	width: 120px;
+	position: absolute;
+	padding-top: 2%;
+}
+
+.odvetviaWrapper{
+	display: inline-block;
+	top: 2%;
+	width: 450px;
+	text-align: center;
+}
+
+input[type=text], select {
+    width: 80%;
+    padding: 10px 20px;
+	margin-left: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-size: 14px;
+}
+
+input[type=text]:focus{
+	border-color: #6e2f7c;
+	outline: none; 
+	box-shadow: 0 0 2px 0.2px #6e2f7c;
+}
+
+input[type=email], select {
+    width: 80%;
+    padding: 10px 20px;
+    margin: 8px 0;
+	margin-left: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-size: 14px;
+}
+
+input[type=email]:focus{
+	border-color: #6e2f7c;
+	outline: none; 
+	box-shadow: 0 0 2px 0.2px #6e2f7c;
+}
+
+.policko{
+	display: inline-block;
+	position: absolute;
+	margin-left: 80px;
+	top: 6px;	
+}
+
+.wrapperItem{
+	position: relative;
+	display: block;
+	height: 48px;
+	width: 600px;
+}
 	
+	.buttonSave{
+	display: inline-block;
+	top: 0px;
+	width: 150px;
+}
+
+.medzeraButton{
+	width: 20px;
+	display: inline-block;	
+}
+	
+.cancelButton{
+}
 	
 
  /* ----- Animations -------------------------------- */
