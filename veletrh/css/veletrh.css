@@ -799,7 +799,7 @@ body {
 	margin-bottom: 6%;
 	float: none;
 	display:block;
-	border-radius: 8px;	
+	border-radius: 4px;	
 }
 .small{
 	font-size: 20px;
@@ -1071,14 +1071,14 @@ body {
 }
 input{
 	margin: 0 auto;
-	font-size: 22px;
+	font-size: 16px;
 	display: block;
 	width: 80%;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	background: #f4f4f4;
-	border: 2px solid #d1d1d1;
+	border: 1px solid #d1d1d1;
 	color: #939393;
-	border-radius: 8px;
+	border-radius: 4px;
 }
 input[type=password] {
 	width: 240px;  
@@ -1088,7 +1088,7 @@ input[type=password] {
 	padding-top: 10px;
     background-size: 22px;
     padding-left: 38px;
-	border-radius: 8px;
+	border-radius: 4px;
 	margin: 0 auto;
 }
 input[type=login] {
@@ -1098,7 +1098,7 @@ input[type=login] {
     background-position: 8px 7px;
     background-size: 22px;
     padding-left: 38px;
-    border-radius: 8px;
+    border-radius: 4px;
 	margin: 0 auto;
 }
 input[type=submit] {
@@ -1107,7 +1107,7 @@ input[type=submit] {
 	height: 50px;
 	background-color: #FF9022;
 	border-color:#FF9022;
-	border-radius: 8px;
+	border-radius: 4px;
 	color: white;
 }
 input[type=submit]:hover,
@@ -1134,6 +1134,15 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-image: url(images/login.png);
     background-repeat: no-repeat;
     color: #939393;
+}
+@media (min-width: 768px) {	
+	input[type=login] {
+	width: 240px;
+    background-position: 8px 7px;
+    background-size: 22px;
+    padding-left: 38px;
+	border: 1px solid #d1d1d1;
+	}
 }
 #login_err{
 	color: red;
@@ -1164,7 +1173,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 .registration-wrapper{	
 	text-align: center;
 	width: 240px;
-	border-radius: 8px;
+	border-radius: 4px;
 	margin: 0 auto;	
     background-color: #b5b5b5;
     color: white;
@@ -1211,7 +1220,7 @@ select {
   padding: 5px 10px;
   background-color: #e5e5e5;
   border: 1px solid #a0b3b0;
-  border-radius: 8px;
+  border-radius: 4px;
   border: 2px solid #cccccc;
   transition:border-color .25s ease, box-shadow .25s ease;  
 }
@@ -1221,9 +1230,7 @@ select:focus {
 	background-color: white;
 	color: #6e2f7c;
 }
-.number-registration{
-	width: 295px;
-}
+
 .first-row{
 	display: none;
 }
@@ -1254,7 +1261,7 @@ select:focus {
 	height: 50px;
 	background-color: #FF9022;
 	border-color: #FF9022;
-	border-radius: 8px;
+	border-radius: 4px;
 	color: white;
 }
 #reg_button1:hover, #reg_button1:focus,
@@ -1265,6 +1272,9 @@ select:focus {
 	color: white;	
 }
 @media (min-width: 768px) {	
+	.number-registration{
+		width: 295px;
+	}
 	.modal {
     display: none; 
     position: fixed;
@@ -1581,7 +1591,7 @@ input[type=email], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 input[type=email]:focus{
