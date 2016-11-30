@@ -555,30 +555,29 @@ section h3.section-subheading {
 #map{
 	height: 500px;
 }
-.mapaAdresa{
+.mapAddress{
 	width: 150px;	
 	height: 150px;
 	border-radius: 50%;
 	background-color: #FF9022;
 	position: absolute;
-	top: 75%;
-	right: 29%;
+	top: 73%;
+	right: 28%;
 }
-.mapaAdresa:hover,
-.mapaAdresa:focus
-{
+.mapAddress:hover,
+.mapAddress:focus{
 	background-color: #ee7600;
 }
-.adresaNadpis{
+.address-title{
 	margin: 0 auto;
-	padding-top: 34%;
-	font-family: Helvetica, sans-serif;
-	font-size: 20px;
+	padding-top: 30%;
+	font-size: 18px;
 	color: white;
 	text-align: center;
 	padding-bottom: 3%;
+	font-weight: 600;
 }
-.adresaText{
+.address-detail{
 	margin: 0 auto;
 	font-family: Helvetica, sans-serif;
 	font-size: 16px;
@@ -590,18 +589,18 @@ section h3.section-subheading {
 	height: 160px;
 }
 @media (min-width: 768px) {	
-	.mapaAdresa{
+	.mapAddress{
 		width: 200px;	
 		height: 200px;
 		top: 64%;
 		right: 4%;
 	}
-	.adresaNadpis{
+	.address-title{
 		padding-top: 36%;
 		font-size: 26px;	
 		padding-bottom: 3%;
 	}
-	.adresaText{
+	.address-detail{
 		font-size: 18px;
 	}
 	.img-responsive{
