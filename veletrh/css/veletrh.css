@@ -4,6 +4,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   width: 100%;
+  overflow: auto;
 }
 a, button, input{
 cursor: pointer;
@@ -232,7 +233,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .navbar-custom .navbar-brand {
   color: #FF9022;
-  font-family: 'Poppins', "Helvetica Neue", Helvetica, Arial, cursive;
+  font-family: "Helvetica Neue", Helvetica, Arial, cursive;
 }
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus,
@@ -1332,8 +1333,8 @@ select:focus {
 }
 .slim{
 	padding-bottom: 5px;
-	}
-	
+}
+
 	
  /* Vystavovatel prihlaseny*/	
  
@@ -1513,42 +1514,31 @@ input[type="checkbox"] {
 
  /* ----- Profile -------------------------------- */
 
+ #profil{
+	padding-top: 40px;
+	padding-bottom: 60px;
+ }
+ .slimer{
+	padding:3%;
+	padding-bottom: 2%;
+	padding-top: 2%;
+}
+.wrapper-industry{
+	width: 90%;
+}	
+.wraper-profile-btn{
+	width: 80%;
+}
 .cancel a:hover, .cancel a:active{
 	color: white;
 }
-
-.profilPopis{
-	font-size: 16px;
-	color: black;
-	padding-top: 4%;
-	padding-left: 2%;	
+.nickname-title{
+	font-size: 24px;
+	padding-bottom: 3%;
 }
-
-.profilNadpis{
-	font-size: 20px;
-	color: black;
-	padding-top: 3%;
-}
-
-.wrapperProfil{
-	margin: 0 auto; 
-	display: flex;
-	width: 120px;
-	position: absolute;
-	padding-top: 2%;
-}
-
-.odvetviaWrapper{
-	display: inline-block;
-	top: 2%;
-	width: 450px;
-	text-align: center;
-}
-
 input[type=text], select {
     width: 80%;
     padding: 10px 20px;
-	margin-left: 30px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -1561,12 +1551,9 @@ input[type=text]:focus{
 	outline: none; 
 	box-shadow: 0 0 2px 0.2px #6e2f7c;
 }
-
 input[type=email], select {
-    width: 80%;
+  width: 80%;
     padding: 10px 20px;
-    margin: 8px 0;
-	margin-left: 30px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -1579,33 +1566,98 @@ input[type=email]:focus{
 	outline: none; 
 	box-shadow: 0 0 2px 0.2px #6e2f7c;
 }
-
-.policko{
-	display: inline-block;
-	position: absolute;
-	margin-left: 80px;
-	top: 6px;	
-}
-
-.wrapperItem{
-	position: relative;
-	display: block;
-	height: 48px;
-	width: 600px;
-}
-	
-	.buttonSave{
-	display: inline-block;
-	top: 0px;
+input[type=submit].buttonSave{
 	width: 150px;
+	margin: 0 auto;
+	display: block;
+}
+.cancel{
+	width: 150px;
+	background-color: #b5b5b5;
+
+}
+.cancel:hover{
+	color: white;
+	background-color: #909090;
+}
+.wrapper-industry a[data]:hover:after {
+  content: attr(data);
+  padding: 4px 8px;
+  color: rgba(255,255,255,0.5);
+  position: absolute;
+  z-index: 2;
+  border-radius: 5px ;
+  background: pink; 
 }
 
-.medzeraButton{
-	width: 20px;
-	display: inline-block;	
+@media (min-width: 768px) {
+	.wrapper-industry{
+	width: 70%;
+}	
 }
-	
-.cancelButton{
+img.fin.active{
+  content: url(images/odvetvia/FIN.png);
+  background: none;
+}
+
+img.hr.active{
+  content: url(images/odvetvia/HR.png);
+  background: none;
+}
+
+img.chem.active{
+  content: url(images/odvetvia/CHEM.png);
+  background: none;
+}
+
+img.it.active{
+  content: url(images/odvetvia/IT.png);
+  background: none;
+}
+
+img.jaz.active{
+  content: url(images/odvetvia/JAZ.png);
+  background: none;
+}
+
+img.obch.active{
+  content: url(images/odvetvia/OBCH.png);
+  background: none;
+}
+
+img.por.active{
+  content: url(images/odvetvia/POR.png);
+  background: none;
+}
+
+img.prav.active{
+  content: url(images/odvetvia/PRAV.png);
+  background: none;
+}
+
+img.serv.active{
+  content: url(images/odvetvia/SERV.png);
+  background: none;
+}
+
+img.stav.active{
+  content: url(images/odvetvia/STAV.png);
+  background: none;
+}
+
+img.stro.active{
+  content: url(images/odvetvia/STRO.png);
+  background: none;
+}
+
+img.tech.active{
+  content: url(images/odvetvia/TECH.png);
+  background: none;
+}
+
+img.zem.active{
+  content: url(images/odvetvia/ZEM.png);
+  background: none;
 }
 	
 
