@@ -24,7 +24,7 @@
 <body id="page-top" class="index">
 
   <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -33,25 +33,27 @@
                 </button>
                 <a class="navbar-brand page-scroll" href="index.html"><img src="img/jobchS.png" class="mainLogo"></a>
             </div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                	<li>
-                        <a class="page-scroll" href="#page-top">Chci vystavovat</a>
+                   <li>
+                        <a class="page-scroll" href="#page-top">Chci se zúčastnit</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Objednání služeb</a>
+                        <a class="page-scroll" href="#tips">Jak se připravit</a>
                     </li>
-					<li>
-                        <a class="page-scroll" href="#exhibitors">Výběr místa</a>
+                    <li>
+                        <a class="page-scroll" href="#programmeTable">Doprovodný program</a>
                     </li>
+                 
 					<li>
-                        <a class="page-scroll" href="#info">Kdy a kde</a>
+                        <a class="page-scroll" href="#contact">Top vystavovatelé</a>
                     </li>
-					<li>
+					<li>				
 						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Nickname</button>						
-						<div class="collapse wrapper-user-collapse dropdown-user" id="collapseExample">					
-								<a class="page-scroll" href="">Profil</a><span class="navbar-symbol text-inverse"> | </span><a class="page-scroll" href="">Odhlásit</a>
-						</div>		
+						<div class="collapse wrapper-user-collapse" id="collapseExample">					
+								<a href="uchazecProfil.html">Profil</a> | <a href="">Odhlásit</a>
+						</div>					
                     </li>
                 </ul>
             </div>
@@ -78,47 +80,48 @@
 	<div class="container table-reasons slimer">			       
         <form action="edit_uchazec.php" method="post" name="edit_form">
         	<div class="col-lg-6 text-left">
-            	<h2><?php echo $_SESSION['login_user'] ?>Jozzo</h2>         	               
+            	<h2><?php echo $_SESSION['login_user'] ?>Jozzo</h2>        
+				<div class="spaceSmall"></div>
                 <div class="row padding">					
-		        	<span class="col-lg-2 description text-soft"> Jméno </span>
-                	<span class="col-lg-7"> <input type="text" id="fname" name="firstname" value="<?php echo $f_name; ?>" required autocomplete="off"></span>
-					<span class="col-lg-3"></span>
+		        	<span class="col-lg-3 description text-soft padding-top"> Jméno </span>
+                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="fname" name="firstname" value="<?php echo $f_name; ?>" required autocomplete="off"></span>
+					<span class="col-lg-1 hidden-sm hidden-xs"></span>
                 </div>
                 <div class="row padding">
-					<span class="col-lg-2 description text-soft"> Příjmení </span>
-                	<span class="col-lg-7"> <input type="text" id="lname" name="lastname" value="<?php echo $l_name; ?>" required autocomplete="off"> </span>
-					<span class="col-lg-3"></span>    		   	
+					<span class="col-lg-3 description text-soft  padding-top"> Příjmení </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="lname" name="lastname" value="<?php echo $l_name; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-2"></span>    		   	
                 </div>
 				<div class="row padding">
-					<span class="col-lg-2 description text-soft"> E-mail </span>
-                	<span class="col-lg-7"> <input type="email" id="mail" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
-					<span class="col-lg-3"></span>    		   	
+					<span class="col-lg-3 description text-soft  padding-top"> E-mail </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="mail" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-2"></span>    		   	
                 </div>
-     
-            	<h4>Studium</h4>
+				<div class="spaceSmall"></div>
+            	<h4 class="spaceSmall ">Studium</h4>
                 
 				<div class="row padding">
-					<span class="col-lg-2 description text-soft"> Stupen </span>
-                	<span class="col-lg-7"> <input type="text" id="stupen" name="studium" value="<?php echo $studium; ?>" disabled> </span>
-					<span class="col-lg-3"></span>    		   	
+					<span class="col-lg-3 description text-soft padding-top"> Druh studia </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="stupen" name="studium" value="<?php echo $studium; ?>" disabled> </span>
+					<span class="col-lg-2"></span>    		   	
                 </div>      
                 
 				<div class="row padding">
-					<span class="col-lg-2 description text-soft"> Univerzita </span>
-                	<span class="col-lg-7"> <input type="text" id="univerzita" name="univerzita" value="<?php echo $uni; ?>" disabled> </span>
-					<span class="col-lg-3"></span>    		   	
+					<span class="col-lg-3 description text-soft padding-top"> Univerzita </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="univerzita" name="univerzita" value="<?php echo $uni; ?>" disabled> </span>
+					<span class="col-lg-2"></span>    		   	
                 </div> 
 				
 				<div class="row padding">
-					<span class="col-lg-2 description text-soft"> Fakulta </span>
-                	<span class="col-lg-7"> <input type="text" id="fakulta" name="fakulta" value="<?php echo $fakulta; ?>" disabled></span>
-					<span class="col-lg-3"></span>    		   	
+					<span class="col-lg-3 description text-soft padding-top"> Fakulta </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="fakulta" name="fakulta" value="<?php echo $fakulta; ?>" disabled></span>
+					<span class="col-lg-2"></span>    		   	
                 </div>    
 				
 				<div class="row padding">
-					<span class="col-lg-2 description text-soft"> Ročník </span>
-                	<span class="col-lg-7"> <input type="text" id="rocnik" name="rocnik" value="<?php echo $rocnik; ?>" disabled></span>
-					<span class="col-lg-3"></span>    		   	
+					<span class="col-lg-3 description text-soft padding-top"> Ročník </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="rocnik" name="rocnik" value="<?php echo $rocnik; ?>" disabled></span>
+					<span class="col-lg-2"></span>    		   	
                 </div>
 				<div class="space"></div>
             </div>
@@ -154,14 +157,16 @@
                     	onclick ="add_interest('tech', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/>						
 						<img src="img/industry/ZEM_seda.png" class="<?php echo $o_zem; ?> zem" title="Zemnědělství" 
                     	onclick ="add_interest('zem', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/>
-                </div>            
+                </div>   
+				<div class="space"></div>
             </div>
         </form>
-		<div class="wraper-profile-btn">
-			<div class="row col-lg-12 margin">
-				<input type="submit" class="buttonSave col-lg-5" name="submit" value="Uložit"/>
-				<a href="#" class="col-lg-2 page-scroll"></a>
-				<a href="uchazecPrihlaseny.html" class="registration-wrapper col-lg-5 cancel " >Cancel</a>
+		<div class="wrapper">
+			<div class=" col-xs-12 col-md-6 margin">
+				<input type="submit" class="buttonSave col-xs-5" name="submit" value="Uložit"/>
+				<span class="col-xs-2"></span>
+				<input type="cancel" class="cancel col-xs-5" name="submit" value="Uložit"/>
+				<div class="spaceSmall"></div>
 			</div>   
 		</div>
 		<input type="hidden" name="id" value="<?php echo $user_id; ?>">   
@@ -174,8 +179,8 @@
 	
     <footer class="bg-photo-main">
         <div class="container">
-            <div class="row"> 
-				<div class="col-md-1">
+            <div class="row "> 
+				<div class="col-md-1 hidden-sm hidden-xs">
 					<a href="index.html"><img src="img/jobch.png" width="200" class="footerJobch"></img></a>
 				</div>	
 				<div class="col-md-1">	</div> 				

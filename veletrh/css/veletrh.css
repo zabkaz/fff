@@ -921,6 +921,7 @@ body {
 .faq-title{
 	 overflow: hidden; 
 	 padding-left: 15px;
+	 padding-bottom:  5px;
 	 padding-top: 2px;
 	 font-size: 17px;
 	 font-weight: 500;
@@ -1119,12 +1120,14 @@ body {
 	text-transform: none;	
 	text-align: center;
 }
-input{
+.padding-top{
+	padding-top: 2%;
+}
+input {
 	outline: 0;
 	color: #939393;
-	margin: 0 auto;
 	font-size: 20px;
-	display: block;
+	margin: 0 auto;
 	width: 240px;
 	padding: 5px 10px;
 	background: #f4f4f4;
@@ -1152,8 +1155,9 @@ input[type=login] {
     border-radius: 4px;
 	margin: 0 auto;
 }
-input[type=submit] {
+input[type=submit]{
     margin: 0 auto;
+	display: block;
     width: 240px;
 	height: 50px;
 	background-color: #FF9022;
@@ -1357,7 +1361,7 @@ select:focus {
 	border:2px solid #a0b3b0;
 	resize: vertical;
 	}
-	input {
+	input .login-input{
 	font-size: 22px;
 	width: 295px;
 	height: 100%;
@@ -1461,7 +1465,6 @@ input[type="radio"] {
 	margin: 0 auto;
 	margin-bottom: 15px;	
 }
-
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -1586,6 +1589,19 @@ input[type="checkbox"] {
 	}
 }
 
+ /* ----- Order services Mobile -------------------------------- */
+ 
+ section h2.services-heading {
+	margin-top: -5px;
+	padding-bottom: 5px;
+}
+
+.order-title{
+	font-size: 25px;			
+	padding-bottom: 3%;
+	}
+
+
  /* ----- Profile -------------------------------- */
 
  #profil{
@@ -1610,15 +1626,39 @@ input[type="checkbox"] {
 	font-size: 24px;
 	padding-bottom: 3%;
 }
+input[type=cancel] {
+    margin: 0 auto;
+	display: block;
+    width: 150px;
+	height: 50px;
+	background-color: #b5b5b5;
+	border: none;
+	border-radius: 4px;
+	color: white;
+}
+input[type=cancel]:hover,
+input[type=cancel]:focus {
+	background-color: #909090;
+	color: white;	
+}
+input[type="text"].profil{
+	width: 200px;
+	padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font-size: 14px;
+}
 input[type=submit].buttonSave{
 	width: 150px;
 	margin: 0 auto;
 	display: block;
+	border: none;
 }
 .cancel{
+	text-align: center;
 	width: 150px;
 	background-color: #b5b5b5;
-
 }
 .cancel:hover{
 	color: white;
