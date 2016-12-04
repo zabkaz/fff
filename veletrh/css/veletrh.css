@@ -6,7 +6,7 @@ body {
   width: 100%;
   overflow: auto;
 }
-a, button, input{
+a, button{
 cursor: pointer;
 }
 .text-soft {
@@ -90,6 +90,9 @@ h1{
 }
 h2{
   font-weight: 400;
+}
+.padding-top{
+	padding-top: 2%;
 }
 .padding{
 	padding-bottom: 2%;
@@ -1290,13 +1293,14 @@ select:focus {
 	width: 88px; 
 }
 #sign-in{
-	display: block;
+	display: none;
 }
 #sign-up{
 	display: none;  
 }
 #reg_button1, #reg_button2, #reg_button3{
     margin: 0 auto;
+	display: block;
     width: 240px;
 	height: 50px;
 	background-color: #FF9022;
@@ -1412,12 +1416,26 @@ select:focus {
 .slim{
 	padding-bottom: 5px;
 }
+.align-left{
+	position: absolute;
+	left: -40px;
+	top: 42%;
+}
+.align-right{
+	position: absolute;
+	right: -40px;
+	top: 42%;
+}
+.responsive{
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	display: block;
+}
 
-	
- /* Vystavovatel prihlaseny*/	
+ /* Vystavovatel prihlaseny*/	 
  
- 
- .dropdown-user{
+.dropdown-user{
 	margin-top: 10px;
  }
  .navbar-symbol{
@@ -1447,6 +1465,7 @@ select:focus {
 #collapse-order{
 	padding-top: 2%;
 }
+
 .counter{
 	width: 60px;
     height: 30px;
@@ -1618,6 +1637,7 @@ input[type="checkbox"] {
 }	
 .wraper-profile-btn{
 	width: 80%;
+	margin: 0 auto;	
 }
 .cancel a:hover, .cancel a:active{
 	color: white;
