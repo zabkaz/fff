@@ -1292,7 +1292,7 @@ select:focus {
 	width: 88px; 
 }
 #sign-in{
-	display: none;
+	display: display;
 }
 #sign-up{
 	display: none;  
