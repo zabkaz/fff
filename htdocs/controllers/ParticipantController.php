@@ -6,8 +6,8 @@ class ParticipantController extends Controller{
 	function participant(){
 		$this->f3->set('content','participant.htm');
 		$this->f3->set('map','map.htm');
+		$this->f3->set('contact','contact.htm');
 		$this->f3->set('title','Chci se zucastnit');
-		$this->f3->set('state','2');
 		echo View::instance()->render('layout.htm');
 	}	
 	

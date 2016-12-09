@@ -9,6 +9,12 @@ class ExhibitorController extends Controller{
 		$this->f3->set('title','Vystavovatel');
 		echo View::instance()->render('layout.htm');
 	}	
+	
+	function loginMobileE(){
+		$this->f3->set('content','loginMobileE.htm');
+		$this->f3->set('title','Login');
+		echo View::instance()->render('layout.htm');
+	}
 			
 	function authenticate() {
         $username = $this->f3->get('POST.username');

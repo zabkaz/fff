@@ -1297,6 +1297,9 @@ select:focus {
 #sign-up{
 	display: none;  
 }
+#id01, #id02 {
+	display: none;
+}
 #reg_button1, #reg_button2, #reg_button3{
     margin: 0 auto;
 	display: block;
