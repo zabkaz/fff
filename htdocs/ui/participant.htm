@@ -227,7 +227,7 @@
 				<true>
 				<span onclick="document.getElementById('id01').style.display='none'" class="buttonX"> <img src="ui/img/picto/cross.png" width="10"/></span>
                 <h1 class="login-heading">Přihlaš se</h1>                          
-                <form action="login.php" method="post" name="login_form" id="login_form"> 
+                <form action="/auth" method="post" name="login_form" id="login_form"> 
 					<div class="field-wrap">							
                      	<input type="login" id="main_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete=”off” required/>
                     </div>                          
@@ -235,7 +235,7 @@
                       	<input type="password" id="main_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" required autocomplete=”off”/>
                     </div>
 					<div class="spaceSmall"></div>	  
-                    <input type="submit" value="Přihlásit" onclick="return probe_login()">
+                    <input type="submit" value="Přihlásit" >
                     <span id="login_err">Nesprávný login nebo heslo </span>
                 </form>
 				
