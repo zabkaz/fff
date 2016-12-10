@@ -944,6 +944,10 @@ body {
 .faq-p{
 	padding-top: 10px;
 }
+.video{
+	padding-top: 3%;
+	text-align: center;
+}
 @media (min-width: 768px) {	
 	.faq-title{
 	overflow: hidden; 
@@ -995,11 +999,11 @@ body {
 	margin-top: -80px;
 
     -webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 12s linear infinite 0s;
-    -moz-animation: imageAnimation 12s linear infinite 0s;
-    -o-animation: imageAnimation 12s linear infinite 0s;
-    -ms-animation: imageAnimation 12s linear infinite 0s;
-    animation: imageAnimation 12s linear infinite 0s; 
+    -webkit-animation: imageAnimation 12s linear;
+    -moz-animation: imageAnimation 12s linear ;
+    -o-animation: imageAnimation 12s linear ;
+    -ms-animation: imageAnimation 12s linear;
+    animation: imageAnimation 12s linear; 
 }
 #mascot-animation > img:nth-child(2) {
     -webkit-animation-delay: 2s;
@@ -1016,8 +1020,7 @@ body {
     animation-delay: 8s; 
 }
 #mascot-animation:hover:after{
-	content: url('../img/mascot/mascot02small.png'); 
-	width: 110px;
+	content: url('../img/mascot/mascot02.png'); 
     display: block;
 	cursor: pointer;
 	margin-top: -110px;
@@ -1296,9 +1299,6 @@ select:focus {
 }
 #sign-up{
 	display: none;  
-}
-#id01, #id02 {
-	display: none;
 }
 #reg_button1, #reg_button2, #reg_button3{
     margin: 0 auto;

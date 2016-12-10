@@ -1,31 +1,18 @@
-$(".otazkaNazov").click(function () {
-
-    $nazov = $(this);
-    $popis0 = $nazov.next();
-	$popis = $popis0.next();
-    $popis.slideToggle(500, function () {
-    		
-    });
-});
-
 function modal_login() {
     el = document.getElementById("overlay");
     el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 }
 
 function processing(){  
-    var el1 = document.getElementById('login');
-    var el3 = document.getElementById('wrapperRegistracia');
-    var el2 = document.getElementById('signup');
+    var el1 = document.getElementById('sign-in');
+    var el2 = document.getElementById('sign-up');
     
     if(el1.style.display != 'none'){
       el1.style.display = 'none';
       el2.style.display = 'block';
-	  el3.style.display = 'none';
     }else{
       el1.style.display = 'block';
       el2.style.display = 'none';
-	  el3.style.display = 'block';
     }    
 }
 

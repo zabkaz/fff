@@ -1,9 +1,9 @@
 <?php
 
-class UserE extends DB\SQL\Mapper{
+class infoE extends DB\SQL\Mapper{
 
 	public function __construct(DB\SQL $db) {
-	    parent::__construct($db,'login_vyst'); //TODO zmenit nazov
+	    parent::__construct($db,'vyst_info'); //TODO zmenit nazov
 	}
 	
 	public function all() {
@@ -16,14 +16,10 @@ class UserE extends DB\SQL\Mapper{
         return $this->query;
     }
 
-    public function getByName($name) {
-        $this->load(array('username=?', $name));
-    }
-
     public function add() {
         $this->copyFrom('POST',function($val) {
             // the 'POST' array is passed to our callback function
-            return array_intersect_key($val, array_flip(array('username','password')));
+            return array_intersect_key($val, array_flip(array('id','c_name','email','tel_num','full_name','con_email','con_tel_num','con_country','address_id')));
         });
         $this->save();
     }

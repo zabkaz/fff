@@ -3,7 +3,19 @@
 class ExhibitorController extends Controller{
 
 	function exhibitor(){
+		$this->f3->set('error','');
 		$this->f3->set('content','exhibitor.htm');
+		$this->f3->set('slider','slider.htm');
+		$this->f3->set('map','map.htm');
+		$this->f3->set('contact','contact.htm');
+		$this->f3->set('title','Vystavovatel');
+		echo View::instance()->render('layout.htm');
+	}	
+	
+	function exhibitorWrong(){
+		$this->f3->set('error','true');
+		$this->f3->set('content','exhibitor.htm');
+		$this->f3->set('slider','slider.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('contact','contact.htm');
 		$this->f3->set('title','Vystavovatel');
@@ -24,7 +36,7 @@ class ExhibitorController extends Controller{
         $user->getByName($username);
 
         if($user->dry()) {
-            $this->f3->reroute('/unknow');
+            $this->f3->reroute('/exhibitorWrong');
         }
         //TODO add verification like bcrypt
         if($password == $user->password) {
@@ -32,8 +44,7 @@ class ExhibitorController extends Controller{
             
             $this->f3->reroute('/exhibitor/auth');
         } else {
-            $this->f3->reroute('/wrong');
-            //TODO reroute to previous page? how to choose between / and /uchazec
+            $this->f3->reroute('/exhibitorWrong');            
         }
     }
 }
