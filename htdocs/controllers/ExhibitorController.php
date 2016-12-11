@@ -24,7 +24,13 @@ class ExhibitorController extends Controller{
 	
 	function loginMobileE(){
 		$this->f3->set('content','loginMobileE.htm');
-		$this->f3->set('title','Login');
+		$this->f3->set('title','Prihlášení');
+		echo View::instance()->render('layout.htm');
+	}
+	
+	function registerMobileE(){
+		$this->f3->set('content','registerMobileE.htm');
+		$this->f3->set('title','Registrace');
 		echo View::instance()->render('layout.htm');
 	}
 			
