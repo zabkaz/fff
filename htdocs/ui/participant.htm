@@ -117,7 +117,7 @@
 			
 			<div class="table-reasons">
 				<div class="row text-center reasons">
-					<div class="col-md-4 dashed1">							
+					<div class="col-md-4 dashed3">							
 						<div class="imgLecture">
 							<img src="ui/img/picto/panel01.png" 
 								onmouseover="this.src='ui/img/photo/program01.jpg'"
@@ -128,7 +128,7 @@
 						<div class="text-soft description text-left narrower">Znát svou hodnotu a být dobrý vyjednavač se na trhu práce rozhodně vyplatí.</div>								
 					</div>
 					
-					<div class="col-md-4 dashed1">							
+					<div class="col-md-4 dashed3">							
 						<div class="imgLecture">
 							<img src="ui/img/picto/panel02.png" 
 								onmouseover="this.src='ui/img/photo/program02.jpg'"
@@ -139,7 +139,7 @@
 						<div class="text-soft description text-left narrower">Zaujmi personalistu v&nbsp;jedné minutě aneb hackni výběrový proces ve svůj prospěch.</div>								
 					</div> 
 					
-					<div class="col-md-4 nondashed2">							
+					<div class="col-md-4 nondashed">							
 						<div class="imgLecture">
 							<img src="ui/img/picto/panel03.png" 
 								onmouseover="this.src='ui/img/photo/program03.jpg'"
@@ -159,14 +159,13 @@
 	
 	<?php echo $this->render(Base::instance()->get('contact')); ?>
  
-<!-- The Modal Window Login-->
-	<div id="id01" class="modal bg-light-gray">
-		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-		
-		<div class="modal-content animate">		
+	<!-- The Modal Window Login-->
+<div id="id01" class="modal bg-light-gray">
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>		
+		<div class="modal-content animate">	
 			<span onclick="document.getElementById('id01').style.display='none'" class="buttonX"> <img src="ui/img/picto/cross.png" width="10"/></span>
-                <h1 class="login-heading">Přihlaš se</h1>                          
-                <form action="/auth" method="post" name="login_form" id="login_form"> 
+            <h1 class="login-heading">Přihlašte se</h1>                          
+            <form action="/authE" method="post" name="login_form" id="login_form"> 
 					<div class="field-wrap">							
                      	<input type="login" id="main_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete=”off” required/>
                     </div>                          
@@ -174,26 +173,39 @@
                       	<input type="password" id="main_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" required autocomplete=”off”/>
                     </div>
 					<div class="spaceSmall"></div>	  
-                    <input type="submit" value="Přihlásit" >
-                    <span id="login_err">Nesprávný login nebo heslo </span>
-                </form>
-				
-				<div class="wrapper">
-					<div class="registration-subheading">Jěšte nejsi zaregistrovaný/á?</div>            
-					<div class="registration-wrapper" >             		
-						<a href="#" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'"><span class="registracia">Zaregistruj se</span></a>
-					</div>           
-				</div>
-				<script src="js/login.js"></script>
-				<script>
+                    <input type="submit" value="Přihlásit">
+                    <span id="login_err">Nesprávný login nebo heslo </span>					
+					<?php
+                    if($error){
+
+					echo "<script>
+					    $('#login_err').css('display', 'block');
+					    $('#id01').css('display', 'block');
+					</script>";
+					} else{
+
+					echo "<script>
+					    $('#login_err').css('display', 'none');
+					</script>";
+					}
+                    ?>
+             </form>				
+			<div class="wrapper">
+				<div class="registration-subheading">Jěšte nejsi zaregistrovaný/á?</div>            
+				<div class="registration-wrapper" >             		
+					<a href="#" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block';processing()"><span class="registracia">Zaregistruj se</span></a>
+				</div>           
+			</div> 
+			<script src="js/loginP.js"></script>
+			<script>
 					var modal1 = document.getElementById('id01');					
 					window.onclick = function(event) {					
 					if (event.target == modal1) {
 						modal1.style.display = "none";
 					}
 					}
-				</script>
-		</div>
+			</script>
+		</div>	
 	</div>					
 	   
 	<div id="id02" class="modal bg-light-gray">

@@ -1,9 +1,18 @@
 <?php
 
 class ParticipantController extends Controller{
-
 	
 	function participant(){
+		$this->f3->set('error','');
+		$this->f3->set('content','participant.htm');
+		$this->f3->set('map','map.htm');
+		$this->f3->set('contact','contact.htm');
+		$this->f3->set('title','Chci se zucastnit');
+		echo View::instance()->render('layout.htm');
+	}	
+	
+	function participantWrong(){
+		$this->f3->set('error','true');
 		$this->f3->set('content','participant.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('contact','contact.htm');
@@ -25,7 +34,7 @@ class ParticipantController extends Controller{
         $user->getByName($username);
 
         if($user->dry()) {
-            $this->f3->reroute('/unknow');
+            $this->f3->reroute('/participantWrong');
         }
         //TODO add verification like bcrypt
         if($password == $user->password) {
@@ -33,8 +42,7 @@ class ParticipantController extends Controller{
             
             $this->f3->reroute('/participant/auth');
         } else {
-            $this->f3->reroute('/wrong');
-            //TODO reroute to previous page? how to choose between / and /uchazec
+            $this->f3->reroute('/participantWrong');
         }
     }
 }

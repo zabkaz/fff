@@ -30,7 +30,7 @@ class AuthController extends Controller{
 	}
 	
 	function exhibitorProfile(){
-		$this->f3->set('content','exhibitorPofile.htm');
+		$this->f3->set('content','exhibitorProfile.htm');
 		$this->f3->set('title','Profil');
 		echo View::instance()->render('layout.htm');
 	}

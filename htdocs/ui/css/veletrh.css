@@ -6,11 +6,19 @@ body {
   width: 100%;
   overflow: auto;
 }
+input::selection {
+	color: white;
+	background-color: #6D2F7C;
+}
 a, button{
 cursor: pointer;
 }
 .text-soft {
-  color: #5f5f5f;
+	color: #5f5f5f;
+}
+.text-soft ::selection{
+	background-color: #FF9022;
+	color: white;	
 }
 .text-primary {
   color: #FF9022;
@@ -84,12 +92,19 @@ a{
 	color: black;
 }
 h1{
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 900;
 }
 h2{
   font-weight: 400;
+}
+p::selection, b::selection, h1::selection, h2::selection, h3::selection, h4::selection, .reason-heading::selection, .panel-body::selection,
+.description::selection, .reasonReg-heading::selection, .aspirant-heading::selection, .aspirant-subtitle::selection,
+.copyright::selection, .intro-lead-in::selection, .intro-heading::selection, .hidden-xs::selection, .divided::selection,
+.order-title::selection, .order-subtitle::selection, .order-detail::selection{
+	background-color: #FF9022;
+	color: white;
 }
 .padding-top{
 	padding-top: 2%;
@@ -136,7 +151,7 @@ h2{
   color: white;
   background-color: #FF9022;
   border-color: #FF9022;
-  font-family: 'Poppins',"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -320,8 +335,7 @@ fieldset[disabled] .btn-primary.active {
   }
   .navbar-custom .navbar-nav > .active > a {
     border-radius: 3px;
-  }
-  
+  }  
 }
 @media (min-width: 768px) {
   .navbar-custom.affix {
@@ -331,6 +345,9 @@ fieldset[disabled] .btn-primary.active {
   .navbar-custom.affix .navbar-brand {
     font-size: 1.5em;
   }
+}
+section::selection, header::selection{
+	 background-color: #FF9022;
 }
 header {
   text-align: center;
@@ -593,6 +610,10 @@ section h3.section-subheading {
 	width: 160px;
 	height: 160px;
 }
+.address-title::selection, .address-detail p::selection{
+	background-color: #ee7600;
+	color:  white;
+}
 @media (min-width: 768px) {	
 	.mapAddress{
 		width: 200px;	
@@ -601,7 +622,7 @@ section h3.section-subheading {
 		right: 4%;
 	}
 	.address-title{
-		padding-top: 36%;
+		padding-top: 33%;
 		font-size: 26px;	
 		padding-bottom: 3%;
 	}

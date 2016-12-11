@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Chci se zucasnit</title>
-	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/veletrh.css" rel="stylesheet">
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC30vh00SoAtmQERjf42ougkmDS6V_YytE"></script>
-	<script type="text/javascript" src="js/mapa.js"> </script>
-	<link rel="icon" href="img/jobchIco.png" type="image/png" sizes="16x16">
-   <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-</head>
-
-<body id="page-top" class="index">
+<div id="page-top" class="index">
 
   <!-- Navigation -->
 	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -32,28 +8,28 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html"><img src="img/jobchS.png" class="mainLogo"></a>
+                <a class="navbar-brand page-scroll" href="/"><img src="ui/img/jobchS.png" class="mainLogo"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                    <li>
-                        <a class="page-scroll" href="#page-top">Chci se zúčastnit</a>
+                        <a class="page-scroll" href="/exhibitor">Chci vystavovat</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#tips">Jak se připravit</a>
+                        <a class="page-scroll" href="/exhibitor/auth">Objednání služeb</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#programmeTable">Doprovodný program</a>
+                        <a class="page-scroll" href="#exhibitors">Výběr místa</a>
                     </li>
                  
 					<li>
-                        <a class="page-scroll" href="#contact">Top vystavovatelé</a>
+                        <a class="page-scroll" href="#contact">Kdy a kde</a>
                     </li>
 					<li>				
 						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Nickname</button>						
 						<div class="collapse wrapper-user-collapse" id="collapseExample">					
-								<a href="vystavovatelProfil.html">Profil</a> | <a href="">Odhlásit</a>
+								<a href="exhibitor/profile">Profil</a> | <a href="/">Odhlásit</a>
 						</div>					
                     </li>
                 </ul>
@@ -73,29 +49,28 @@
 	<!-- Profile Section -->
 	<section id="profil" class="bg-light-gray ">		
 	<div class="row profil">		
-			<h2 class="programme-heading text-center">Můj profil</h2>	
-				
+			<h2 class="programme-heading text-center">Můj profil</h2>					
     </div>	
 	<div class="space"></div>	
 	
 	<div class="container table-reasons slimer">			       
         <form action="edit_uchazec.php" method="post" name="edit_form">
         	<div class="col-lg-6 text-left">
-            	<h2><?php echo $_SESSION['login_user'] ?>Jozzo</h2>        
+            	<h2>Jozzo</h2>        
 				<div class="spaceSmall"></div>
                 <div class="row padding">					
 		        	<span class="col-lg-3 description text-soft padding-top"> Název firmy </span>
-                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="c_name" name="cname" value="<?php echo $c_name; ?>" required autocomplete="off"></span>
+                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="c_name" name="cname" value="" required autocomplete="off"></span>
 					<span class="col-lg-1 hidden-sm hidden-xs"></span>
                 </div>
                 <div class="row padding">
 					<span class="col-lg-3 description text-soft  padding-top"> E-mail </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="email" name="email" value="<?php echo $email ?>" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="email" name="email" value="" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft  padding-top"> Tel.č. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="number" name="number" value="<?php echo $tel_num ?>" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="number" name="number" value="" required autocomplete="off"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>
 				<div class="spaceSmall"></div>
@@ -103,30 +78,30 @@
                 
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Ulice, č.p. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="street" name="street" value="<?php echo $street ?>" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="street" name="street" value="" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>      
                 
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Obec </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="city" name="city" value="<?php echo $city ?>" required autocomplete="off"></span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="city" name="city" value="" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div> 
 				
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> PSČ </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="zip" name="zip" value="<?php echo $zip ?>" required autocomplete="off"></span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="zip" name="zip" value="" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>    
 				
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Země </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="country" name="country" value="<?php echo $country ?>" required autocomplete="off"></span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="country" name="country" value="" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>
 				<div class="spaceSmall"></div>
 				<div class="row padding">
-                	<span class="col-lg-3 col-xs-2 padding-top"><input type="checkbox" class="profil" name="address2" value="<?php echo $cor_adress_id ?>" id="corr-add" autocomplete="off"></span>
+                	<span class="col-lg-3 col-xs-2 padding-top"><input type="checkbox" class="profil" name="address2" value="" id="corr-add" autocomplete="off"></span>
                     <span class="col-xs-10 col-lg-9 description text-soft padding-top "> Korešpondeční adresa je jiná než sídlo </span>
                 </div>  
 				
@@ -135,25 +110,25 @@
                 
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Ulice, č.p. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil add2" id="ulica" name="street2" value="<?php echo  ?>" required autocomplete="off" disabled> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil add2" id="ulica" name="street2" value="" required autocomplete="off" disabled> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>      
                 
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Obec </span>
-                	<span class="col-lg-7"> <input type="text" class="profil add2" id="obec" name="city2" value="<?php echo  ?>" required autocomplete="off" disabled></span>
+                	<span class="col-lg-7"> <input type="text" class="profil add2" id="obec" name="city2" value="" required autocomplete="off" disabled></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div> 
 				
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> PSČ </span>
-                	<span class="col-lg-7"> <input type="text" class="profil add2" id="psc" name="psc2" value="<?php echo  ?>" required autocomplete="off" disabled></span>
+                	<span class="col-lg-7"> <input type="text" class="profil add2" id="psc" name="psc2" value="" required autocomplete="off" disabled></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>    
 				
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Země </span>
-                	<span class="col-lg-7"> <input type="text" class="profil add2" id="country" name="country2" value="<?php echo  ?>" required autocomplete="off" disabled></span>
+                	<span class="col-lg-7"> <input type="text" class="profil add2" id="country" name="country2" value="" required autocomplete="off" disabled></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>
 				
@@ -164,22 +139,22 @@
             	<h4 class="spaceSmall ">Kontaktní osoba</h4>
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Jméno </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="fname" name="con_name" value="<?php echo $full_name ?>" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="fname" name="con_name" value="" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> E-mail </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="email-contact" value="<?php echo $con_email ?>" name="con_email" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="email-contact" value="" name="con_email" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Tel.č. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="number-contact" name="con_tel" value="<?php echo $con_tel_num ?>"  required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="number-contact" name="con_tel" value=""  required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 				<div class="row padding">
 					<span class="col-lg-3 description text-soft padding-top"> Země </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="country-contact" name="con_country" value="<?php echo $con_country ?>" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="country-contact" name="con_country" value="" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 					
@@ -188,31 +163,31 @@
                 <span class="description text-soft">Klikněte na odvětví, v kterém působíte</span>
 				<div class="space"></div>
             	<div class="wrapper-industry">
-						<a data="Finance"><img src="img/industry/FIN_seda.png" class="<?php echo $o_fin; ?> fin" 
+						<a data="Finance"><img src="ui/img/industry/FIN_seda.png" class="fin" 
                     	onclick ="add_interest('fin', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>						
-						<a data="Lidské zdroje"><img src="img/industry/HR_seda.png" class="<?php echo $o_hr; ?> hr"
+						<a data="Lidské zdroje"><img src="ui/img/industry/HR_seda.png" class="hr"
                     	onclick ="add_interest('hr', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Chemie"><img src="img/industry/CHEM_seda.png" class="<?php echo $o_chem; ?> chem" 
+						<a data="Chemie"><img src="ui/img/industry/CHEM_seda.png" class="chem" 
                     	onclick ="add_interest('chem', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Informační technologie"><img src="img/industry/IT_seda.png" class="<?php echo $o_it; ?> it"
+						<a data="Informační technologie"><img src="img/industry/IT_seda.png" class="it"
                     	onclick ="add_interest('it', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>	
-						<a data="Jazyky"><img src="img/industry/JAZ_seda.png" class="<?php echo $o_jaz; ?> jaz"
+						<a data="Jazyky"><img src="ui/img/industry/JAZ_seda.png" class="jaz"
                     	onclick ="add_interest('jaz', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Marketing a obchod"><img src="img/industry/OBCH_seda.png" class="<?php echo $o_obch; ?> obch"
+						<a data="Marketing a obchod"><img src="ui/img/industry/OBCH_seda.png" class="obch"
                     	onclick ="add_interest('obch', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Personální a poradentské služby"><img src="img/industry/POR_seda.png" class="<?php echo $o_por; ?> por"
+						<a data="Personální a poradentské služby"><img src="img/industry/POR_seda.png" class="por"
                     	onclick ="add_interest('por', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Právo"><img src="img/industry/PRAV_seda.png" class="<?php echo $o_prav; ?> prav"
+						<a data="Právo"><img src="ui/img/industry/PRAV_seda.png" class="prav"
                     	onclick ="add_interest('prav', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Zákaznický servis"><img src="img/industry/SERV_seda.png" class="<?php echo $o_serv; ?> serv"
+						<a data="Zákaznický servis"><img src="ui/img/industry/SERV_seda.png" class="serv"
                     	onclick ="add_interest('serv', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Stavebnictví"><img src="img/industry/STAV_seda.png" class="<?php echo $o_stav; ?> stav"
+						<a data="Stavebnictví"><img src="ui/img/industry/STAV_seda.png" class="stav"
                     	onclick ="add_interest('stav', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>						
-						<a data="Strojírenství"><img src="img/industry/STRO_seda.png" class="<?php echo $o_stro; ?> stro"
+						<a data="Strojírenství"><img src="ui/img/industry/STRO_seda.png" class="stro"
                     	onclick ="add_interest('stro', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
-						<a data="Technika"><img src="img/industry/TECH_seda.png" class="<?php echo $o_tech; ?> tech" 
+						<a data="Technika"><img src="ui/img/industry/TECH_seda.png" class="tech" 
                     	onclick ="add_interest('tech', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>					
-						<a data="Zemnědělství"><img src="img/industry/ZEM_seda.png" class="<?php echo $o_zem; ?> zem"
+						<a data="Zemnědělství"><img src="ui/img/industry/ZEM_seda.png" class="zem"
                     	onclick ="add_interest('zem', <?php echo $user_id; ?>)" width="70" style="padding:2%;"/></a>
                 </div>   
 				<div class="spaceBigger"></div>
@@ -233,41 +208,6 @@
 </section>
 	
 	<div class="space violet "></div>
+		<script type="text/javascript" src="js/adresa.js"></script> 
 	
-    <footer class="bg-photo-main">
-        <div class="container">
-            <div class="row "> 
-				<div class="col-md-1 hidden-sm hidden-xs">
-					<a href="index.html"><img src="img/jobch.png" width="200" class="footerJobch"></img></a>
-				</div>	
-				<div class="col-md-1">	</div> 				
-                <div class="col-md-8">
-                    <a href="https://www.muni.cz/" target="_blank" class="logo"><img src="img/footer/logoMuni.png" width="90"/></a>
-					<a href="http://mendelu.cz/" target="_blank" class="logo"><img src="img/footer/logoMendel.png" width="70" /></a>
-					<a href="https://www.vutbr.cz/" target="_blank" class="logo"><img src="img/footer/logoVut.png" width="100"/></a>
-                </div>
-				<div class="col-md-2">	</div>               
-            </div>
-			<div class="col-md-12">
-                    <span class="copyright">Copyright &copy; Zuzana Majláthová 2017</span>
-                </div>
-        </div>
-    </footer>	
-
-
-  
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- JavaScript -->
-    <script src="js/veletrh.min.js"></script>
-	
-	<script type="text/javascript" src="js/adresa.js"></script> 
-	
-</body>
-
-</html>
+</div>
