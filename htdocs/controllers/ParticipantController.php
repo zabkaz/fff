@@ -59,7 +59,7 @@ class ParticipantController extends Controller{
             $this->f3->reroute('/participantWrong');
         }
         //TODO add verification like bcrypt
-        if($password == $user->password) {
+        if(\Bcrypt::instance()->verify($password, $user->password)){
             $this->f3->set('SESSION.user', $user->username);
             
             $this->f3->reroute('/participant/auth');

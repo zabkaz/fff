@@ -147,26 +147,40 @@
 						<div class="bg-white border-radius table-item">
 							<span class="lecture-time pink">9.30 – 10.30</span>
 							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky?</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
+							<a class="button-free" role="button" href="/participant/0#programmeTable">
+								<?php
+								if($hash[0] == '0'){
+									echo 'Přihlaš se';
+								}else{
+									echo 'Odhlaš se';
+								} ?>
 							</a>
-							<div class="capacity">Kapacita: 47/50</div>
+							<div class="capacity">Kapacita: <?php echo $capacity[0]?>/50</div>
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">10.30 – 11.30</span>
-							<div class="lecture-title">Jak udělat dobrý dojem na zaměstnavatele</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
-							</a>
-							<div class="capacity">Kapacita: 43/50</div>
+							<div class="lecture-title">Jak udělat dobrý dojem na zaměstnavatele</div>							
+								<?php
+								if($hash[1] == '0'){
+									echo '<a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a>';
+								}else{
+									echo '<a class="button-free violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>';
+								} ?>
+							
+							<div class="capacity">Kapacita: <?php echo $capacity[1]?>/50</div>
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">11.30 – 12.30</span>
 							<div class="lecture-title">Jak se obléct (nejen) na pohovor</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
+							<a class="button-free" role="button" href="/participant/2#programmeTable">
+								<?php
+								if($hash[2] == '0'){
+									echo 'Přihlaš se';
+								}else{
+									echo 'Odhlaš se';
+								} ?>
 							</a>
-							<div class="capacity">Kapacita: 43/50</div>
+							<div class="capacity">Kapacita: <?php echo $capacity[2]?>/50</div>
 						</div>
 					</div>
 					
@@ -192,10 +206,15 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time orange">10.30 – 11.30</span>
 							<div class="lecture-title oneLine">Jak řešit problémy kreativně</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
+							<a class="button-free" role="button" href="/participant/5#programmeTable">
+								<?php
+								if($hash[5] == '0'){
+									echo 'Přihlaš se';
+								}else{
+									echo 'Odhlaš se';
+								} ?>
 							</a>
-							<div class="capacity">Kapacita: 42/50</div>
+							<div class="capacity">Kapacita: <?php echo $capacity[5]?>/50</div>
 						</div>						
 					</div>							
 			
@@ -204,26 +223,41 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">9.30 – 10.30</span>
 							<div class="lecture-title">Disrupt the World of&nbsp;Travel With Kiwi.com!</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
+							<a class="button-free" role="button" href="/participant/6#programmeTable">
+								<?php
+								if($hash[6] == '0'){
+									echo 'Přihlaš se';
+								}else{
+									echo 'Odhlaš se';
+								} ?>
 							</a>
-							<div class="capacity">Kapacita: 30/50</div>
+							<div class="capacity">Kapacita: <?php echo $capacity[6]?>/50</div>
 						</div>	
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title">Kariéra v KPMG - jak uspět při výběrovém řízení</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
+							<a class="button-free" role="button" href="/participant/7#programmeTable">
+								<?php
+								if($hash[7] == '0'){
+									echo 'Přihlaš se';
+								}else{
+									echo 'Odhlaš se';
+								} ?>
 							</a>
-							<div class="capacity">Kapacita: 40/50</div>
+							<div class="capacity">Kapacita: <?php echo $capacity[7]?>/50</div>
 						</div>		
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title oneLine">Tvoje cesta do&nbsp;EY</div>
-							<a class="button-free" role="button" href="#">
-								Přihlaš se
+							<a class="button-free" role="button" href="/participant/8#programmeTable">
+								<?php
+								if($hash[8] == '0'){
+									echo 'Přihlaš se';
+								}else{
+									echo 'Odhlaš se';
+								} ?>
 							</a>
-							<div class="capacity">Kapacita: 40/50</div>
+							<div class="capacity">Kapacita: <?php echo $capacity[8]?>/50</div>
 						</div>	
 					</div>							
 										

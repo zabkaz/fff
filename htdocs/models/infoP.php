@@ -27,10 +27,7 @@ class infoP extends DB\SQL\Mapper{
         $this->univerzita = $f3->get('POST.univerzita');
         $this->fakulta = $f3->get('POST.fakulta');
         $this->rocnik = $f3->get('POST.rocnik');
-        $this->lecture1 = $f3->get('POST.lecture1');
-        $this->lecture2 = $f3->get('POST.lecture2');
-        $this->lecture3 = $f3->get('POST.lecture3');
-        $this->lecture4 = $f3->get('POST.lecture4');
+
         $this->save();
     }
 

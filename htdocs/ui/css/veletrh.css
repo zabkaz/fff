@@ -1760,7 +1760,7 @@ input[type=submit] #register{
 	display: block;
 }
 
- /* Vystavovatel prihlaseny*/	 
+ /* exhibitor auth + order */	 
  
 .dropdown-user{
 	margin-top: 10px;
@@ -1782,9 +1782,10 @@ input[type=submit] #register{
 	margin: 0 auto;	
 }
 .order-title{
-	font-size: 25px;			
+	font-size: 20px;			
 	font-weight: bold;
-	padding-bottom: 3%;
+	padding-bottom: 20px;
+	font-family: Georgia, serif;
 }
 .order-subtitle{
 	font-size: 18px;			
@@ -1795,6 +1796,7 @@ input[type=submit] #register{
 .order-detail, .order-detail2{
 	font-size: 16px;	
 	font-weight: 400;
+	padding-bottom: 20px;
 }
 .order-detail2{
 	padding-left: 60px;
@@ -1908,8 +1910,8 @@ input[type="checkbox"] {
 	text-align: right;
 	}
 	.order-title{
-	font-size: 25px;			
-	padding-bottom: 3%;
+	font-size: 22px;			
+	padding-bottom: 40px;
 	}
 	.order-subtitle{
 	font-size: 18px;			
@@ -1919,6 +1921,7 @@ input[type="checkbox"] {
 	.order-detail{
 	font-size: 16px;	
 	font-weight: 400;
+	padding-bottom:0;
 	}
 	.radio-btn{
 	text-align: left;
@@ -1947,17 +1950,6 @@ input[type="checkbox"] {
 	margin-top: 1px;
 	}
 }
-
- /* ----- Order services Mobile -------------------------------- */
- 
- section h2.services-heading {
-	margin-top: -5px;
-	padding-bottom: 5px;
-}
-.order-title{
-	font-size: 25px;			
-	padding-bottom: 3%;
-	}
 
  /* ----- Profile -------------------------------- */
 

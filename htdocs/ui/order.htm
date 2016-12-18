@@ -10,17 +10,17 @@
             </div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                	<li>
-                        <a class="page-scroll" href="/exhibitor">Chci vystavovat</a>
+                   <li>
+                        <a class="page-scroll" href="participant"><span>Chci se zucastnit</span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Objednání služeb</a>
+                        <a class="page-scroll" href="exhibitor"><span>Chci vystavovat</span></a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
+                    </li>                 
 					<li>
-                        <a class="page-scroll" href="#place">Výběr místa</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="#info">Kdy a kde</a>
+                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
                     </li>
 					<li>
 						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Nickname</button>						
@@ -46,8 +46,9 @@
 	<section id="order" class="photoBg2 bg-white">
         <div class="container"> 
 		<div class="col-lg-12 table-reasons ">
-			<form onsubmit="return objednavkaPdf()">
-				<div class="order-title text-center">Objednání služeb</div>
+			<form onsubmit="return objednavkaPdf()">			
+				<h2 class="section-heading text-center">Objednání služeb</h2>
+				<div class="spaceSmall"></div>
 				<div class="narrower-order">
 					<div class="order-title order-align">Základní nabídka</div>   					
 					<div class="order">   
@@ -65,7 +66,7 @@
                      <div class="order">                    	 
                     	<div class="space"></div>                        
                         <div class="row">  			
-							<span class="col-lg-1 col-xs-12"><input type="radio" name="area" id="area2" checked/> </span>						
+							<span class="col-lg-1 col-xs-12  order-align"><input type="radio" name="area" id="area2" checked/> </span>						
                 			<span class="order-subtitle text-soft col-lg-8 col-xs-12 order-align">Rozšířená výstavní plocha 3x2&nbsp;m</span>
 							<span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">32 200 Kč</span>
 						</div>
@@ -78,7 +79,7 @@
                     <div class="order">                    	 
                     	<div class="space"></div>                        
                         <div class="row">  			
-							<span class="col-lg-1 col-xs-12"><input type="radio" name="area" id="area3" checked/> </span>						
+							<span class="col-lg-1 col-xs-12  order-align"><input type="radio" name="area" id="area3" checked/> </span>						
                 			<span class="order-subtitle text-soft col-lg-8 col-xs-12 order-align">Nadstandardní výstavní plocha 4x2&nbsp;m</span>
 							<span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">39 800 Kč</span>
 						</div>
@@ -99,31 +100,31 @@
                         </div>  
 						  
                         <div class="row padding">						
-							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item2"></span>
+							<span class="col-lg-1 col-xs-12 order-align"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item2"></span>
                         	<span class="order-detail2 text-soft col-lg-9 ">Židle klasická (300 Kč/ks)</span>
                             <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="300">0 Kč</span>
                         </div>                           
                          
 						<div class="row padding">						
-							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item3"></span>
-                        	<span class="order-detail2 text-soft col-lg-9">Kulatý stůl o průměru 70 cm (400 Kč/ks)</span>
+							<span class="col-lg-1 col-xs-12 order-align"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item3"></span>
+                        	<span class="order-detail2 text-soft col-lg-9 col-xs-12">Kulatý stůl o průměru 70 cm (400 Kč/ks)</span>
                             <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="400">0 Kč</span>
                         </div>	
 						
 						<div class="row padding">						
-							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item4"></span>
+							<span class="col-lg-1 col-xs-12 order-align"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item4"></span>
                         	<span class="order-detail2 text-soft col-lg-9">Kulatý stůl o průměru 90 cm (400 Kč/ks)</span>
                             <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="400">0 Kč</span>
                         </div>
                             
                         <div class="row padding">						
-							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item5"></span>
+							<span class="col-lg-1 col-xs-12 order-align"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item5"></span>
                         	<span class="order-detail2 text-soft col-lg-9">Pult o šířce 0,5 m (450 Kč/ks)</span>
                             <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="450">0 Kč</span>
                         </div>   
                             
 						<div class="row padding">						
-							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item6"></span>
+							<span class="col-lg-1 col-xs-12 order-align"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item6"></span>
                         	<span class="order-detail2 text-soft col-lg-8">Pult o šířce 1 m (450 Kč/ks)</span>
                             <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2" item-value="450">0 Kč</span>
                         </div> 
