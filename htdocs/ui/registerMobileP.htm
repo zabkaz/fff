@@ -1,0 +1,133 @@
+
+
+<div id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container menu">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img src="ui/img/jobchS.png" class="mainLogo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   <li>
+                        <a class="page-scroll" href="#page-top">Chci se zucastnit</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#reasonReg">Proč se registrovat</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info">Kdy a kde</a>
+                    </li>
+                 
+					<li>
+                        <a class="page-scroll" href="#contact">Nabitý program</a>
+                    </li>
+					<li>
+						<span class="hidden-xs hidden-sm">
+							<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlaš se</button>
+						</span>
+						<span class="visible-xs visible-sm">
+							<a href="/loginE" class="btn btn-default login">Přihlaš se</a>
+						</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+	<!-- Login Form -->
+	<section class="bg-light-gray">		
+	<div class="container" id="registration">
+		<div class="col-lg-12">  
+			<div class="spaceSmall"></div>
+            <h1 class="login-heading">Registrace</h1>        
+			<div class="spaceSmall"></div>
+            <form action="/registerP" method="post" name="reg_form" autocomplete=”off” >             
+				<div class="field-wrap">	
+					<input type="text" name="login1" value="" style="display: none" /> 
+                    <input type="text" id="ver_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete="off" required/>
+                </div>
+            
+                <div class="field-wrap">
+					<input type="text" name="password0" value="" style="display: none" /> 
+                    <input type="text" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" autocomplete="off" required/>
+                </div>
+				<div class="spaceSmall"></div>	 
+				
+                <div class="field-wrap">
+                            <input id="first_name" type="text" name="first_name" placeholder='Jméno' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno'" required autocomplete="off" />
+                        </div>				
+                <div class="field-wrap">
+							<input type="text" name="last_name" placeholder='Přijímení' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Přijímení'" required autocomplete="off"/>
+						</div>
+                <div class="field-wrap">
+							<input id="reg_email" type="email" name="email" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" required autocomplete="off"/>
+						</div>
+				<div class="spaceSmall"></div>
+
+                <div class="field-wrap tretie">                           
+                            <select name="studium" class="option-style">  
+									<option value="" selected disabled>Druh studia</option>
+									<option value="bakalar">bakalářské</option>
+									<option value="magister">magisterské/inženýrske</option>                                
+									<option value="doktorant">doktorantské</option>
+									<option value="absolvent">absolvent</option>                           
+                            </select>
+                        </div>  
+                <div class="field-wrap tretie">
+                            <select name="univerzita"> 								
+                                <optgroup label="Univerzita">
+									<option value="" selected>Univerzita</option>
+									<option value="MU">MUNI</option>
+									<option value="VUT">VUT</option>
+									<option value="Mendel">Mendelu</option>
+									<option value="Ina">Jiná</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="field-wrap tretie">
+                            <select name="fakulta">
+                                <optgroup label="Fakulta">
+									<option value="" selected>Fakulta</option>
+									<option value="FI">FI</em></option>
+									<option value="ESF">ESF</option> 
+                                    <option value="ESF">FF</option>  
+									<option value="Ina">PřF</option> 
+									<option value="Ina">Jiná</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="field-wrap tretie">
+                            <input type="number" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
+                        </div>                            
+                        <div class="spaceSmall"></div>	
+                        <input id="register" name="submit" type="submit" value="Registruj" class="registracia">     
+				<div class="spaceSmall"></div>
+				<script src="js/loginP.js"></script>
+				<script>
+					// Get the modal
+					var modal = document.getElementById('id02');
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+					}
+				</script>
+			</form>	
+		</div>	
+	</div>
+
+	</section>
+
+	
+</div>

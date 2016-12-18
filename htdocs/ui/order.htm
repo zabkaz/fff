@@ -1,0 +1,185 @@
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img src="../ui/img/jobchS.png" class="mainLogo"></a>
+            </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                	<li>
+                        <a class="page-scroll" href="/exhibitor">Chci vystavovat</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Objednání služeb</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#place">Výběr místa</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#info">Kdy a kde</a>
+                    </li>
+					<li>
+						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Nickname</button>						
+						<div class="collapse wrapper-user-collapse dropdown-user" id="collapseExample">					
+								<a class="page-scroll" href="/exhibitor/profile">Profil</a><span class="navbar-symbol text-inverse"> | </span><a class="page-scroll" href="/logout">Odhlásit</a>
+						</div>		
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<script src="../js/jsPDF-1.2.60/dist/jspdf.min.js"></script>
+     <!-- Header -->
+    <header>
+		<div class="container-fluid">
+			<div class="spaceBigger"> </div>	
+			<div class="space"> </div>	
+		</div>			
+    </header>	
+	<div class="spaceSmall violet"></div>
+
+	<!-- Order services -->		
+	<section id="order" class="photoBg2 bg-white">
+        <div class="container"> 
+		<div class="col-lg-12 table-reasons ">
+			<form onsubmit="return objednavkaPdf()">
+				<div class="order-title text-center">Objednání služeb</div>
+				<div class="narrower-order">
+					<div class="order-title order-align">Základní nabídka</div>   					
+					<div class="order">   
+                        <div class="row ">  			
+							<span class="col-lg-1 col-xs-12 order-align "><input type="radio" name="area" id="area1" checked/> </span>						
+                			<span class="order-subtitle text-soft col-lg-8  col-xs-12 order-align">Základní výstavní plocha 2x2&nbsp;m</span>
+							<span class="order-subtitle text-soft col-lg-3  col-xs-12 order-align2">24 000 Kč</span>
+						</div>
+						<div class="row">
+							<span class="col-lg-1"></span>
+							<span class="order-detail text-soft col-lg-11 col-xs-12">Vybavení expozice: stůl o&nbsp;průměru 90&nbsp;cm, 4&nbsp;ks židle, odpadkový koš, bílý firemní lem 200x40&nbsp;cm a&nbsp;grafický nápis 1&nbsp;ks, 3x zásuvka 220V. </span>
+						</div>
+					</div>                   
+                     
+                     <div class="order">                    	 
+                    	<div class="space"></div>                        
+                        <div class="row">  			
+							<span class="col-lg-1 col-xs-12"><input type="radio" name="area" id="area2" checked/> </span>						
+                			<span class="order-subtitle text-soft col-lg-8 col-xs-12 order-align">Rozšířená výstavní plocha 3x2&nbsp;m</span>
+							<span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">32 200 Kč</span>
+						</div>
+						<div class="row">
+							<span class="col-lg-1"></span>
+							<span class="order-detail text-soft col-lg-11 col-xs-12">Vybavení expozice: stůl o&nbsp;průměru 90&nbsp;cm, 4&nbsp;ks židle, odpadkový koš, bílý firemní lem 300x40&nbsp;cm a&nbsp;grafický nápis 1&nbsp;ks, 3x zásuvka 220V. </span>
+						</div>
+					</div>
+                   
+                    <div class="order">                    	 
+                    	<div class="space"></div>                        
+                        <div class="row">  			
+							<span class="col-lg-1 col-xs-12"><input type="radio" name="area" id="area3" checked/> </span>						
+                			<span class="order-subtitle text-soft col-lg-8 col-xs-12 order-align">Nadstandardní výstavní plocha 4x2&nbsp;m</span>
+							<span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">39 800 Kč</span>
+						</div>
+						<div class="row">
+							<span class="col-lg-1"></span>
+							<span class="order-detail text-soft col-lg-11 col-xs-12">Vybavení expozice: stůl o průměru 90&nbsp;cm, 4&nbsp;ks židle, 1&nbsp;ks barová židle, pult o&nbsp;šířce 1&nbsp;m, odpadkový koš, bílý firemní lem 400x40&nbsp;cm a&nbsp;grafický nápis 1&nbsp;ks, 3x zásuvka 220V. </span>
+						</div>
+					</div>
+                    
+					 <div class="spaceBigger"></div> 
+                     <div class="order-title order-align">Nadstandardní vybavení stránku</div>  
+                     <div class="order order-align">
+						
+                    	<div class="row padding">						
+							<span class="col-lg-1 col-xs-12 order-align"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item1"></span>
+                        	<span class="order-detail2 text-soft col-lg-9 col-xs-12">Židle klasická (300 Kč/ks)</span>
+                            <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="300">0 Kč</span>
+                        </div>  
+						  
+                        <div class="row padding">						
+							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item2"></span>
+                        	<span class="order-detail2 text-soft col-lg-9 ">Židle klasická (300 Kč/ks)</span>
+                            <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="300">0 Kč</span>
+                        </div>                           
+                         
+						<div class="row padding">						
+							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item3"></span>
+                        	<span class="order-detail2 text-soft col-lg-9">Kulatý stůl o průměru 70 cm (400 Kč/ks)</span>
+                            <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="400">0 Kč</span>
+                        </div>	
+						
+						<div class="row padding">						
+							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item4"></span>
+                        	<span class="order-detail2 text-soft col-lg-9">Kulatý stůl o průměru 90 cm (400 Kč/ks)</span>
+                            <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="400">0 Kč</span>
+                        </div>
+                            
+                        <div class="row padding">						
+							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item5"></span>
+                        	<span class="order-detail2 text-soft col-lg-9">Pult o šířce 0,5 m (450 Kč/ks)</span>
+                            <span class="order-subtitle text-soft col-lg-2 col-xs-12 order-align2" item-value="450">0 Kč</span>
+                        </div>   
+                            
+						<div class="row padding">						
+							<span class="col-lg-1 col-xs-12"><input type="number" name="count" min="0" max="20" step="1" value="0" class="counter" id="item6"></span>
+                        	<span class="order-detail2 text-soft col-lg-8">Pult o šířce 1 m (450 Kč/ks)</span>
+                            <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2" item-value="450">0 Kč</span>
+                        </div> 
+								
+                    </div>
+       
+                    <div class="spaceBigger"></div>
+                    <div class="order-title order-align">Prezentace v&nbsp;rámci doprovodného programu</div>
+			        <div class="row">    
+						<span class="col-lg-1 col-xs-12"><input type="checkbox" name="presentation" id="presentation"></span>
+                        <span class="order-detail text-soft col-lg-8 ">Workshop vedený zástupcem společnosti v rámci doprovodného programu</span>
+                        <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">8 500 Kč</span>
+                    </div> 
+                                  
+                    <div class="spaceBigger"></div> 
+                    <div class="order-title order-align">Exkluzivní inzerce v&nbsp;Challenge Book</div> 
+                    <div class="order order-align">   
+                        <div class="row ">
+							<span class="col-lg-1 col-xs-12"><input type="checkbox" name="advertising" id="advertising1"></span>
+                            <span class="order-detail text-soft col-lg-8">Inzerce na 2.&nbsp;straně obálky</span>
+                            <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">12 000 Kč</span>
+                        </div>
+						<div class="row">
+							<span class="col-lg-1 col-xs-12"><input type="checkbox" name="advertising" id="advertising2"></span>
+                            <span class="order-detail text-soft col-lg-8">Inzerce na 3.&nbsp;straně obálky</span>
+                            <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">8 000 Kč</span>
+                        </div>
+						<div class="row">
+							<span class="col-lg-1 col-xs-12"><input type="checkbox" name="advertising" id="advertising3"></span>
+                            <span class="order-detail text-soft col-lg-8">Inzerce na 4.&nbsp;straně obálky</span>
+                            <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">16 000 Kč</span>
+                        </div>
+                    </div>  
+                    
+                    <div class="spaceBigger"></div>    
+                    <div class="order-title order-align">Nabídka partnerství veletrhu</div> 
+                    <div class="order order-align"> 
+						<div class="row">
+							<span class="col-lg-1 col-xs-12"><input type="checkbox" name="partner" id="partner1"></span>
+                            <span class="order-detail text-soft col-lg-8">Generální partner veletrhu</span>
+                            <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">45 000&nbsp;Kč</span>
+                        </div>
+						<div class="row">
+							<span class="col-lg-1 col-xs-12"><input type="checkbox" name="partner" id="partner2"></span>
+                            <span class="order-detail text-soft col-lg-8">Partner veletrhu</span>
+                            <span class="order-subtitle text-soft col-lg-3 col-xs-12 order-align2">18 000&nbsp;Kč</span>
+                        </div>
+                    </div>  
+				</div>						
+                <div class="spaceBigger"></div>                   
+				<span class="col-lg-12"><input type="submit" name="submit-order" value="Potvrdit a vytisknout" /></span>
+				<script src="../js/place.js"></script> 
+				<script src="../js/order.js"></script> 
+				<script src="../js/counter.js"></script> 
+            </form>
+            <div class="spaceBigger"></div>  
+       	</div>        
+		</div>
+	</section>			
