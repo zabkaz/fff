@@ -29,9 +29,9 @@
                         <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
                     </li>
 					<li>				
-						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#userOptions" aria-expanded="false" aria-controls="userOptions">Přezdívka <i class="fa fa-caret-down" aria-hidden="true"></i></button>						
-						<div class="collapse wrapper-user-collapse" id="userOptions">					
-								<a href="participantProfile">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+						<button class="btn btn-default login page-scroll" type="button">Přezdívka</button>						
+						<div class="wrapper-user-collapse dropdown-user" >					
+								<a href="/participant/profile">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 						</div>					
                     </li>
                 </ul>
@@ -55,6 +55,9 @@
 		</div>
 		<div class="bubble">
 			<img src="../ui/img/mascot/bubble2.png" width="200"/>
+		</div>
+		<div class="bubble2">
+			<img src="../ui/img/mascot/bubble.png" width="200"/>
 		</div>
 	</div>
 		
@@ -146,15 +149,13 @@
 						<div class="table-heading narrower pink">Praktické tipy</div>
 						<div class="bg-white border-radius table-item">
 							<span class="lecture-time pink">9.30 – 10.30</span>
-							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky?</div>
-							<a class="button-free" role="button" href="/participant/0#programmeTable">
+							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky?</div>							
 								<?php
 								if($hash[0] == '0'){
-									echo 'Přihlaš se';
+									echo '<a class="button-free" role="button" href="/participant/0#programmeTable">Přihlaš se</a>';
 								}else{
-									echo 'Odhlaš se';
+									echo '<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>';
 								} ?>
-							</a>
 							<div class="capacity">Kapacita: <?php echo $capacity[0]?>/50</div>
 						</div>
 						<div class="table-item bg-white border-radius">
@@ -164,7 +165,7 @@
 								if($hash[1] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a>';
 								}else{
-									echo '<a class="button-free violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>';
+									echo '<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>';
 								} ?>
 							
 							<div class="capacity">Kapacita: <?php echo $capacity[1]?>/50</div>
@@ -172,14 +173,12 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">11.30 – 12.30</span>
 							<div class="lecture-title">Jak se obléct (nejen) na pohovor</div>
-							<a class="button-free" role="button" href="/participant/2#programmeTable">
-								<?php
+							<?php
 								if($hash[2] == '0'){
-									echo 'Přihlaš se';
+									echo '<a class="button-free" role="button" href="/participant/2#programmeTable">Přihlaš se</a>';
 								}else{
-									echo 'Odhlaš se';
+									echo '<a class="button-violet" role="button" href="/participant/2#programmeTable">Odhlaš se</a>';
 								} ?>
-							</a>
 							<div class="capacity">Kapacita: <?php echo $capacity[2]?>/50</div>
 						</div>
 					</div>
@@ -190,7 +189,7 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time orange">9.30 – 10.30</span>
 							<div class="lecture-title">Jak oživit prezentaci a&nbsp;okouzlit své publikum</div>
-							<a class="" role="button" href="#">
+							<a class="full" role="button" href="#">
 								Kapacita vyčerpána
 							</a>
 							<div class="capacity">Kapacita: 50/50</div>
@@ -198,22 +197,20 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time orange">10.30 – 11.30</span>
 							<div class="lecture-title">Jak uniknout z&nbsp;rozhodovací paralýzy</div>
-							<a class="" role="button" href="#">
+							<a class="full" role="button" href="#">
 								Kapacita vyčerpána
 							</a>
 							<div class="capacity">Kapacita: 50/50</div>
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time orange">10.30 – 11.30</span>
-							<div class="lecture-title oneLine">Jak řešit problémy kreativně</div>
-							<a class="button-free" role="button" href="/participant/5#programmeTable">
+							<div class="lecture-title oneLine">Jak řešit problémy kreativně</div>							
 								<?php
 								if($hash[5] == '0'){
-									echo 'Přihlaš se';
+									echo '<a class="button-free" role="button" href="/participant/5#programmeTable">Přihlaš se</a>';
 								}else{
-									echo 'Odhlaš se';
-								} ?>
-							</a>
+									echo '<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>';
+								} ?>							
 							<div class="capacity">Kapacita: <?php echo $capacity[5]?>/50</div>
 						</div>						
 					</div>							
@@ -222,39 +219,34 @@
 						<div class="table-heading narrower green">Hledání zaměstnání</div>	
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">9.30 – 10.30</span>
-							<div class="lecture-title">Disrupt the World of&nbsp;Travel With Kiwi.com!</div>
-							<a class="button-free" role="button" href="/participant/6#programmeTable">
+							<div class="lecture-title">Disrupt the World of&nbsp;Travel With Kiwi.com!</div>							
 								<?php
 								if($hash[6] == '0'){
-									echo 'Přihlaš se';
+									echo '<a class="button-free" role="button" href="/participant/6#programmeTable">Přihlaš se</a>';
 								}else{
-									echo 'Odhlaš se';
-								} ?>
-							</a>
+									echo '<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>';
+								} ?>							
 							<div class="capacity">Kapacita: <?php echo $capacity[6]?>/50</div>
 						</div>	
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
-							<div class="lecture-title">Kariéra v KPMG - jak uspět při výběrovém řízení</div>
-							<a class="button-free" role="button" href="/participant/7#programmeTable">
+							<div class="lecture-title">Kariéra v KPMG - jak uspět při výběrovém řízení</div>							
 								<?php
 								if($hash[7] == '0'){
-									echo 'Přihlaš se';
+									echo '<a class="button-free" role="button" href="/participant/7#programmeTable">Přihlaš se</a>';
 								}else{
-									echo 'Odhlaš se';
-								} ?>
-							</a>
+									echo '<a class="button-violet" role="button" href="/participant/7#programmeTable">Odhlaš se</a>';
+								} ?>							
 							<div class="capacity">Kapacita: <?php echo $capacity[7]?>/50</div>
 						</div>		
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title oneLine">Tvoje cesta do&nbsp;EY</div>
-							<a class="button-free" role="button" href="/participant/8#programmeTable">
 								<?php
 								if($hash[8] == '0'){
-									echo 'Přihlaš se';
+									echo '<a class="button-free" role="button" href="/participant/8#programmeTable">Přihlaš se</a>';
 								}else{
-									echo 'Odhlaš se';
+									echo '<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>';
 								} ?>
 							</a>
 							<div class="capacity">Kapacita: <?php echo $capacity[8]?>/50</div>
