@@ -22,47 +22,19 @@ function validateEmail(email)
     return re.test(email);
 }
 
-function probe_login(){
-  var login = $('#main_login').val();
-  var pass = $('#main_pass').val();
-  if ((pass.length < 4) || (login.length < 4)) {
-     document.getElementById('login_err').style.display = 'block';
-    return false;
-  }
-
-  $.ajax({    
-    type: "POST",  
-    url: "probe_login_vyst.php",
-    data: "login=" + login + "& pass=" + pass,
-    success: function(data){
-        if(data.localeCompare('success') === 0){
-          var log = document.getElementById('login_form');          
-          log.submit();          
-        }else{
-          document.getElementById('login_err').style.display = 'block';
-		 }        
-    },
-    error: function(jqXHR, textStatus, errorThrown){
-      alert("Nepodařilo se kontaktovat server");
-    }         
-  });
-  return false;
-}
-
-function verify_login(){
+function verify_login(){  
   var login = $('#ver_login').val();
-
   $.ajax({    
-    type: "POST",  
-    url: "check_login_vyst.php",
+    type: "GET",  
+    url: "/checkLogin",
     data: "login=" + login,
     success: function(data){          
-        if(data.localeCompare('success') === 0){
-          next_reg_1();
-        }else{
+        if(data.localeCompare('success') != 0){
           document.getElementById('ver_login').setCustomValidity("Přihlašovací jméno již existuje");
           document.getElementById('register').click();
-        }         
+        }else{
+			next_reg_1();
+		}        
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) { 
         alert("Status: " + textStatus + "|| Error: " + errorThrown);
@@ -71,6 +43,7 @@ function verify_login(){
 }
 
 function next_reg_1() {
+	
   el1 = document.getElementById("first-row");
   el2 = document.getElementById("second-row");  
 

@@ -26,7 +26,10 @@ class Address extends DB\SQL\Mapper{
 
     public function edit($id) {
         $this->load(array('id=?',$id));
-        $this->copyFrom('POST');
+        $this->copyFrom('POST',function($val) {
+            // the 'POST' array is passed to our callback function
+            return array_intersect_key($val, array_flip(array('street','city','zip','country')));
+        });
         $this->update();
     }
 

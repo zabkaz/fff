@@ -1,8 +1,14 @@
 body {
   font-family: Helvetica, Arial, sans-serif; 
   overflow: auto;
-   background: url('../img/photo/bg.jpg') no-repeat center center fixed; ;
-  background-size: cover;	  
+   background: url('../img/photo/bg.jpg') no-repeat center center fixed;
+   background-size: cover;	  
+  -webkit-background-size: cover;
+  -moz-background-size: cover; 
+}
+.exhibitor{
+   background: url('../img/photo/bgColor.jpg') no-repeat center center fixed;
+   background-size: cover;	  
   -webkit-background-size: cover;
   -moz-background-size: cover; 
 }
@@ -20,6 +26,9 @@ footer span.copyright {
 }
 a, button{
 cursor: pointer;
+}
+.text-orange{
+	text-color: #FF9022;
 }
 .text-soft {
 	color: #5f5f5f;
@@ -359,13 +368,15 @@ fieldset[disabled] .btn-primary.active {
   background-color: transparent;
   color: #FF9022;
 }
-
 .navbar-custom .navbar-nav > .active > a > span {
   background-color: transparent;
   color: #FF9022;
   border-bottom: 1px solid #FF9022;
 }
-
+.navbar-custom .navbar-nav > .active2 > a > span {
+  background-color: transparent;
+  color: #FF9022;
+}
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
   color: #FF9022;
@@ -746,6 +757,14 @@ section h3.section-subheading {
 }
 .violet{
 	background-color: #6D2F7C;
+}
+.spaceSmall2{
+	padding-bottom: 20px;
+	margin-top: -80px;
+	position: absolute;
+	z-index: 20px;
+	background-color: #6D2F7C;
+	height: 20px;
 }
 #map{
 	height: 500px;
@@ -1315,26 +1334,30 @@ body {
 	cursor: pointer;
 	margin-top: -110px;
 }
-.bubble{
+.bubble, .bubble2, .bubble3{
 	position: absolute;
 	margin-top: -130px;
 	margin-left: 90px;
-	animation: show-bubble 1s 4s linear, hide-bubble 1s 25s linear;
 	opacity: 0;
+}
+.bubble{	
+	animation: show-bubble 1s 4s linear, hide-bubble 1s 25s linear;	
+		-webkit-animation-fill-mode:forwards;
+   -moz-animation-fill-mode:forwards;
+   -o-animation-fill-mode:forwards; 
+   -ms-animation-fill-mode:forwards; 
+   animation-fill-mode:forwards; 
+}
+.bubble2{	
+	animation: show-bubble 1s 26s linear, hide-bubble 1s 51s linear;
 	-webkit-animation-fill-mode:forwards;
    -moz-animation-fill-mode:forwards;
    -o-animation-fill-mode:forwards; 
    -ms-animation-fill-mode:forwards; 
    animation-fill-mode:forwards; 
 }
-.bubble2{
-	position: absolute;
-	margin-top: -130px;
-	margin-left: 90px;
-	animation: show-bubble 1s linear;
-	-webkit-animation-delay: 4s;
-	animation-delay: 8s;
-	opacity: 0;
+.bubble3{	
+	animation: show-bubble 1s 52s linear;
 	-webkit-animation-fill-mode:forwards;
    -moz-animation-fill-mode:forwards;
    -o-animation-fill-mode:forwards; 
@@ -1369,6 +1392,7 @@ body {
 	font-size: 16px;
 	font-weight: 600;
 	color: #6D2F7C;
+	cursor: default;
 }
 .button-free, .table-item .button-free{
 	color: white;
@@ -1384,11 +1408,11 @@ body {
 	border-radius: 4px;
 	font-weight: 500;
 }
-.button-violet:hover, .button-violet:active{
+.button-violet:hover, .button-violet:active, .button-violet:focus{
 	background-color: #4c2056;
 	color: white;
 }
-.button-free:hover, .button-free:active{
+.button-free:hover, .button-free:active, .button-free:focus{
 	background-color: #ee7600;	
 }
 .capacity{
@@ -1447,7 +1471,7 @@ body {
 }
 input {
 	transition: border-color 0.6s ease,
-				background-image 0.3s ease;
+			    background-image 0.3s ease;
 	outline: 0;
 	color: #939393;
 	font-size: 20px;
@@ -1517,9 +1541,8 @@ input[type=password]:focus{
 #registration input[type=email],  #registration select{
 	background-color: white;
 }
-input[type=number] #year {
+input[type=number]{
 	width: 150px;
-	text-align: center;
 }
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     background-color: #e5e5e5;
@@ -1857,6 +1880,9 @@ input[type="checkbox"] {
 	fill: #FF9022;
 	cursor: pointer;
 }
+.stand:active, .stand:focus{
+	fill: #6D2F7C;
+}
 .selected{
 	fill: #6D2F7C;
 }
@@ -1951,7 +1977,7 @@ input[type="checkbox"] {
 	margin-top: 4px; 
     margin-bottom: 10px;
 	}	
-	input[type="number"] {
+	#order input[type="number"] {
     width: 60px;
     height: 30px;
 	text-align: center;
@@ -1976,9 +2002,7 @@ input[type="checkbox"] {
 #profile .table-reasons{
 	 padding: 5%;
 }
-.wrapper-industry{
-	padding-top: 10px;
-}	
+
 .wraper-profile-btn{
 	width: 80%;
 	margin: 0 auto;	
@@ -2014,9 +2038,6 @@ input[type="text"].profil{
 	font-size: 14px;
 	background-color: #f1f1f1;
 }
-input[type="text"].profil:disabled{
-	background-color: #e9e9e9;
-}
 input[type=submit].buttonSave{
 	width: 150px;
 	margin: 0 auto;
@@ -2035,8 +2056,8 @@ input[type=submit].buttonSave{
   background: white; 
   font-size: 14px;
   box-shadow: 2px 2px 10px 0 #545454; 
-  margin-top: -4%;
-  margin-left: -12%;
+  margin-top: -15px;
+  margin-left: -75px;
 }
 #profile h4{
 	padding-bottom: 5px;
@@ -2054,70 +2075,79 @@ input[type=submit].buttonSave{
 	padding-top: 30px;
 }
 img.fin.active{
-  content: url(images/odvetvia/FIN.png);
+  content: url(../img/industry/FIN.png);
   background: none;
 }
 
 img.hr.active{
-  content: url(images/odvetvia/HR.png);
+  content: url(../img/industry/HR.png);
   background: none;
 }
 
 img.chem.active{
-  content: url(images/odvetvia/CHEM.png);
+  content: url(../img/industry/CHEM.png);
   background: none;
 }
 
 img.it.active{
-  content: url(images/odvetvia/IT.png);
+  content: url(../img/industry/IT.png);
   background: none;
 }
 
 img.jaz.active{
-  content: url(images/odvetvia/JAZ.png);
+  content: url(../img/industry/JAZ.png);
   background: none;
 }
 
 img.obch.active{
-  content: url(images/odvetvia/OBCH.png);
+  content: url(../img/industry/OBCH.png);
   background: none;
 }
 
 img.por.active{
-  content: url(images/odvetvia/POR.png);
+  content: url(../img/industry/POR.png);
   background: none;
 }
 
 img.prav.active{
-  content: url(images/odvetvia/PRAV.png);
+  content: url(../img/industry/PRAV.png);
   background: none;
 }
 
 img.serv.active{
-  content: url(images/odvetvia/SERV.png);
+  content: url(../img/industry/SERV.png);
   background: none;
 }
 
 img.stav.active{
-  content: url(images/odvetvia/STAV.png);
+  content: url(../img/industry/STAV.png);
   background: none;
 }
 
 img.stro.active{
-  content: url(images/odvetvia/STRO.png);
+  content: url(../img/industry/STRO.png);
   background: none;
 }
 
 img.tech.active{
-  content: url(images/odvetvia/TECH.png);
+  content: url(../img/industry/TECH.png);
   background: none;
 }
 
 img.zem.active{
-  content: url(images/odvetvia/ZEM.png);
+  content: url(../img/industry/ZEM.png);
   background: none;
 }
+.disabled{
+	color: #cccccc;	
 	
+}
+.disabled .description {
+	color: #cccccc;	
+}
+input .disabled{
+	background-color: #cccccc;
+}
 
  /* ----- Animations -------------------------------- */
 @-webkit-keyframes imageAnimation { 

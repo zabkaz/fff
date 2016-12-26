@@ -4,11 +4,13 @@ class ExhibitorController extends Controller{
 
 	function exhibitor(){
 		$this->f3->set('error','');
+		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','exhibitor.htm');
 		$this->f3->set('slider','slider.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('contact','contact.htm');
 		$this->f3->set('title','Vystavovatel');
+		$this->f3->set('class','exhibitor');
 		echo View::instance()->render('layout.htm');
 	}	
 	

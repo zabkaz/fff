@@ -1,14 +1,13 @@
-function selectPlace(place, id){   
- $('.stanok').removeClass('selected');
- $.ajax({    
+function add_interest(name, id){    
+    $.ajax({    
     type: "POST",  
-    url: "select_place.php",
-    data: "place=" + place + "& id=" + id,	
+    url: "../add_interest.php",
+    data: "name=" + name + "& id=" + id,
     success: function(data){          
         if(data.localeCompare('success') === 0){
-          $('.stanok' + place).toggleClass('selected');	
+          $('.'+name).toggleClass('active')
         }else{
-          alert('Chyba!');
+          alert('fail');
         }         
     },
     error: function(XMLHttpRequest, textStatus, errorThrown) { 

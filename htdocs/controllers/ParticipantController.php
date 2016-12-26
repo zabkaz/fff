@@ -4,6 +4,7 @@ class ParticipantController extends Controller{
 	
 	function participant(){
 		$this->f3->set('error','');
+		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','participant.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('slider','slider.htm');
@@ -14,6 +15,7 @@ class ParticipantController extends Controller{
 	
 	function participantWrong(){
 		$this->f3->set('error','true');
+		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','participant.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('slider','slider.htm');
@@ -38,12 +40,14 @@ class ParticipantController extends Controller{
 	
 	function loginMobileP(){
 		$this->f3->set('content','loginMobileP.htm');
+		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('title','Login');
 		echo View::instance()->render('layout.htm');
 	}
 	
 	function registerMobileP(){
 		$this->f3->set('content','registerMobileP.htm');
+		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('title','Registrace');
 		echo View::instance()->render('layout.htm');
 	}

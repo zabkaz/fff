@@ -3,6 +3,7 @@
 class MainController extends Controller{
 
 	function homepage(){
+		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','index.htm');
 		$this->f3->set('video','video.htm');
 		$this->f3->set('map','map.htm');

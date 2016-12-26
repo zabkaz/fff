@@ -13,24 +13,23 @@
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   <li>
-                        <a class="page-scroll" href="#page-top">Chci se zúčastnit</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#tips">Jak se připravit</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#programmeTable">Doprovodný program</a>
-                    </li>
-                 
+                <ul class="nav navbar-nav navbar-right">                  
 					<li>
-                        <a class="page-scroll" href="#contact">Top vystavovatelé</a>
+                        <a class="page-scroll" href="/participant"><span>Chci se zúčastnit</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/exhibitor"><span>Chci vystavovat</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
+                    </li>                 
+					<li>
+                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
                     </li>
 					<li>				
-						<button class="btn btn-default login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Nickname</button>						
-						<div class="collapse wrapper-user-collapse" id="collapseExample">					
-								<a href="participantProfile">Profil</a> | <a href="">Odhlásit</a>
+						<button class="btn btn-default login page-scroll" type="button">Přezdívka</button>						
+						<div class="wrapper-user-collapse dropdown-user" >					
+								<a href="/participant/profile" class="text-orange">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 						</div>					
                     </li>
                 </ul>
@@ -39,7 +38,7 @@
     </nav>
    
 	 <!-- Header -->
-    <header id="reasons-registration" class="bg-photo-main">
+    <header id="reasons-registration">
         <div class="container">
            	<div class="spaceBigger"> </div>	
 			<div class="space"> </div>				
@@ -51,15 +50,15 @@
 	<section id="profile" class="bg-light-gray ">	
 	<div class="container">
 	<div class="table-reasons">	
-			<h2 class="programme-heading text-center">Můj profil</h2>	
-			<div class="spaceSmall"></div>	
-        <form action="edit_uchazec.php" method="post" name="edit_form">
+		<h2 class="programme-heading text-center">Můj profil</h2>	
+		<div class="spaceSmall"></div>	
+        <form action="/participant/edit" method="post" name="edit_form">
         	<div class="col-lg-4 text-left">
             	<h4>Základní údaje</h4>				
                 <div class="row">					
 		        	<span class="col-lg-3 description text-soft padding-top"> Jméno </span>
                 	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="fname" name="firstname" value="<?php echo $f_name; ?>" required autocomplete="off"></span>
-					<span class="col-lg-1 hidden-sm hidden-xs"></span>
+					<span class="col-lg-2 hidden-sm hidden-xs"></span>
                 </div>
                 <div class="row">
 					<span class="col-lg-3 description text-soft  padding-top"> Příjmení </span>
@@ -71,28 +70,25 @@
                 	<span class="col-lg-7"> <input type="text" class="profil" id="mail" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>
-			</div>
-			<div class="col-lg-4 text-left">		
-            	<h4 class="spaceSmall">Studium</h4>
-                
+				</div>
+				
+				<div class="col-lg-4 text-left">		
+            	<h4 class="spaceSmall">Studium</h4>                
 				<div class="row">
 					<span class="col-lg-3 description text-soft padding-top"> Druh studia </span>
                 	<span class="col-lg-7"> <input type="text" class="profil" id="stupen" name="studium" value="<?php echo $studium; ?>"> </span>
 					<span class="col-lg-2"></span>    		   	
-                </div>      
-                
+                </div>  
 				<div class="row">
 					<span class="col-lg-3 description text-soft padding-top"> Univerzita </span>
                 	<span class="col-lg-7"> <input type="text" class="profil" id="univerzita" name="univerzita" value="<?php echo $uni; ?>"> </span>
 					<span class="col-lg-2"></span>    		   	
-                </div> 
-				
+                </div> 				
 				<div class="row">
 					<span class="col-lg-3 description text-soft padding-top"> Fakulta </span>
                 	<span class="col-lg-7"> <input type="text" class="profil" id="fakulta" name="fakulta" value="<?php echo $fakulta; ?>"></span>
 					<span class="col-lg-2"></span>    		   	
-                </div>    
-				
+                </div>				
 				<div class="row">
 					<span class="col-lg-3 description text-soft padding-top"> Ročník </span>
                 	<span class="col-lg-7"> <input type="text" class="profil" id="rocnik" name="rocnik" value="<?php echo $rocnik; ?>"></span>
@@ -104,57 +100,57 @@
             	<h4>Kde chci hledať uplatnění</h4>
                 <span class="description text-soft padding">Klikni na odvětví, o které máš zájem.</span>		
             	<div class="wrapper-industry">
-						<a data="Finance"><img src="../ui/img/industry/FIN_seda.png" class="fin" 
+						<a data="Finance"><img src="../ui/img/industry/FIN_seda.png" class="<?php echo $o_fin; ?> fin" 
                     	onclick ="add_interest('fin', <?php echo $user_id; ?>)" 
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>						
-						<a data="Lidské zdroje"><img src="../ui/img/industry/HR_seda.png" class="hr"
+						width="70" style="padding-right:15px; padding-top:20px;" /></a>						
+						<a data="Lidské zdroje"><img src="../ui/img/industry/HR_seda.png" class="<?php echo $o_hr; ?> hr"
                     	onclick ="add_interest('hr', <?php echo $user_id; ?>)" 
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-						<a data="Chemie"><img src="../ui/img/industry/CHEM_seda.png" class="chem" 
+						width="70" style="padding-right:15px; padding-top:20px;" /></a>		
+						<a data="Chemie"><img src="../ui/img/industry/CHEM_seda.png" class="<?php echo $o_chem; ?> chem"
                     	onclick ="add_interest('chem', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-						<a data="Informační technologie"><img src="../ui/img/industry/IT_seda.png" class="it"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>		
+						<a data="Informační technologie"><img src="../ui/img/industry/IT_seda.png" class="<?php echo $o_it; ?> it"
                     	onclick ="add_interest('it', <?php echo $user_id; ?>)" 
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>			
-						<a data="Jazyky"><img src="../ui/img/industry/JAZ_seda.png" class="jaz"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>			
+						<a data="Jazyky"><img src="../ui/img/industry/JAZ_seda.png"  class="<?php echo $o_jaz; ?> jaz"
                     	onclick ="add_interest('jaz', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-						<a data="Marketing a obchod"><img src="../ui/img/industry/OBCH_seda.png" class="obch"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>		
+						<a data="Marketing a obchod"><img src="../ui/img/industry/OBCH_seda.png"  class="<?php echo $o_obch; ?> obch"
                     	onclick ="add_interest('obch', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-						<a data="Personální a poradentské služby"><img src="../ui/img/industry/POR_seda.png" class="por"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>		
+						<a data="Personální a poradentské služby"><img src="../ui/img/industry/POR_seda.png" class="<?php echo $o_por; ?> por"
                     	onclick ="add_interest('por', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-						<a data="Právo"><img src="../ui/img/industry/PRAV_seda.png" class="prav"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>		
+						<a data="Právo"><img src="../ui/img/industry/PRAV_seda.png" class="<?php echo $o_prav; ?> 
                     	onclick ="add_interest('prav', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-						<a data="Zákaznický servis"><img src="../ui/img/industry/SERV_seda.png" class="serv"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>		
+						<a data="Zákaznický servis"><img src="../ui/img/industry/SERV_seda.png"  class="<?php echo $o_serv; ?> serv"
                     	onclick ="add_interest('serv', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>			
-						<a data="Stavebnictví"><img src="../ui/img/industry/STAV_seda.png" class="stav"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>			
+						<a data="Stavebnictví"><img src="../ui/img/industry/STAV_seda.png" class="<?php echo $o_stav; ?> stav"
                     	onclick ="add_interest('stav', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>									
-						<a data="Strojírenství"><img src="../ui/img/industry/STRO_seda.png" class="stro"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>									
+						<a data="Strojírenství"><img src="../ui/img/industry/STRO_seda.png" class="<?php echo $o_stro; ?> stro"
                     	onclick ="add_interest('stro', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>			
-						<a data="Technika"><img src="../ui/img/industry/TECH_seda.png" class="tech" 
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>			
+						<a data="Technika"><img src="../ui/img/industry/TECH_seda.png" class="<?php echo $o_tech; ?> tech"
                     	onclick ="add_interest('tech', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>						
-						<a data="Zemnědělství"><img src="../ui/img/industry/ZEM_seda.png" class="zem"
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>						
+						<a data="Zemnědělství"><img src="../ui/img/industry/ZEM_seda.png" class="<?php echo $o_zem; ?> zem"
                     	onclick ="add_interest('zem', <?php echo $user_id; ?>)"
-						width="60" style="padding-right:3%; padding-top:3%;" /></a>		
-                </div> 
+						width="70" style="padding-right:15px; padding-top:20px;"/></a>		
+                </div>   
 			</div>    			
 			<div class="wrapper row">	
 				<div class="centered-btn col-lg-12">
-					<input type="submit" class="buttonSave col-xs-6" name="submit" value="Ulož"/>	
-					<a href="/participant/auth" class="btn-cancel col-xs-6">Zruš</a>					
+					<input type="submit" class="buttonSave col-lg-6" name="submit" value="Ulož"/>	
+					<a href="/participant/auth" class="btn-cancel col-lg-6">Zruš</a>					
 				</div>   
 			</div>
 			<div class="spaceSmall"></div>
 			<input type="hidden" name="id" value="<?php echo $user_id; ?>"> 
 		</form>		
-        <script src="js/odvetvia.js"> </script>  
+       <script src="../js/interest.js"> </script>  
 	</div>
 	</div>
 </section>

@@ -1,42 +1,6 @@
-<div id="page-top"  class="index" >
+<div id="participant" >
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="/"><img src="ui/img/jobchS.png" class="mainLogo"></a>
-            </div>
-			
-			 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-					<li>
-                        <a class="page-scroll" href="participant"><span>Chci se zucastnit</span></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="exhibitor"><span>Chci vystavovat</span></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
-                    </li>                 
-					<li>
-                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
-                    </li>
-					<li>
-						<span class="hidden-xs hidden-sm hidden-md">
-							<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlaš se</button>
-						</span>
-						<span class="visible-xs visible-sm visible-md">
-							<a href="/loginP" class="btn btn-default login">Přihlaš se</a>
-						</span>
-                    </li>
-                </ul>
-            </div>
-       </div>
-    </nav>
+   <?php echo $this->render(Base::instance()->get('navigation')); ?>
 
     <!-- Header -->
     <header id="reasons-registration">
@@ -55,9 +19,7 @@
             <div class="row">				
 				<div class="col-md-4 reasonMobile">
 						<div class="pictoReason1">
-							<img src="ui/img/picto/07.png" class="pictoItem"
-								onmouseover="this.src='ui/img/picto/07orange.png'"
-								onmouseout="this.src='ui/img/picto/07.png'" />
+							<img src="ui/img/picto/07.png" class="pictoItem" />
 						</div>
 						<div class="pictoText">
 							<div class="reasonReg-heading">Veletržní soutěž</div>
@@ -66,9 +28,7 @@
 				</div>				
 				<div class="col-md-4 reasonMobile">
 						<div class="pictoReason2">
-							<img src="ui/img/picto/08.png" class="pictoItem"
-								onmouseover="this.src='ui/img/picto/08orange.png'"
-								onmouseout="this.src='ui/img/picto/08.png'" />
+							<img src="ui/img/picto/08.png" class="pictoItem" />
 						</div>
 						<div class="pictoText">
 							<div class="reasonReg-heading">Balíček personálních testů</div>
@@ -77,9 +37,7 @@
 				</div> 				
 				<div class="col-md-4 reasonMobile-nondashed">
 						<div class="pictoReason2">
-							<img src="ui/img/picto/09.png"  class="pictoItem"
-								onmouseover="this.src='ui/img/picto/09orange.png'"
-								onmouseout="this.src='ui/img/picto/09.png'" />
+							<img src="ui/img/picto/09.png"  class="pictoItem" />
 						</div>
 						<div class="pictoText">
 							<div class="reasonReg-heading">Databáze životopisů</div>
@@ -219,12 +177,12 @@
                     <div class="first-row" id="first-row">                          
                         <div class="field-wrap">	
 							<input type="login" name="login1" value="" style="display: none" /> 
-                            <input type="login" id="ver_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete="off" required/>
+                            <input type="login" id="ver_login" name="username" placeholder='Přezdívka' onfocus="this.placeholder = ''" onblur="this.placeholder ='Přezdívka'" autocomplete="off"/>
                         </div>
             
                         <div class="field-wrap">
 							<input type="password" name="password0" value="" style="display: none" /> 
-                            <input type="password" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" autocomplete="off" required/>
+                            <input type="password" id="ver_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo';" autocomplete="off"/>
                         </div>
 						<div class="spaceSmall"></div>	  
                         <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
@@ -283,7 +241,7 @@
                         </div>
 
                         <div class="field-wrap tretie">
-                            <input type="number" id="year" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
+                            <input type="number" class="numberReg" id="year" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
                         </div>                            
                         <div class="spaceSmall"></div>	
                         <input id="register" name="submit" type="submit" value="Registruj" class="registracia">                         

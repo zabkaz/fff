@@ -1,44 +1,10 @@
 
 <div id="page-top" class="index">
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="/"><img src="ui/img/jobchS.png" class="mainLogo"></a>
-            </div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                 <ul class="nav navbar-nav navbar-right">
-                   <li>
-                        <a class="page-scroll" href="participant"><span>Chci se zucastnit</span></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="exhibitor"><span>Chci vystavovat</span></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
-                    </li>                 
-					<li>
-                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
-                    </li>
-					<li>
-						<span class="hidden-xs hidden-sm hidden-md">
-							<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-default login">Přihlašte se</button>
-						</span>
-						<span class="visible-xs visible-sm visible-md">
-							<a href="/loginE" class="btn btn-default login">Přihlašte se</a>
-						</span>
-                    </li>
-            </div>
-        </div>
-    </nav>
+    <?php echo $this->render(Base::instance()->get('navigation')); ?>
 
     <!-- Header -->
-    <header class="bg-photo-main">
+    <header>
         <div class="container-fluid">
             <div class="header-text">
 				<div class="aspirant-heading">Proč vystavovat na JobChallenge?</div>
@@ -54,9 +20,7 @@
             <div class="row">				
 				<div class="col-md-4 reasonMobile ">
 						<div class="pictoReason1">
-							<img src="ui/img/picto/big01.png" width="200" class="pictoItem"
-								onmouseover="this.src='ui/img/picto/big01orange.png'"
-								onmouseout="this.src='ui/img/picto/big01.png'" />
+							<img src="ui/img/picto/big01.png" width="200" class="pictoItem" />
 						</div>
 						<div class="pictoText">
 							<div class="reasonReg-heading">Osobní setkání</div>
@@ -65,9 +29,7 @@
 				</div>				
 				<div class="col-md-4 reasonMobile">
 						<div class="pictoReason2">
-							<img src="ui/img/picto/big02.png" width="200" class="pictoItem"
-								onmouseover="this.src='ui/img/picto/big02orange.png'"
-								onmouseout="this.src='ui/img/picto/big02.png'" />	
+							<img src="ui/img/picto/big02.png" width="200" class="pictoItem" />	
 						</div>
 						<div class="pictoText">
 							<div class="reasonReg-heading">3 univerzity</div>
@@ -76,9 +38,7 @@
 				</div> 				
 				<div class="col-md-4 reasonMobile-nondashed">
 						<div class="pictoReason2">
-							<img src="ui/img/picto/big03.png" width="200" class="pictoItem"
-								onmouseover="this.src='ui/img/picto/big03orange.png'"
-								onmouseout="this.src='ui/img/picto/big03.png'" />	
+							<img src="ui/img/picto/big03.png" width="200" class="pictoItem" />	
 						</div>
 						<div class="pictoText">
 							<div class="reasonReg-heading">Katalog Challenge Book</div>
@@ -115,9 +75,7 @@
 					<div class="col-sm-6 col-xs-12 dashed1">
 						<div class="col-md-3 col-xs-12">
 							<div class="icon2 text-center">
-								<img src="ui/img/picto/13.png" 
-									onmouseover="this.src='ui/img/picto/13orange.png'"
-									onmouseout="this.src='ui/img/picto/13.png'" />
+								<img src="ui/img/picto/13.png" />
 							</div>
 						</div>
 						<div class="col-md-9 col-xs-12 text-left ">
@@ -127,9 +85,7 @@
 					</div>
 					<div class="col-sm-6 col-xs-12 dashed2">
 						<div class="col-md-3 col-xs-12 icon2 text-center">
-								<img src="ui/img/picto/14.png" 
-									onmouseover="this.src='ui/img/picto/14orange.png'"
-									onmouseout="this.src='ui/img/picto/14.png'" />
+								<img src="ui/img/picto/14.png" />
 						</div>
 						<div class="col-md-9 col-xs-12 text-left">
 							<span class="reason-heading">Kde je distribuován?<br/></span>
@@ -142,9 +98,7 @@
 				<div class="row reasons">
 					<div class="col-sm-6 col-xs-12 dashed3">
 						<div class="col-md-3 col-xs-12 icon2 text-center">
-							<img src="ui/img/picto/15.png" 
-									onmouseover="this.src='ui/img/picto/15orange.png'"
-									onmouseout="this.src='ui/img/picto/15.png'" />
+							<img src="ui/img/picto/15.png" />
 						</div>
 						<div class="col-md-9 text-left">
 							<span class="reason-heading">Co tým získáte?<br/></span>
@@ -154,9 +108,7 @@
 					</div>
 					<div class="col-sm-6 col-xs-12 nondashed">
 						<div class="col-md-3 col-xs-12 icon2 text-center">
-							<img src="ui/img/picto/16.png" 
-									onmouseover="this.src='ui/img/picto/16orange.png'"
-									onmouseout="this.src='ui/img/picto/16.png'" />
+							<img src="ui/img/picto/16.png" />
 						</div>
 						<div class="col-md-9 col-xs-12 text-left">
 							<span class="reason-heading">Jak se stanete jeho součástí?<br/></span>
@@ -315,7 +267,7 @@
             </form>				
 			<div class="wrapper">
 			<div class="divide"></div>
-				<div class="registration-subheading"><a href="#" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'">Jěšte nejsi zaregistrovaný/á?</a></div>            				          
+				<div class="registration-subheading"><a href="#" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'">Jěšte nejste zaregistrovaný/á?</a></div>            				          
 			</div> 
 			<script src="js/loginE.js"></script>
 			<script>
@@ -345,7 +297,7 @@
 						  <div class="space"></div>
                           <div class="field-wrap">	
 							  <input type="login" name="login1" value="" style="display: none" /> 
-                              <input type="login" id="ver_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'"  autocomplete="off" required/>
+                              <input type="login" id="ver_login" name="username" placeholder='Přihlašovací jméno' onfocus="this.placeholder = 'Přihlašovací jméno';" onblur="this.placeholder = 'Login'"  autocomplete="off" required/>
                           </div>
             
                           <div class="field-wrap">
@@ -353,7 +305,7 @@
                               <input type="password" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'"  autocomplete="off" required/>
                           </div>
 						  <div class="spaceSmall"></div>	  
-                          <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
+                          <input id="reg_button1" type="button" value="Dále">
                         </div>
 
                         <div class="second-row" id="second-row">
