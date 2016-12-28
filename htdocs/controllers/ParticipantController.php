@@ -4,7 +4,6 @@ class ParticipantController extends Controller{
 	
 	function participant(){
 		$this->f3->set('error','');
-		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','participant.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('slider','slider.htm');
@@ -15,7 +14,6 @@ class ParticipantController extends Controller{
 	
 	function participantWrong(){
 		$this->f3->set('error','true');
-		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','participant.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('slider','slider.htm');
@@ -29,27 +27,37 @@ class ParticipantController extends Controller{
         $user->add();
 
         $info = new InfoP($this->db);
-        $info->add($user->id, $address->id);
+        $info->add($user->id);
 
         $interest = new interest($this->db);
         $interest->add($user->id);
 
 		$this->f3->set('SESSION.user', $user->username);
+		$this->f3->set('SESSION.type', 'p');
 		$this->f3->reroute('/participant/auth');
     }
 	
 	function loginMobileP(){
 		$this->f3->set('content','loginMobileP.htm');
-		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('title','Login');
 		echo View::instance()->render('layout.htm');
 	}
 	
 	function registerMobileP(){
 		$this->f3->set('content','registerMobileP.htm');
-		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('title','Registrace');
 		echo View::instance()->render('layout.htm');
+	}
+
+	function checkLoginP(){
+		$login = $this->f3->get('GET.login');
+		$user =  new UserP($this->db);
+		$user->getByName($login);
+		if ($user->dry()) {
+			echo 'success';
+		} else {
+			echo 'failed';
+		}
 	}
 	
 	function authenticate() {
@@ -62,9 +70,9 @@ class ParticipantController extends Controller{
         if($user->dry()) {
             $this->f3->reroute('/participantWrong');
         }
-        //TODO add verification like bcrypt
         if(\Bcrypt::instance()->verify($password, $user->password)){
             $this->f3->set('SESSION.user', $user->username);
+			$this->f3->set('SESSION.type', 'p');
             
             $this->f3->reroute('/participant/auth');
         } else {

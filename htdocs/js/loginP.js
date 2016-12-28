@@ -8,7 +8,7 @@ function verify_login(){
   var login = $('#ver_login').val();
   $.ajax({    
     type: "GET",  
-    url: "/checkLogin",
+    url: "/checkLoginP",
     data: "login=" + login,
     success: function(data){          
         if(data.localeCompare('success') != 0){

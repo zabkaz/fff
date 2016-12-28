@@ -7,7 +7,7 @@ class AuthController extends Controller{
             $this->f3->reroute('/fail');
             exit;
         }
-    }
+    }		
 	
 	function participantAuth(){
 		$this->loadLectures();
@@ -18,7 +18,25 @@ class AuthController extends Controller{
         echo View::instance()->render('layout.htm');
     }
 	
-	 function enroll(){
+	function participantProfile(){
+		$this->loadPinfo();
+		$this->f3->set('content','participantProfile.htm');
+		$this->f3->set('title','Profil');
+		echo View::instance()->render('layout.htm');
+	}
+	
+	function participantEdit(){
+		$name = $this->f3->get('SESSION.user');
+		$user = new UserP($this->db);
+    	$user->getByName($name);
+
+    	$info = new infoP($this->db);
+    	$info->edit($user->id);    
+
+    	$this->f3->reroute('/participant/auth');
+	}
+	
+	function enroll(){
     	$curse = $this->f3->get('PARAMS.curse');    	
     	$studenName = $this->f3->get('SESSION.user');
 
@@ -37,18 +55,10 @@ class AuthController extends Controller{
     		$lectures->delete($student->id, $curse);
     	}
 		$this->f3->reroute('/participant/auth#programmeTable');
-
-		// $this->participantAuth();
-	}
-	
-	function participantProfile(){
-		$this->f3->set('content','participantProfile.htm');
-		$this->f3->set('title','Profil');
-		echo View::instance()->render('layout.htm');
 	}
 	
 	function exhibitorAuth(){
-		$this->loadPinfo();
+		$this->loadEinfo();
 		$this->f3->set('content','exhibitorAuth.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('contact','contact.htm');
@@ -56,16 +66,16 @@ class AuthController extends Controller{
 		echo View::instance()->render('layout.htm');
 	}
 	
-	function order(){
-		$this->f3->set('content','order.htm');
-		$this->f3->set('title','Objednani');
-		echo View::instance()->render('layout.htm');
-	}
-	
 	function exhibitorProfile(){
 		$this->loadEinfo();
 		$this->f3->set('content','exhibitorProfile.htm');
 		$this->f3->set('title','Profil');
+		echo View::instance()->render('layout.htm');
+	}
+	
+	function order(){
+		$this->f3->set('content','order.htm');
+		$this->f3->set('title','Objednani');
 		echo View::instance()->render('layout.htm');
 	}
 	
@@ -83,32 +93,36 @@ class AuthController extends Controller{
     	$this->f3->reroute('/exhibitor/auth');
 	}
 	
-	function participantEdit(){
-		$name = $this->f3->get('SESSION.user');
-		$user = new UserP($this->db);
-    	$user->getByName($name);
-
-    	$info = new infoP($this->db);
-    	$info->edit($user->id);    
-
-    	$this->f3->reroute('/participant/auth');
-	}
-	
 	function logout(){
 		$this->f3->clear('SESSION');
 		$this->f3->reroute('/');
+	}	
+	
+	function profile(){
+		$type = $this->f3->get('SESSION.type');
+		if($type=='p'){
+			$this->f3->reroute('/participant/profile');			
+		}else{
+			$this->f3->reroute('/exhibitor/profile');	
+		}	
 	}
 	
-	function checkLogin(){
-		$db = $this->db;
-		$login = $this->f3->get('GET.login');
-		$result = $db->exec('SELECT username FROM login WHERE username=?', $login);
-		if (sizeof($result) == 0) {
-			echo 'success';
-		} else {
-			echo 'failed';
-    }
-	
+	function selectPlace(){
+		$place = $this->f3->get('GET.place');
+		$id = $this->f3->get('GET.id');
+
+		$result = $this->db->exec('UPDATE vyst_info SET placeID=? WHERE id=?', $place, $id);
+		// TODO verify result?
+		echo 'success';
+	}
+
+	function addInterest(){
+		$db = $this->db;	
+		$name = $this->f3->get('GET.name');		
+		$id = $this->f3->get('GET.id');		
+		$result = $db->exec('UPDATE odvetvie SET '.$name.'=1 WHERE id=?', $id);
+		// TODO verify result?	
+		echo 'success';
 	}
 	
 	// ----------------------------
@@ -181,10 +195,10 @@ class AuthController extends Controller{
 	
 	private function loadPinfo(){
 		$name = $this->f3->get('SESSION.user');
-		$user = new UserE($this->db);
+		$user = new UserP($this->db);
     	$user->getByName($name);
 
-    	$info = new infoE($this->db);
+    	$info = new infoP($this->db);
     	$info->getById($user->id);
 
        	$this->f3->set('first_name', $info->first_name);
@@ -197,6 +211,7 @@ class AuthController extends Controller{
 
 		$interest = new Interest($this->db);
 		$interest->getById($user->id);
+		$this->f3->set('user_id', $user->id);
 		
     	$this->f3->set('o_fin', $interest->fin == 1 ? 'active' : '');
 		$this->f3->set('o_hr', $interest->hr == 1 ? 'active' : '');
@@ -210,8 +225,6 @@ class AuthController extends Controller{
 		$this->f3->set('o_serv', $interest->serv == 1 ? 'active' : '');		
 		$this->f3->set('o_stro', $interest->stro == 1 ? 'active' : '');		
 		$this->f3->set('o_tech', $interest->tech == 1 ? 'active' : '');		
-		$this->f3->set('o_zem', $interest->zem == 1 ? 'active' : '');
-		
-		
+		$this->f3->set('o_zem', $interest->zem == 1 ? 'active' : '');				
     }
 }

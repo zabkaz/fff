@@ -4,13 +4,11 @@ class ExhibitorController extends Controller{
 
 	function exhibitor(){
 		$this->f3->set('error','');
-		$this->f3->set('navigation','navigation.htm');
 		$this->f3->set('content','exhibitor.htm');
 		$this->f3->set('slider','slider.htm');
 		$this->f3->set('map','map.htm');
 		$this->f3->set('contact','contact.htm');
-		$this->f3->set('title','Vystavovatel');
-		$this->f3->set('class','exhibitor');
+		$this->f3->set('title','Chci vystavovat');
 		echo View::instance()->render('layout.htm');
 	}	
 	
@@ -22,20 +20,8 @@ class ExhibitorController extends Controller{
 		$this->f3->set('contact','contact.htm');
 		$this->f3->set('title','Vystavovatel');
 		echo View::instance()->render('layout.htm');
-	}	
-	
-	function loginMobileE(){
-		$this->f3->set('content','loginMobileE.htm');
-		$this->f3->set('title','Prihlášení');
-		echo View::instance()->render('layout.htm');
 	}
 	
-	function registerMobileE(){
-		$this->f3->set('content','registerMobileE.htm');
-		$this->f3->set('title','Registrace');
-		echo View::instance()->render('layout.htm');
-	}
-		
 	function registerE(){
         $user = new UserE($this->db);
         $user->add();
@@ -50,8 +36,32 @@ class ExhibitorController extends Controller{
         $interest->add($user->id);
 		
 		$this->f3->set('SESSION.user', $user->username);
+		$this->f3->set('SESSION.type', 'e');
 		$this->f3->reroute('/exhibitor/auth');
     }
+	
+	function loginMobileE(){
+		$this->f3->set('content','loginMobileE.htm');
+		$this->f3->set('title','Prihlášení');
+		echo View::instance()->render('layout.htm');
+	}
+	
+	function registerMobileE(){
+		$this->f3->set('content','registerMobileE.htm');
+		$this->f3->set('title','Registrace');
+		echo View::instance()->render('layout.htm');
+	}	
+
+    function checkLoginE(){
+		$login = $this->f3->get('GET.login');
+		$user =  new UserE($this->db);
+		$user->getByName($login);
+		if ($user->dry()) {
+			echo 'success';
+		} else {
+			echo 'failed';
+		}
+	}	
 			
 	function authenticate() {
         $username = $this->f3->get('POST.username');
@@ -63,9 +73,9 @@ class ExhibitorController extends Controller{
         if($user->dry()) {
             $this->f3->reroute('/exhibitorWrong');
         }
-        //TODO add verification like bcrypt
-        if($password == $user->password) {
+        if(\Bcrypt::instance()->verify($password, $user->password)) {
             $this->f3->set('SESSION.user', $user->username);
+			$this->f3->set('SESSION.type', 'e');
             
             $this->f3->reroute('/exhibitor/auth');
         } else {

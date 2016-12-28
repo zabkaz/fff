@@ -1,8 +1,8 @@
 function selectPlace(place, id){   
  $('.stand').removeClass('selected');
  $.ajax({    
-    type: "POST",  
-    url: "select_place.php",
+    type: "GET",  
+    url: "/selectPlace",
     data: "place=" + place + "& id=" + id,	
     success: function(data){          
         if(data.localeCompare('success') === 0){

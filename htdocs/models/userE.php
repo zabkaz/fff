@@ -22,6 +22,8 @@ class UserE extends DB\SQL\Mapper{
     }
 
     public function add() {
+        $pass = \Bcrypt::instance()->hash(Base::instance()->get('POST.password'));
+        Base::instance()->set('POST.password', $pass); 
         $this->copyFrom('POST',function($val) {
             // the 'POST' array is passed to our callback function
             return array_intersect_key($val, array_flip(array('username','password')));
