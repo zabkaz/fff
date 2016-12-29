@@ -17,7 +17,7 @@
                         <a class="page-scroll" href="/participant"><span>Chci se zúčastnit</span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="exhibitor"><span>Chci vystavovat</span></a>
+                        <a class="page-scroll" href="/exhibitor"><span>Chci vystavovat</span></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
@@ -25,10 +25,10 @@
 					<li>
                         <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
                     </li>
-					<li>				
-						<button class="btn btn-default login page-scroll" type="button">Přezdívka</button>						
+					<li>
+						<a href="/participant/auth" class="btn login page-scroll"><?php echo $_SESSION[user] ?></a>						
 						<div class="wrapper-user-collapse dropdown-user" >					
-								<a href="/participant/profile">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+								<a href="/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 						</div>					
                     </li>
                 </ul>
@@ -144,34 +144,39 @@
 							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky?</div>							
 								<?php
 								if($hash[0] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/0#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/0#programmeTable">Přihlaš se</a>
+										  <div class="capacity">Kapacita: <?php echo $capacity[0]?>/50</div>
+										  
+									';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>';
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+									<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>';
 								} ?>
-							<div class="capacity">Kapacita: <?php echo $capacity[0]?>/50</div>
+							
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">10.30 – 11.30</span>
 							<div class="lecture-title">Jak udělat dobrý dojem na zaměstnavatele</div>							
 								<?php
 								if($hash[1] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a>
+										<div class="capacity">Kapacita: <?php echo $capacity[1]?>/50</div>';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>';
-								} ?>
-							
-							<div class="capacity">Kapacita: <?php echo $capacity[1]?>/50</div>
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+											<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>';
+								} ?>							
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">11.30 – 12.30</span>
 							<div class="lecture-title">Jak se obléct (nejen) na pohovor</div>
 							<?php
 								if($hash[2] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/2#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/2#programmeTable">Přihlaš se</a>
+										<div class="capacity">Kapacita: <?php echo $capacity[2]?>/50</div>';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/2#programmeTable">Odhlaš se</a>';
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+										<a class="button-violet" role="button" href="/participant/2#programmeTable">Odhlaš se</a>';
 								} ?>
-							<div class="capacity">Kapacita: <?php echo $capacity[2]?>/50</div>
 						</div>
 					</div>
 					
@@ -199,11 +204,12 @@
 							<div class="lecture-title oneLine">Jak řešit problémy kreativně</div>							
 								<?php
 								if($hash[5] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/5#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/5#programmeTable">Přihlaš se</a>
+											<div class="capacity">Kapacita: <?php echo $capacity[5]?>/50</div>';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>';
-								} ?>							
-							<div class="capacity">Kapacita: <?php echo $capacity[5]?>/50</div>
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+										<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>';
+								} ?>	
 						</div>						
 					</div>							
 			
@@ -214,43 +220,62 @@
 							<div class="lecture-title">Disrupt the World of&nbsp;Travel With Kiwi.com!</div>							
 								<?php
 								if($hash[6] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/6#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/6#programmeTable">Přihlaš se</a>
+										<div class="capacity">Kapacita: <?php echo $capacity[6]?>/50</div>';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>';
-								} ?>							
-							<div class="capacity">Kapacita: <?php echo $capacity[6]?>/50</div>
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+										<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>';
+								} ?>	
 						</div>	
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title">Kariéra v KPMG - jak uspět při výběrovém řízení</div>							
 								<?php
 								if($hash[7] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/7#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/7#programmeTable">Přihlaš se</a>
+										<div class="capacity">Kapacita: <?php echo $capacity[7]?>/50</div>';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/7#programmeTable">Odhlaš se</a>';
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+										<a class="button-violet" role="button" href="/participant/7#programmeTable">Odhlaš se</a>';
 								} ?>							
-							<div class="capacity">Kapacita: <?php echo $capacity[7]?>/50</div>
 						</div>		
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title oneLine">Tvoje cesta do&nbsp;EY</div>
 								<?php
 								if($hash[8] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/8#programmeTable">Přihlaš se</a>';
+									echo '<a class="button-free" role="button" href="/participant/8#programmeTable">Přihlaš se</a>
+										 <div class="capacity">Kapacita: <?php echo $capacity[8]?>/50</div>';
 								}else{
-									echo '<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>';
-								} ?>
+									echo '<div class="signed text-violet">Jsi přihlášen</div>
+										<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>';} ?>
 							</a>
-							<div class="capacity">Kapacita: <?php echo $capacity[8]?>/50</div>
+							<div class="alert success">
+											<span class="closebtn">&times;</span>  
+												Jsi  <strong>úspešne</strong> přihlášený/á na přednášku.
+										</div>		
 						</div>	
-					</div>							
-										
-				</div>
+					</div>		
+
+  <script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+</script>
+  
 			</div>
 		</div>
     </section>
 
     <?php echo $this->render(Base::instance()->get('map')); ?>
     <?php echo $this->render(Base::instance()->get('contact')); ?>
+
 </div>
 

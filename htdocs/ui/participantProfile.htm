@@ -13,7 +13,7 @@
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">                  
+                 <ul class="nav navbar-nav navbar-right">                  
 					<li>
                         <a class="page-scroll" href="/participant"><span>Chci se zúčastnit</span></a>
                     </li>
@@ -26,10 +26,10 @@
 					<li>
                         <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
                     </li>
-					<li>				
-						<button class="btn btn-default login page-scroll" type="button">Přezdívka</button>						
+					<li>
+						<a href="/participant/auth" class="btn login page-scroll"><?php echo $_SESSION[user] ?></a>						
 						<div class="wrapper-user-collapse dropdown-user" >					
-								<a href="/participant/profile" class="text-orange">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+								<a href="/profile" class="padding-left active-profile">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 						</div>					
                     </li>
                 </ul>
@@ -57,12 +57,12 @@
             	<h4>Základní údaje</h4>				
                 <div class="row">					
 		        	<span class="col-lg-3 description text-soft padding-top"> Jméno </span>
-                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="fname" name="firstname" value="<?php echo $f_name; ?>" required autocomplete="off"></span>
+                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="fname" name="firstname" value="<?php echo $first_name; ?>" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>
                 </div>
                 <div class="row">
 					<span class="col-lg-3 description text-soft  padding-top"> Příjmení </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="lname" name="lastname" value="<?php echo $l_name; ?>" required autocomplete="off"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="lname" name="lastname" value="<?php echo $last_name; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>
 				<div class="row">
@@ -81,7 +81,7 @@
                 </div>  
 				<div class="row">
 					<span class="col-lg-3 description text-soft padding-top"> Univerzita </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="univerzita" name="univerzita" value="<?php echo $uni; ?>"> </span>
+                	<span class="col-lg-7"> <input type="text" class="profil" id="univerzita" name="univerzita" value="<?php echo $univerzita; ?>"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div> 				
 				<div class="row">

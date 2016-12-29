@@ -25,10 +25,11 @@
                         <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
                     </li>
 					<li>				
-						<button class="btn btn-default login page-scroll" type="button">Přezdívka</button>						
+						<a href="/exhibitor/auth" class="btn login page-scroll"><?php echo $_SESSION[user] ?></a>						
 						<div class="wrapper-user-collapse dropdown-user" >					
-								<a href="/exhibitor/profile">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
-						</div>					
+								<a href="/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+						</div>						
+                    </li>			
                     </li>
                 </ul>
             </div>

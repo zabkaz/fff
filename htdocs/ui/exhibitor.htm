@@ -1,7 +1,51 @@
 
 <div id="page-top" class="index">
 
-    <?php echo $this->render(Base::instance()->get('navigation')); ?>
+   
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img src="ui/img/jobchS.png" class="mainLogo"></a>
+            </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav navbar-right">
+                   <li>
+                        <a class="page-scroll" href="participant"><span>Chci se zucastnit</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="exhibitor"><span>Chci vystavovat</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
+                    </li>                 
+					<li>
+                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
+                    </li>
+					<li>
+					<?php
+						if( $_SESSION === null ){
+								echo
+									'<span class="hidden-xs hidden-sm hidden-md">
+										<button onclick="document.getElementById(\'id01\').style.display=\'block\'" class="btn btn-default login">Přihlašte se</button>
+									</span>
+									<span class="visible-xs visible-sm visible-md">
+										<a href="/loginE" class="btn btn-default login">Přihlašte se</a>
+									</span>';									
+								}else{
+									echo 	'<button class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</button>						
+											<div class="wrapper-user-collapse dropdown-user" >					
+												<a href="/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';							
+						} ?>						
+                    </li>
+            </div>
+        </div>
+    </nav>
 
     <!-- Header -->
     <header>
@@ -51,7 +95,7 @@
 					<button onclick="document.getElementById('id02').style.display='block'" class="btn btn-default login big">Chci registrovat firmu</button>
 				</span>
 				<span class="visible-xs visible-sm visible-md">
-					<a href="/registerE" class="btn btn-default login big">Chci registrovat firmu</a>
+					<a href="/registerMobileE" class="btn login2 big">Chci registrovat firmu</a>
 				</span>
 			</div>
 			</div>
@@ -62,15 +106,14 @@
 	
    <!-- Challenge Book Section -->
     <section id="book" class="bg-white photoBg">
-        <div class="container">
-		
-            <div class="row">			
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading padding">Oslovte zájemce pomocí Challenge Booku</h2>
-                </div>				
-            </div>
-			
-			<div class="table-reasons">			
+        <div class="container">	
+			<div class="table-reasons">					
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="section-heading padding text-center">Oslovte zájemce pomocí Challenge Booku</h2>	
+						<div class="spaceSmall"></div>
+					</div>					
+				</div>	
 				<div class="row reasons">
 					<div class="col-sm-6 col-xs-12 dashed1">
 						<div class="col-md-3 col-xs-12">
@@ -127,7 +170,7 @@
         <div class="container bg-white border-radius">		
             <div class="row">			
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading faq-heading">Nejčastěji kladené dotazy</h2>
+                    <h2 class="section-heading faq-heading padding-top">Nejčastěji kladené dotazy</h2>
                 </div>				
             </div>		
 			
@@ -252,7 +295,6 @@
                     <input type="submit" value="Přihlásit">                    			
 					<?php
                     if($error){
-
 					echo "<script>
 					    $('#login_err').css('display', 'block');
 					    $('#id01').css('display', 'block');
