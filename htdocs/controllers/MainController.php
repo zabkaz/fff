@@ -13,7 +13,9 @@ class MainController extends Controller{
 	}		
 		
 	function error(){
-		echo \Template::instance()->render('error.html');
+		$this->f3->set('content','error.htm');
+		$this->f3->set('title','Chyba');
+        echo View::instance()->render('layout.htm');
 	}	
 	
 }

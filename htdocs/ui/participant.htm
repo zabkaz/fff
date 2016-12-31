@@ -29,18 +29,25 @@
 						<?php
 							if( $_SESSION === null ){
 								echo
-									'<span class="hidden-xs hidden-sm hidden-md">
+									'<span class="hidden-xs hidden-sm hidden-md page-scroll">
 										<button onclick="document.getElementById(\'id01\').style.display=\'block\'" class="btn btn-default login">Přihlaš se</button>
 									</span>
-									<span class="visible-xs visible-sm visible-md">
+									<span class="visible-xs visible-sm visible-md page-scroll">
 										<a href="/loginP" class="btn btn-default login">Přihlaš se</a>
 									</span>';									
 								}else{
-									echo   '<a href="/participant/auth" class="btn login page-scroll"> '.$_SESSION[user].'</a>					
+								if($_SESSION.type == 'e'){
+									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Služby</a>						
 											<div class="wrapper-user-collapse dropdown-user" >					
-												<a href="/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
-											</div>';							
-						} ?>						
+												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';
+								}else{
+									echo	'<a href="/participant/auth" class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</a>						
+											<div class="wrapper-user-collapse dropdown-user" >					
+												<a href="/participant/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';
+									}											
+								} ?>				
                     </li>
                 </ul>
             </div>
@@ -216,10 +223,10 @@
 						<div class="circle active"></div>
 						<div class="circle"></div>
 						<div class="circle"></div>
-                </div>
-				<div class="space"></div>
+                </div>				
                 <form action="/registerP" method="post" name="reg_form" autocomplete=”off” >
-                    <div class="first-row" id="first-row">                          
+					<div class="space"></div>
+                    <div class="first-row" id="first-row">   						
                         <div class="field-wrap">	
 							<input type="login" name="login1" value="" style="display: none" /> 
                             <input type="login" id="ver_login" name="username" placeholder='Přezdívka' onfocus="this.placeholder = ''" onblur="this.placeholder ='Přezdívka'" autocomplete="off"/>
@@ -233,7 +240,8 @@
                         <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
                     </div>
 
-                    <div class="second-row" id="second-row">                            
+                    <div class="second-row" id="second-row">   
+							
                         <div class="field-wrap">
                             <input id="first_name" type="text" name="first_name" placeholder='Jméno' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno'" required autocomplete="off" />
                         </div>
@@ -249,7 +257,7 @@
 						<input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
                     </div>
 
-                    <div class="third-row" id="third-row">
+                    <div class="third-row participant" id="third-row">
 						<div class="field-wrap tretie">                           
                             <select name="studium" class="option-style">  
 									<option value="" selected disabled>Druh studia</option>

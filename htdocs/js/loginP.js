@@ -36,8 +36,8 @@ function next_reg_1() {
   var pass = document.forms["reg_form"]["password"].value;
   var username = document.forms["reg_form"]["username"].value;  
   
-  if ((pass.length < 4) || (username.length < 4)) {
-    var err_msg = "Login a heslo by měli mít alespoň 4 znaky!";
+  if ((pass.length < 3) || (username.length < 3)) {
+    var err_msg = "Jméno a heslo by měli mít alespoň 3 znaky!";
     document.getElementById('ver_login').setCustomValidity(err_msg);
     document.getElementById('register').click();
   }else{

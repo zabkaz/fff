@@ -21,15 +21,15 @@
                         <a class="page-scroll" href="/exhibitor"><span>Chci vystavovat</span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
+                        <a class="page-scroll" href="/participant/auth#info"><span>Kdy a kde</span></a>
                     </li>                 
 					<li>
-                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
+                        <a class="page-scroll" href="/participant/auth#contact"><span>Kontakt</span></a>
                     </li>
 					<li>
 						<a href="/participant/auth" class="btn login page-scroll"><?php echo $_SESSION[user] ?></a>						
 						<div class="wrapper-user-collapse dropdown-user" >					
-								<a href="/profile" class="padding-left active-profile">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+								<a href="/participant/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 						</div>					
                     </li>
                 </ul>
@@ -56,18 +56,18 @@
         	<div class="col-lg-4 text-left">
             	<h4>Základní údaje</h4>				
                 <div class="row">					
-		        	<span class="col-lg-3 description text-soft padding-top"> Jméno </span>
-                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="fname" name="firstname" value="<?php echo $first_name; ?>" required autocomplete="off"></span>
+		        	<span class="col-lg-3 description text-soft padding-top2"> Jméno </span>
+                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profile" id="first_name" name="first_name" value="<?php echo $first_name; ?>" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>
                 </div>
                 <div class="row">
-					<span class="col-lg-3 description text-soft  padding-top"> Příjmení </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="lname" name="lastname" value="<?php echo $last_name; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft  padding-top2"> Příjmení </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="last_name" name="last_name" value="<?php echo $last_name; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>
 				<div class="row">
-					<span class="col-lg-3 description text-soft  padding-top"> E-mail </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="mail" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft  padding-top2"> E-mail </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="mail" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>
 				</div>
@@ -75,23 +75,23 @@
 				<div class="col-lg-4 text-left">		
             	<h4 class="spaceSmall">Studium</h4>                
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Druh studia </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="stupen" name="studium" value="<?php echo $studium; ?>"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Druh studia </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="stupen" name="studium" value="<?php echo $studium; ?>"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>  
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Univerzita </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="univerzita" name="univerzita" value="<?php echo $univerzita; ?>"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Univerzita </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="univerzita" name="univerzita" value="<?php echo $univerzita; ?>"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div> 				
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Fakulta </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="fakulta" name="fakulta" value="<?php echo $fakulta; ?>"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> Fakulta </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="fakulta" name="fakulta" value="<?php echo $fakulta; ?>"></span>
 					<span class="col-lg-2"></span>    		   	
                 </div>				
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Ročník </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="rocnik" name="rocnik" value="<?php echo $rocnik; ?>"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> Ročník </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="rocnik" name="rocnik" value="<?php echo $rocnik; ?>"></span>
 					<span class="col-lg-2"></span>    		   	
                 </div>
 				<div class="space"></div>

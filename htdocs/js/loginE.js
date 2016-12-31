@@ -50,8 +50,8 @@ function next_reg_1() {
   var pass = document.forms["reg_form"]["password"].value;
   var username = document.forms["reg_form"]["username"].value;  
   
-  if ((pass.length < 4) || (username.length < 4)) {
-    var err_msg = "Login a heslo by měli mít alespoň 4 znaky!";
+  if ((pass.length < 3) || (username.length < 3)) {
+    var err_msg = "Jméno a heslo by měli mít alespoň 3 znaky!";
     document.getElementById('ver_login').setCustomValidity(err_msg);
     document.getElementById('register').click();
   }else{
@@ -68,7 +68,6 @@ function next_reg_2() {
   el1 = document.getElementById("second-row");
   el2 = document.getElementById("third-row");
   
-  var c_name = document.forms["reg_form"]["c_name"].value;
   var tel_num = document.forms["reg_form"]["tel_num"].value; 
   var email = document.forms["reg_form"]["email"].value;   
   
@@ -76,9 +75,9 @@ function next_reg_2() {
   if(validateEmail(email) === false){
     document.getElementById('register').click();
   }else{
-    if ((c_name.length < 3) || (tel_num.length < 9)) {
-      err_msg = 'Company name or tel. number are too short!';
-      document.getElementById('reg_name').setCustomValidity(err_msg);
+    if (tel_num.length < 9) {
+      err_msg = 'Telefonní číslo je příliš krátké.';
+      document.getElementById('reg_num').setCustomValidity(err_msg);
       document.getElementById('register').click();
     }else{
       el1.style.display = 'none';

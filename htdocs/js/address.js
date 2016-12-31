@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 	
     var address2 = $("#corr-add").val();
-    if(adresa2 != 0){
+    if(address2 != 0){
     	$("#corr-add").prop('checked', true);
     }else{
     	$("#corr-add").prop('checked', false);
@@ -13,11 +13,15 @@ $( document ).ready(function() {
 });
 
 $('#corr-add').change(function(){
-   if (this.checked) {    
-		$('#addressNew').removeClass("disabled");   		
+   var boxy = document.getElementsByClassName("add2");
+   if (this.checked) {     
+	  for(i=0; i< boxy.length; i++){
+	  	boxy[i].disabled = false;
     }
    }
 	else{
-	  $('#addressNew').addClass("disabled");   		
+	   for(i=0; i< boxy.length; i++){
+	  	boxy[i].disabled = true;	  	
+	    }
 	}
 });

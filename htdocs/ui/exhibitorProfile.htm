@@ -19,15 +19,15 @@
                         <a class="page-scroll" href="/exhibitor"><span>Chci vystavovat</span></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
+                        <a class="page-scroll" href="/exhibitor/auth#info"><span>Kdy a kde</span></a>
                     </li>                 
 					<li>
-                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
+                        <a class="page-scroll" href="/exhibitor/auth#contact"><span>Kontakt</span></a>
                     </li>
 					<li>				
-						<a href="/exhibitor/auth" class="btn login page-scroll"><?php echo $_SESSION[user] ?></a>						
-						<div class="wrapper-user-collapse dropdown-user" >					
-								<a href="/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+						<a href="/exhibitor/auth" class="btn login page-scroll">Služby</a>						
+						<div class="wrapper-user-collapse dropdown-user">					
+								<a class="padding-left" href="profile">Profil</a><span class="separator text-inverse"> | </span><a class="page-scroll" href="/logout">Odhlásit</a>
 						</div>						
                     </li>			
                     </li>
@@ -55,40 +55,40 @@
         	<div class="col-lg-4 text-left">
             	<h4>Základní údaje</h4>
                 <div class="row">					
-		        	<span class="col-lg-3 description text-soft padding-top"> Název firmy </span>
-                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profil" id="c_name" name="c_name" value="<?php echo $c_name; ?>" required autocomplete="off"></span>
+		        	<span class="col-lg-3 description text-soft padding-top2"> Název firmy </span>
+                	<span class="col-lg-7 col-sm-7"> <input type="text" class="profile" id="c_name" name="c_name" value="<?php echo $c_name; ?>" required autocomplete="off"></span>
 					<span class="col-lg-1 hidden-sm hidden-xs"></span>
                 </div>
                 <div class="row">
-					<span class="col-lg-3 description text-soft  padding-top"> E-mail </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="email" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> E-mail </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="email" name="email" value="<?php echo $email; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>
 				<div class="row">
-					<span class="col-lg-3 description text-soft  padding-top"> Tel.č. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="number" name="tel_num" value="<?php echo $tel_num; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Tel.č. </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="number" name="tel_num" value="<?php echo $tel_num; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2"></span>    		   	
                 </div>					
 				<div class="spaceSmall"></div>	
             	<h4 class="spaceSmall ">Kontaktní osoba</h4>
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Jméno </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="fname" name="full_name" value="<?php echo $full_name; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Jméno a přijímení </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="fname" name="full_name" value="<?php echo $full_name; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> E-mail </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="email-contact" value="<?php echo $con_email; ?>" name="con_email" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> E-mail </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="email-contact" value="<?php echo $con_email; ?>" name="con_email" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Tel.č. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="number-contact" name="con_tel_num" value="<?php echo $con_tel_num; ?>"  required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Tel.č. </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="number-contact" name="con_tel_num" value="<?php echo $con_tel_num; ?>"  required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Země </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="country-contact" name="con_country" value="<?php echo $con_country; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Země </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="country-contact" name="con_country" value="<?php echo $con_country; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>  
 			</div>	
@@ -96,58 +96,58 @@
 			<div class="col-lg-4 text-left">	
             	<h4 class="spaceSmall ">Sídlo</h4>                
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Ulice, č.p. </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="street" name="street" value="<?php echo $street; ?>" required autocomplete="off"> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Ulice, č.p. </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="street" name="street" value="<?php echo $street; ?>" required autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>   
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Obec </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="city" name="city" value="<?php echo $city; ?>" required autocomplete="off"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> Obec </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="city" name="city" value="<?php echo $city; ?>" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div> 				
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> PSČ </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="zip" name="zip" value="<?php echo $zip; ?>" required autocomplete="off"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> PSČ </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="zip" name="zip" value="<?php echo $zip; ?>" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>   
 				
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Země </span>
-                	<span class="col-lg-7"> <input type="text" class="profil" id="country" name="country" value="<?php echo $country; ?>" required autocomplete="off"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> Země </span>
+                	<span class="col-lg-7"> <input type="text" class="profile" id="country" name="country" value="<?php echo $country; ?>" required autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
                 </div>
 				<div class="spaceSmall"></div>
 				<div class="row padding">
-                	<span class="col-lg-3 col-xs-2 padding-top"><input type="checkbox" class="profil" name="address2" value="<?php echo $address2; ?>" id="corr-add" autocomplete="off"></span>
-                    <span class="col-xs-10 col-lg-9 description text-soft padding-top "> Korešpondeční adresa je jiná než sídlo </span>
+                	<span class="col-lg-3 col-xs-2 padding-top2"><input type="checkbox" class="profile" name="address2" value="<?php echo $address2; ?>" id="corr-add" autocomplete="off"></span>
+                    <span class="col-xs-10 col-lg-9 description text-soft"> Korešpondeční adresa je jiná než sídlo </span>
                 </div> 
 			</div>
 			
 			<div class="col-lg-4 text-left" id="addressNew">				
             	<h4 class="spaceSmall ">Korešpondeční adresa</h4>  
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Ulice, č.p. </span>
-					<span class="col-lg-7"> <input type="text" class="profil add2" id="ulica" name="street2" value="<?php echo $street2; ?>" required autocomplete="off" disabled> </span>
+					<span class="col-lg-3 description text-soft padding-top2"> Ulice, č.p. </span>
+					<span class="col-lg-7"> <input type="text" class="profile add2" id="ulica" name="street2" value="<?php echo $street2; ?>" autocomplete="off"> </span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
 				</div>
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Obec </span>
-					<span class="col-lg-7"> <input type="text" class="profil add2" id="obec" name="city2" value="<?php echo $city2; ?>" required autocomplete="off"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> Obec </span>
+					<span class="col-lg-7"> <input type="text" class="profile add2" id="obec" name="city2" value="<?php echo $city2; ?>" autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
 				</div>
 				<div class="row">					
-					<span class="col-lg-3 description text-soft padding-top"> PSČ </span>
-					<span class="col-lg-7"> <input type="text" class="profil add2" id="zip" name="zip2" value="<?php echo $zip2; ?>" required autocomplete="off"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> PSČ </span>
+					<span class="col-lg-7"> <input type="text" class="profile add2" id="zip" name="zip2" value="<?php echo $zip2; ?>" autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
 				</div>    				
 				<div class="row">
-					<span class="col-lg-3 description text-soft padding-top"> Země </span>
-					<span class="col-lg-7"> <input type="text" class="profil add2" id="country" name="country2" value="<?php echo $country2; ?>" required autocomplete="off"></span>
+					<span class="col-lg-3 description text-soft padding-top2"> Země </span>
+					<span class="col-lg-7"> <input type="text" class="profile add2" id="country" name="country2" value="<?php echo $country2; ?>" autocomplete="off"></span>
 					<span class="col-lg-2 hidden-sm hidden-xs"></span>    		   	
 				</div>
 				<div class="space"></div>				
 			</div>	
-			<script src="../js/address.js"></script>         
+			      
 			<div class="col-lg-8 text-left">
 				<div class="spaceSmall"></div>
             	<h4>Oblast působnosti firmy:</h4>
@@ -205,7 +205,7 @@
 			<input type="hidden" name="id" value="<?php echo $user_id; ?>"> 
 		</form>		
         <script src="../js/interest.js"> </script>  
-		
+		<script src="../js/address.js"></script>   
 	</div>
 	</div>
 </section>

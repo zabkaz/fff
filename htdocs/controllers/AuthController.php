@@ -4,10 +4,10 @@ class AuthController extends Controller{
 
     function beforeroute(){
         if($this->f3->get('SESSION.user') === null ) {
-            $this->f3->reroute('/fail');
+            $this->f3->reroute('/error');
             exit;
         }
-    }		
+    }	
 	
 	function participantAuth(){
 		$this->loadLectures();
@@ -36,21 +36,22 @@ class AuthController extends Controller{
     	$this->f3->reroute('/participant/auth');
 	}
 	
-	function enroll(){
+	function enroll(){		
+		$this->f3->set('showmodal','false');		
     	$curse = $this->f3->get('PARAMS.curse');    	
     	$studenName = $this->f3->get('SESSION.user');
 
 		$student = new UserP($this->db);
     	$student->getByName($studenName);
-    	echo 'Start';
     	echo $student->id;
     	echo $curse;
 
     	$lectures = new Lectures($this->db);
     	$lectures->getLecture($student->id, $curse);
-
-    	if($lectures->dry()){
+		
+	   	if($lectures->dry()){
     		$lectures->addLecture($student->id, $curse);
+			$show_modal = true;
     	}else{
     		$lectures->delete($student->id, $curse);
     	}

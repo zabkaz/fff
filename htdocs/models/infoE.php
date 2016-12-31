@@ -16,11 +16,13 @@ class infoE extends DB\SQL\Mapper{
         return $this->query;
     }
 
-    public function add() {
+    public function add($id, $address_id) {
         $this->copyFrom('POST',function($val) {
             // the 'POST' array is passed to our callback function
-            return array_intersect_key($val, array_flip(array('id','c_name','email','tel_num','full_name','con_email','con_tel_num','con_country','address_id')));
+            return array_intersect_key($val, array_flip(array('c_name','email','tel_num','full_name','con_email','con_tel_num','con_country','address_id')));
         });
+		$this->id=$id;
+		$this->address_id=$address_id;
         $this->save();
     }
 

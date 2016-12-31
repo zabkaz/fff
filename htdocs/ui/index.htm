@@ -1,6 +1,4 @@
 
-
-
 <div id="page-top" class="index">
 
    <!-- Navigation -->
@@ -31,20 +29,43 @@
 					<?php
 						if( $_SESSION === null ){
 								echo
-									'<span class="hidden-xs hidden-sm hidden-md">
-										<button onclick="document.getElementById(\'id01\').style.display=\'block\'" class="btn btn-default login">Přihlašte se</button>
-									</span>
-									<span class="visible-xs visible-sm visible-md">
-										<a href="/loginE" class="btn btn-default login">Přihlašte se</a>
+									'<span class="page-scroll">
+										<button class="btn btn-default dropdown-toggle login page-scroll"
+										id="menuDrop" data-toggle="dropdown">Přihlašte se <span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+											<li role="presentation" class="hidden-xs hidden-sm hidden-md">
+												<a role="menuitem" tabindex="-1" href="#"
+														onclick="document.getElementById(\'id01\').style.display=\'block\'">
+														Chci se zúčastnit</a>
+											</li>
+											<li role="presentation" class="visible-xs visible-sm visible-md">
+												<a href="/loginP" class="btn btn-default login_mobile">Chci se zúčastnit</a>
+											</li>
+											<li role="presentation" class="hidden-xs hidden-sm hidden-md">
+												<a role="menuitem" tabindex="-1" href="#"
+														onclick="document.getElementById(\'id03\').style.display=\'block\'">
+														Chci vystavovat</a>
+											</li>
+											<li role="presentation" class="visible-xs visible-sm visible-md page-scroll">
+												<a href="/loginE" class="btn btn-default login_mobile">Chci vystavovat</a>
+											</li>
+										</ul>
 									</span>';									
 								}else{
-									echo 	'<button class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</button>						
+								if($_SESSION.type === 'e'){
+									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Objednávka</a>						
 											<div class="wrapper-user-collapse dropdown-user" >					
-												<a href="profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
-											</div>';							
-						} ?>						
+												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';
+								}else{
+									echo	'<a href="/participant/auth" class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</a>						
+											<div class="wrapper-user-collapse dropdown-user" >					
+												<a href="/participant/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';
+									}											
+								} ?>						
                     </li>
-            </div>
+		      </div>
         </div>
     </nav>
 
@@ -53,7 +74,7 @@
         <div class="container-fluid">
             <div class="intro-text">
 				<div class="intro-heading">11.ročník</div>
-                <div class="intro-lead-in">Veletrhu pracovních příležitostí <span class="hidden-xs">JobChallange</span></div>
+                <div class="intro-lead-in">Veletrhu pracovních příležitostí <span class="hidden-xs">JobChallenge</span></div>
 				<div class="intro-lead-in date">
 					<span class="col-xs-12 visible-xs">8. listopad 2017</span>
 					<span class="hidden-xs">8. listopad 2017</span>
@@ -166,7 +187,7 @@
 						</div>
 						<div class="col-md-9 col-xs-12 padding-left2">
 							<span class="reason-heading">Oslav s námi narozeniny<br/></span>
-							<span class="text-soft description">Přidej se k&nbsp;nám na oslavě jubilejního 10.&nbsp;výročí veletrhu. Čeká tě spousta malých překvapení a&nbsp;hodnotných cen!</span>
+							<span class="text-soft description">Přidej se k&nbsp;nám na oslavě dalšího ročníka veletrhu. Čeká tě spousta malých překvapení a&nbsp;hodnotných cen!</span>
 						</div>
 					</div>               
 				</div>				
@@ -180,5 +201,301 @@
 
    <?php echo $this->render(Base::instance()->get('contact')); ?>
 
+	<!-- The Modal Window Login-->
+	<div id="id03" class="modal bg-light-gray">
+		<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>		
+		<div class="modal-content animate">	
+			<span onclick="document.getElementById('id03').style.display='none'" class="buttonX"> <img src="ui/img/picto/cross.png" width="10"/></span>
+            <h1 class="login-heading">Přihlašte se</h1>                          
+            <form action="/authE" method="post" name="login_form" id="login_form"> 
+					<div class="field-wrap">							
+                     	<input type="login" id="main_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" autocomplete=”off” required/>
+                    </div>                          
+                    <div class="field-wrap">
+                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" required autocomplete=”off”/>
+                    </div>
+					<div class="spaceSmall"></div>	  
+					<span id="login_err">Nesprávný login nebo heslo </span>		
+                    <input type="submit" value="Přihlásit">                    			
+					<?php
+                    if($error){
+					echo "<script>
+					    $('#login_err').css('display', 'block');
+					    $('#id03').css('display', 'block');
+					</script>";
+					} else{
 
+					echo "<script>
+					    $('#login_err').css('display', 'none');
+					</script>";
+					}
+                    ?>
+            </form>				
+			<div class="wrapper">
+			<div class="divide"></div>
+				<div class="registration-subheading"><a href="#" onclick="document.getElementById('id03').style.display='none';document.getElementById('id04').style.display='block'">Jěšte nejste zaregistrovaný/á?</a></div>            				          
+			</div> 
+			<script src="js/loginE.js"></script>
+			<script>
+					var modal1 = document.getElementById('id03');					
+					window.onclick = function(event) {					
+					if (event.target == modal1) {
+						modal1.style.display = "none";
+					}
+					}
+			</script>
+		</div>	
+	</div>
+	
+	<div id="id04" class="modal bg-light-gray">
+		<span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+		<div class="modal-content animate">		
+			<span onclick="document.getElementById('id04').style.display='none'" class="buttonX"> <img src="ui/img/picto/cross.png" width="10"/></span>				
+                <h1 class="login-heading">Registrace</h1>
+                <div class="progress_bar more-circles">	
+						<div class="circle active"></div>
+						<div class="circle"></div>
+						<div class="circle"></div>
+						<div class="circle"></div>
+					</div>				
+                <form action="/registerE" method="post" name="reg_form" autocomplete=”off” >
+                        <div class="first-row" id="first-row">  
+						  <div class="space"></div>
+                          <div class="field-wrap">	
+							  <input type="login" name="login1" value="" style="display: none" /> 
+                              <input type="login" id="ver_login" name="username" placeholder='Přihlašovací jméno' onfocus="this.placeholder = 'Přihlašovací jméno';" onblur="this.placeholder = 'Login'"  autocomplete="off" required/>
+                          </div>
+            
+                          <div class="field-wrap">
+							  <input type="password" name="password0" value="" style="display: none" /> 
+                              <input type="password" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'"  autocomplete="off" required/>
+                          </div>
+						  <div class="spaceSmall"></div>	  
+                          <input id="reg_button1" type="button" value="Dále" onclick="verify_login()" >
+                        </div>
+
+                        <div class="second-row" id="second-row">
+		                    <div class="registration-heading">Údaje o firmě</div>
+                            <div class="field-wrap">
+                                <input id="reg_name" type="text" name="c_name" placeholder='Název firmy' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Název firmy'"  required autocomplete="off" />
+                            </div>                                  
+
+                            <div class="field-wrap">
+                                <input id="reg_email" type="email" name="email" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'"  required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap">
+                                <input type="text" name="tel_num" placeholder='Tel. č.' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tel. č.'"  required autocomplete="off"/>
+                            </div>
+							<div class="spaceSmall"></div>
+                            <input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
+                        </div>
+
+                        <div class="third-row" id="third-row">
+							<div class="slim"></div>
+                        	<div class="slim registration-heading">Sídlo</div>
+                            <div class="field-wrap slim">
+                                <input type="text" name="street" placeholder='Ulice, č.p.' required autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ulice, č.p.'"/>
+                            </div>
+        
+                            <div class="field-wrap slim">
+                                <input type="text" name="city" placeholder='Obec' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Obec'" required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap slim">
+                                <input type="text" name="zip" placeholder='PSČ' onfocus="this.placeholder = ''" onblur="this.placeholder = 'PSČ'"  required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap slim">
+                                <input type="text" name="country" placeholder='Země' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Země'"  required autocomplete="off"/>
+                            </div>
+							<div class="spaceSmall"></div>
+                            <input id="reg_button3" type="button" onclick="next_reg_3()" value="Dále">
+                        </div>
+
+                        <div class="fourth-row" id="fourth-row">
+							<div class="slim"></div>
+                        	<div class="slim registration-heading">Kontaktní osoba</div>  
+                            <div class="field-wrap slim">
+                                <input type="text" name="full_name" placeholder='Jméno a příjmení' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno a příjmení'" required autocomplete="off"/>
+                            </div>
+        
+                            <div class="field-wrap slim">
+                                <input type="email" name="con_email" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap slim">
+                                <input type="text" name="con_tel_num" placeholder='Tel. č.' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tel. č.'" required autocomplete="off"/>
+                            </div>
+
+                            <div class="field-wrap slim">
+                                <input type="text" name="con_country" placeholder='Země' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Země'" required autocomplete="off"/>
+                            </div>
+							<div class="spaceSmall"></div>
+                            <input id="register" name="submit" type="submit" value="Registruj">
+                    </div>
+					<script src="js/loginE.js"></script>
+					<script>
+					// Get the modal
+					var modal2 = document.getElementById('id04');
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					if (event.target == modal2) {
+						modal2.style.display = "none";
+					}
+					}
+					</script>
+					</form>	
+				</div>	
+			</div>
+		</div>	
+
+<div id="id01" class="modal bg-light-gray">
+		<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>		
+		<div class="modal-content animate">	
+			<span onclick="document.getElementById('id01').style.display='none'" class="buttonX"> <img src="ui/img/picto/cross.png" width="10"/></span>
+            <h1 class="login-heading">Přihlaš se</h1>                          
+            <form action="/authP" method="post" name="login_form" id="login_form"> 
+					<div class="field-wrap">							
+                     	<input type="login" id="main_login" name="username" placeholder='Login' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Přezdívka'" autocomplete=”off” required/>
+                    </div>                          
+                    <div class="field-wrap">
+                      	<input type="password" id="main_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'" required autocomplete=”off”/>
+                    </div> 
+					<span id="login_err">Nesprávný login nebo heslo </span>		
+                    <input type="submit" value="Přihlásit">                   			
+					<?php
+                    if($error){
+
+					echo "<script>
+					    $('#login_err').css('display', 'block');
+					    $('#id01').css('display', 'block');
+					</script>";
+					} else{
+
+					echo "<script>
+					    $('#login_err').css('display', 'none');
+					</script>";
+					}
+                    ?>
+             </form>			
+			<div class="wrapper">
+			<div class="divide"></div>
+				<div class="registration-subheading"><a href="#" onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'">Jěšte nejsi zaregistrovaný/á?</a></div>            				          
+			</div> 
+			<script src="js/loginP.js"></script>
+			<script>
+					var modal1 = document.getElementById('id01');					
+					window.onclick = function(event) {					
+					if (event.target == modal1) {
+						modal1.style.display = "none";
+					}
+					}
+			</script>
+		</div>	
+	</div>		
+		
+		<div id="id02" class="modal bg-light-gray">
+		<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+		<div class="modal-content animate">  
+			<span onclick="document.getElementById('id02').style.display='none'" class="buttonX"> <img src="ui/img/picto/cross.png" width="10"/></span>				
+                <h1 class="login-heading">Registrace</h1>
+                <div class="progress_bar">	
+						<div class="circle active"></div>
+						<div class="circle"></div>
+						<div class="circle"></div>
+                </div>
+				<div class="space"></div>
+                <form action="/registerP" method="post" name="reg_form" autocomplete=”off” >
+                    <div class="first-row" id="first-row">                          
+                        <div class="field-wrap">	
+							<input type="login" name="login1" value="" style="display: none" /> 
+                            <input type="login" id="ver_login" name="username" placeholder='Přezdívka' onfocus="this.placeholder = ''" onblur="this.placeholder ='Přezdívka'" autocomplete="off"/>
+                        </div>
+            
+                        <div class="field-wrap">
+							<input type="password" name="password0" value="" style="display: none" /> 
+                            <input type="password" id="ver_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo';" autocomplete="off"/>
+                        </div>
+						<div class="spaceSmall"></div>	  
+                        <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
+                    </div>
+
+                    <div class="second-row" id="second-row">                            
+                        <div class="field-wrap">
+                            <input id="first_name" type="text" name="first_name" placeholder='Jméno' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno'" required autocomplete="off" />
+                        </div>
+        
+						<div class="field-wrap">
+							<input type="text" name="last_name" placeholder='Přijímení' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Přijímení'" required autocomplete="off"/>
+						</div>
+
+						<div class="field-wrap">
+							<input id="reg_email" type="email" name="email" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" required autocomplete="off"/>
+						</div>
+						<div class="spaceSmall"></div>	
+						<input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
+                    </div>
+
+                    <div class="third-row" id="third-row">
+						<div class="field-wrap tretie">                           
+                            <select name="studium" class="option-style">  
+									<option value="" selected disabled>Druh studia</option>
+									<option value="bakalar">bakalářské</option>
+									<option value="magister">magisterské/inženýrske</option>                                
+									<option value="doktorant">doktorantské</option>
+									<option value="absolvent">absolvent</option>                           
+                            </select>
+                        </div>
+        
+                        <div class="field-wrap tretie">
+                            <select name="univerzita"> 								
+                                <optgroup label="Univerzita">
+									<option value="" selected>Univerzita</option>
+									<option value="MU">MUNI</option>
+									<option value="VUT">VUT</option>
+									<option value="Mendel">Mendelu</option>
+									<option value="Ina">Jiná</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="field-wrap tretie">
+                            <select name="fakulta">
+                                <optgroup label="Fakulta">
+									<option value="" selected>Fakulta</option>
+									<option value="FI">FI</em></option>
+									<option value="ESF">ESF</option> 
+                                    <option value="ESF">FF</option>  
+									<option value="Ina">PřF</option> 
+									<option value="Ina">Jiná</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="field-wrap tretie">
+                            <input type="number" class="numberReg" id="year" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
+                        </div>                            
+                        <div class="spaceSmall"></div>	
+                        <input id="register" name="submit" type="submit" value="Registruj" class="registracia">                         
+                    </div>
+					<script src="js/loginP.js"></script>
+					<script>
+					var modal2 = document.getElementById('id02');					
+					window.onclick = function(event) {					
+					if (event.target == modal2) {
+						modal2.style.display = "none";
+					}
+					}
+					</script>	
+				</form>		
+			</div>	
+		</div>
+		<script>
+		$("#modal2").on("show", function () {
+		$("body").addClass("modal-open");
+			}).on("hidden", function () {
+			$("body").removeClass("modal-open")
+		});
+		</script>
 </div>

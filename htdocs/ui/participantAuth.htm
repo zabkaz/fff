@@ -143,16 +143,22 @@
 							<span class="lecture-time pink">9.30 – 10.30</span>
 							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky?</div>							
 								<?php
+								$show_modal = false;
 								if($hash[0] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/0#programmeTable">Přihlaš se</a>
-										  <div class="capacity">Kapacita: <?php echo $capacity[0]?>/50</div>
-										  
-									';
+										<div class="capacity">Kapacita: '.$capacity[0].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-									<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>';
-								} ?>
-							
+									echo '<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>										
+											<div class="signed text-violet">Jsi přihlášen</div>';
+								 
+									if($show_modal){
+										echo '<script> 
+											var modal = document.getElementById(\'myModal3\');		
+											modal.style.display = "block";										
+										}</script>';
+									}
+								}
+								?>							
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">10.30 – 11.30</span>
@@ -160,10 +166,10 @@
 								<?php
 								if($hash[1] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a>
-										<div class="capacity">Kapacita: <?php echo $capacity[1]?>/50</div>';
+										<div class="capacity">Kapacita: '.$capacity[1].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-											<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>';
+									echo '<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>
+									<div class="signed text-violet">Jsi přihlášen</div>';
 								} ?>							
 						</div>
 						<div class="table-item bg-white border-radius">
@@ -172,10 +178,10 @@
 							<?php
 								if($hash[2] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/2#programmeTable">Přihlaš se</a>
-										<div class="capacity">Kapacita: <?php echo $capacity[2]?>/50</div>';
+										<div class="capacity">Kapacita: '.$capacity[2].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-										<a class="button-violet" role="button" href="/participant/2#programmeTable">Odhlaš se</a>';
+									echo '<a class="button-violet" role="button" href="/participant/2#programmeTable">Odhlaš se</a>
+											<div class="signed text-violet">Jsi přihlášen</div>';
 								} ?>
 						</div>
 					</div>
@@ -205,10 +211,10 @@
 								<?php
 								if($hash[5] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/5#programmeTable">Přihlaš se</a>
-											<div class="capacity">Kapacita: <?php echo $capacity[5]?>/50</div>';
+											<div class="capacity">Kapacita: '.$capacity[5].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-										<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>';
+									echo '<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>
+											<div class="signed text-violet">Jsi přihlášen</div>';
 								} ?>	
 						</div>						
 					</div>							
@@ -221,10 +227,10 @@
 								<?php
 								if($hash[6] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/6#programmeTable">Přihlaš se</a>
-										<div class="capacity">Kapacita: <?php echo $capacity[6]?>/50</div>';
+										<div class="capacity">Kapacita: '.$capacity[6].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-										<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>';
+									echo '<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>
+										<div class="signed text-violet">Jsi přihlášen</div>';
 								} ?>	
 						</div>	
 						<div class="table-item bg-white border-radius">
@@ -233,10 +239,10 @@
 								<?php
 								if($hash[7] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/7#programmeTable">Přihlaš se</a>
-										<div class="capacity">Kapacita: <?php echo $capacity[7]?>/50</div>';
+										<div class="capacity">Kapacita:'.$capacity[7].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-										<a class="button-violet" role="button" href="/participant/7#programmeTable">Odhlaš se</a>';
+									echo '<a class="button-violet" role="button" href="/participant/7#programmeTable">Odhlaš se</a>
+											<div class="signed text-violet">Jsi přihlášen</div>';
 								} ?>							
 						</div>		
 						<div class="table-item bg-white border-radius">
@@ -245,31 +251,33 @@
 								<?php
 								if($hash[8] == '0'){
 									echo '<a class="button-free" role="button" href="/participant/8#programmeTable">Přihlaš se</a>
-										 <div class="capacity">Kapacita: <?php echo $capacity[8]?>/50</div>';
+										 <div class="capacity">Kapacita: '.$capacity[8].'/50</div>';
 								}else{
-									echo '<div class="signed text-violet">Jsi přihlášen</div>
-										<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>';} ?>
+									echo '<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>
+											<div class="signed text-violet">Jsi přihlášen</div>';} ?>
 							</a>
-							<div class="alert success">
-											<span class="closebtn">&times;</span>  
-												Jsi  <strong>úspešne</strong> přihlášený/á na přednášku.
-										</div>		
+							
 						</div>	
 					</div>		
 
-  <script>
-var close = document.getElementsByClassName("closebtn");
-var i;
+<button id="myBtn" onclick="document.getElementById('myModal3').style.display='block'">Open Modal</button>
 
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-    }
-}
-</script>
-  
+<!-- The Modal -->
+<div id="myModal3" class="modal2 ">
+  <!-- Modal content -->
+  <div class="modal-content2 animate">
+    <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
+    <p>Přihlášení na přednášku proběhlo úspěšne.</p>
+  </div>
+</div>
+		<script>
+					var modal = document.getElementById('myModal3');					
+					window.onclick = function(event) {					
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+					}
+			</script>
 			</div>
 		</div>
     </section>
