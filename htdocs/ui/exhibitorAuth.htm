@@ -14,6 +14,9 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 					<li>
+                        <a class="page-scroll" href="/"><span>Úvod</span></a>
+                    </li>
+					<li>
                         <a class="page-scroll" href="/participant"><span>Chci se zucastnit</span></a>
                     </li>
                     <li>
@@ -248,8 +251,9 @@
 				 		onclick="selectPlace('18', <?php echo $user_id; ?>)" />					
 				 <rect class="stand stand19 <?php echo ($place_id == 19 ? 'selected' : '');?>" x="74%" y="39%" width="10%" height="5%" rx="4" ry="4" id="stand19"
 				 		onclick="selectPlace('19', <?php echo $user_id; ?>)" />			
-				<script src="../js/place.js"></script> 
-			</svg>              
+				
+			</svg>   
+			<script src="../js/place.js"></script> 			
 			<div class="visible-xs place">
 				<div class="col-xs-12 text-center visible-xs">
                     <h2 class="section-heading space">Výstavní plocha</h2>

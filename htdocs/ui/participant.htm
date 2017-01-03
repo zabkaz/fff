@@ -36,7 +36,7 @@
 										<a href="/loginP" class="btn btn-default login">Přihlaš se</a>
 									</span>';									
 								}else{
-								if($_SESSION.type == 'e'){
+								if($_SESSION[type] === 'e'){
 									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Služby</a>						
 											<div class="wrapper-user-collapse dropdown-user" >					
 												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
@@ -224,12 +224,12 @@
 						<div class="circle"></div>
 						<div class="circle"></div>
                 </div>				
-                <form action="/registerP" method="post" name="reg_form" autocomplete=”off” >
+                <form action="/registerP" method="post" name="reg_formP" autocomplete=”off” >
 					<div class="space"></div>
-                    <div class="first-row" id="first-row">   						
+                    <div class="first-row" id="first-rowP">   						
                         <div class="field-wrap">	
 							<input type="login" name="login1" value="" style="display: none" /> 
-                            <input type="login" id="ver_login" name="username" placeholder='Přezdívka' onfocus="this.placeholder = ''" onblur="this.placeholder ='Přezdívka'" autocomplete="off"/>
+                            <input type="login" id="ver_loginP" name="username" placeholder='Přezdívka' onfocus="this.placeholder = ''" onblur="this.placeholder ='Přezdívka'" autocomplete="off"/>
                         </div>
             
                         <div class="field-wrap">
@@ -237,10 +237,10 @@
                             <input type="password" id="ver_pass" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo';" autocomplete="off"/>
                         </div>
 						<div class="spaceSmall"></div>	  
-                        <input id="reg_button1" type="button" onclick="verify_login()" value="Dále">
+                        <input id="reg_button1" type="button" onclick="verify_login_p()" value="Dále">
                     </div>
 
-                    <div class="second-row" id="second-row">   
+                    <div class="second-row" id="second-rowP">   
 							
                         <div class="field-wrap">
                             <input id="first_name" type="text" name="first_name" placeholder='Jméno' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Jméno'" required autocomplete="off" />
@@ -254,10 +254,10 @@
 							<input id="reg_email" type="email" name="email" placeholder='E-mail' onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" required autocomplete="off"/>
 						</div>
 						<div class="spaceSmall"></div>	
-						<input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
+						<input id="reg_button2" type="button" onclick="next_reg_2_p()" value="Dále">
                     </div>
 
-                    <div class="third-row participant" id="third-row">
+                    <div class="third-row participant" id="third-rowP">
 						<div class="field-wrap tretie">                           
                             <select name="studium" class="option-style">  
 									<option value="" selected disabled>Druh studia</option>
@@ -297,7 +297,7 @@
                             <input type="number" class="numberReg" id="year" name="rocnik" min="1" max="6" required value="" placeholder="Ročník">
                         </div>                            
                         <div class="spaceSmall"></div>	
-                        <input id="register" name="submit" type="submit" value="Registruj" class="registracia">                         
+                        <input id="registerP" name="submit" type="submit" value="Registruj" class="registracia">                         
                     </div>
 					<script src="js/loginP.js"></script>
 					<script>

@@ -141,31 +141,27 @@
 						<div class="table-heading narrower pink">Praktické tipy</div>
 						<div class="bg-white border-radius table-item">
 							<span class="lecture-time pink">9.30 – 10.30</span>
-							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky?</div>							
+							<div class="lecture-title">Jak si vyjednat dobré pracovní podmínky</div>							
 								<?php
 								$show_modal = false;
 								if($hash[0] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/0#programmeTable">Přihlaš se</a>
+									echo '
+									<a class="button-free visible-xs visible-sm" role="button" href="/participant/1#programmeTable">Přihlaš se</a>
+									<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal31\').style.display=\'block\'">Přihlaš se</a>
 										<div class="capacity">Kapacita: '.$capacity[0].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>										
 											<div class="signed text-violet">Jsi přihlášen</div>';
-								 
-									if($show_modal){
-										echo '<script> 
-											var modal = document.getElementById(\'myModal3\');		
-											modal.style.display = "block";										
-										}</script>';
-									}
-								}
-								?>							
+								}?>							
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">10.30 – 11.30</span>
 							<div class="lecture-title">Jak udělat dobrý dojem na zaměstnavatele</div>							
 								<?php
 								if($hash[1] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a>
+									echo '
+										<a class="button-free visible-xs visible-sm" role="button" href="/participant/2#programmeTable">Přihlaš se</a>
+										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal32\').style.display=\'block\'">Přihlaš se</a>
 										<div class="capacity">Kapacita: '.$capacity[1].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>
@@ -175,14 +171,10 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time pink">11.30 – 12.30</span>
 							<div class="lecture-title">Jak se obléct (nejen) na pohovor</div>
-							<?php
-								if($hash[2] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/2#programmeTable">Přihlaš se</a>
-										<div class="capacity">Kapacita: '.$capacity[2].'/50</div>';
-								}else{
-									echo '<a class="button-violet" role="button" href="/participant/2#programmeTable">Odhlaš se</a>
-											<div class="signed text-violet">Jsi přihlášen</div>';
-								} ?>
+							<a class="full" role="button">
+								Kapacita vyčerpána
+							</a>
+							<div class="capacity">Kapacita: 50/50</div>
 						</div>
 					</div>
 					
@@ -200,21 +192,29 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time orange">10.30 – 11.30</span>
 							<div class="lecture-title">Jak uniknout z&nbsp;rozhodovací paralýzy</div>
-							<a class="full" role="button">
-								Kapacita vyčerpána
-							</a>
-							<div class="capacity">Kapacita: 50/50</div>
+							<?php
+								if($hash[4] == '0'){
+									echo '
+										<a class="button-free visible-xs visible-sm" role="button" href="/participant/4#programmeTable">Přihlaš se</a>
+										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal35\').style.display=\'block\'">Přihlaš se</a>
+										<div class="capacity">Kapacita: '.$capacity[4].'/50</div>';
+								}else{
+									echo '<a class="button-violet" role="button" href="/participant/4#programmeTable">Odhlaš se</a>
+										 <div class="signed text-violet">Jsi přihlášen</div>';
+								} ?>
 						</div>
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time orange">10.30 – 11.30</span>
 							<div class="lecture-title oneLine">Jak řešit problémy kreativně</div>							
 								<?php
 								if($hash[5] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/5#programmeTable">Přihlaš se</a>
-											<div class="capacity">Kapacita: '.$capacity[5].'/50</div>';
+									echo '
+										<a class="button-free visible-xs visible-sm" role="button" href="/participant/5#programmeTable">Přihlaš se</a>
+										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal33\').style.display=\'block\'">Přihlaš se</a>
+										<div class="capacity">Kapacita: '.$capacity[5].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>
-											<div class="signed text-violet">Jsi přihlášen</div>';
+										 <div class="signed text-violet">Jsi přihlášen</div>';
 								} ?>	
 						</div>						
 					</div>							
@@ -226,7 +226,9 @@
 							<div class="lecture-title">Disrupt the World of&nbsp;Travel With Kiwi.com!</div>							
 								<?php
 								if($hash[6] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/6#programmeTable">Přihlaš se</a>
+									echo '
+										<a class="button-free visible-xs visible-sm" role="button" href="/participant/6#programmeTable">Přihlaš se</a>
+										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal34\').style.display=\'block\'">Přihlaš se</a>
 										<div class="capacity">Kapacita: '.$capacity[6].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>
@@ -236,48 +238,164 @@
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title">Kariéra v KPMG - jak uspět při výběrovém řízení</div>							
-								<?php
-								if($hash[7] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/7#programmeTable">Přihlaš se</a>
-										<div class="capacity">Kapacita:'.$capacity[7].'/50</div>';
-								}else{
-									echo '<a class="button-violet" role="button" href="/participant/7#programmeTable">Odhlaš se</a>
-											<div class="signed text-violet">Jsi přihlášen</div>';
-								} ?>							
+							<a class="full" role="button">
+								Kapacita vyčerpána
+							</a>
+							<div class="capacity">Kapacita: 50/50</div>						
 						</div>		
 						<div class="table-item bg-white border-radius">
 							<span class="lecture-time green">10.30 – 11.30</span>
 							<div class="lecture-title oneLine">Tvoje cesta do&nbsp;EY</div>
-								<?php
+							<?php
 								if($hash[8] == '0'){
-									echo '<a class="button-free" role="button" href="/participant/8#programmeTable">Přihlaš se</a>
-										 <div class="capacity">Kapacita: '.$capacity[8].'/50</div>';
+									echo '
+										<a class="button-free visible-xs visible-sm" role="button" href="/participant/8#programmeTable">Přihlaš se</a>
+										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal36\').style.display=\'block\'">Přihlaš se</a>
+										<div class="capacity">Kapacita:'.$capacity[8].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>
-											<div class="signed text-violet">Jsi přihlášen</div>';} ?>
-							</a>
-							
+											<div class="signed text-violet">Jsi přihlášen</div>';
+								} ?>
 						</div>	
 					</div>		
 
-<button id="myBtn" onclick="document.getElementById('myModal3').style.display='block'">Open Modal</button>
 
-<!-- The Modal -->
-<div id="myModal3" class="modal2 ">
-  <!-- Modal content -->
-  <div class="modal-content2 animate">
-    <span class="close" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
-    <p>Přihlášení na přednášku proběhlo úspěšne.</p>
-  </div>
+
+<!-- Modals -->
+<div id="myModal31" class="modal2">
+ 	<div class="modal-content2 animate">
+		<span class="close" onclick="document.getElementById('myModal31').style.display='none'">&times;</span>
+		<h4 class="modal-title">Opravdu se chceš přihlásit na přednášku:</h4>
+		<p class="modal-info">Jak si vyjednat dobré pracovní podmínky</p>	
+		<div class="centered-btn col-lg-12">
+			<a class="buttonSubmit col-lg-6" role="button" href="/participant/0#programmeTable">Ano, chci.</a>	
+			<a onclick="document.getElementById('myModal31').style.display='none'" class="btn-cancel col-lg-6">Ne, nechci.</a>					
+		</div>  
+		<div class="spaceSmall"></div>
+	</div>
+	<script>
+			var modal = document.getElementById('myModal31');					
+			window.onclick = function(event) {					
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+			}
+	</script>
 </div>
-		<script>
-					var modal = document.getElementById('myModal3');					
-					window.onclick = function(event) {					
-					if (event.target == modal) {
-						modal.style.display = "none";
-					}
-					}
-			</script>
+
+<div id="myModal32" class="modal2">
+ 	<div class="modal-content2 animate">
+		<span class="close" onclick="document.getElementById('myModal32').style.display='none'">&times;</span>
+		<h4 class="modal-title">Opravdu se chceš přihlásit na přednášku:</h4>
+		<p class="modal-info">Jak udělat dobrý dojem na zaměstnavatele</p>
+		<div class="spaceSmall"></div>	
+		<div class="centered-btn col-lg-12">
+			<a class="buttonSubmit col-lg-6" role="button" href="/participant/1#programmeTable">Ano, chci.</a>	
+			<a onclick="document.getElementById('myModal32').style.display='none'" class="btn-cancel col-lg-6">Ne, nechci.</a>					
+		</div>  
+		<div class="spaceSmall"></div>
+	</div>
+	<script>
+			var modal = document.getElementById('myModal32');					
+			window.onclick = function(event) {					
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+			}
+	</script>
+</div>
+
+<div id="myModal33" class="modal2">
+ 	<div class="modal-content2 animate">
+		<span class="close" onclick="document.getElementById('myModal33').style.display='none'">&times;</span>
+		<h4 class="modal-title">Opravdu se chceš přihlásit na přednášku:</h4>
+		<p class="modal-info">Jak řešit problémy kreativně</p>
+		<div class="spaceSmall"></div>	
+		<div class="centered-btn col-lg-12">
+			<a class="buttonSubmit col-lg-6" role="button" href="/participant/5#programmeTable">Ano, chci.</a>	
+			<a onclick="document.getElementById('myModal33').style.display='none'" class="btn-cancel col-lg-6">Ne, nechci.</a>					
+		</div>  
+		<div class="spaceSmall"></div>
+	</div>
+	<script>
+			var modal = document.getElementById('myModal33');					
+			window.onclick = function(event) {					
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+			}
+	</script>
+</div>
+
+<div id="myModal34" class="modal2">
+ 	<div class="modal-content2 animate">
+		<span class="close" onclick="document.getElementById('myModal34').style.display='none'">&times;</span>
+		<h4 class="modal-title">Opravdu se chceš přihlásit na přednášku:</h4>
+		<p class="modal-info">Disrupt the World of&nbsp;Travel With Kiwi.com!</p>
+		<div class="spaceSmall"></div>	
+		<div class="centered-btn col-lg-12">
+			<a class="buttonSubmit col-lg-6" role="button" href="/participant/6#programmeTable">Ano, chci.</a>	
+			<a onclick="document.getElementById('myModal34').style.display='none'" class="btn-cancel col-lg-6">Ne, nechci.</a>					
+		</div>  
+		<div class="spaceSmall"></div>
+	</div>
+	<script>
+			var modal = document.getElementById('myModal34');					
+			window.onclick = function(event) {					
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+			}
+	</script>
+</div>
+
+<div id="myModal35" class="modal2">
+ 	<div class="modal-content2 animate">
+		<span class="close" onclick="document.getElementById('myModal35').style.display='none'">&times;</span>
+		<h4 class="modal-title">Opravdu se chceš přihlásit na přednášku:</h4>
+		<p class="modal-info">Jak uniknout z&nbsp;rozhodovací paralýzy</p>
+		<div class="spaceSmall"></div>	
+		<div class="centered-btn col-lg-12">
+			<a class="buttonSubmit col-lg-6" role="button" href="/participant/4#programmeTable">Ano, chci.</a>	
+			<a onclick="document.getElementById('myModal35').style.display='none'" class="btn-cancel col-lg-6">Ne, nechci.</a>					
+		</div>  
+		<div class="spaceSmall"></div>
+	</div>
+	<script>
+			var modal = document.getElementById('myModal35');					
+			window.onclick = function(event) {					
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+			}
+	</script>
+</div>
+
+<div id="myModal36" class="modal2">
+ 	<div class="modal-content2 animate">
+		<span class="close" onclick="document.getElementById('myModal36').style.display='none'">&times;</span>
+		<h4 class="modal-title">Opravdu se chceš přihlásit na přednášku:</h4>
+		<p class="modal-info">Tvoje cesta do&nbsp;EY</p>
+		<div class="spaceSmall"></div>	
+		<div class="centered-btn col-lg-12">
+			<a class="buttonSubmit col-lg-6" role="button" href="/participant/8#programmeTable">Ano, chci.</a>	
+			<a onclick="document.getElementById('myModal36').style.display='none'" class="btn-cancel col-lg-6">Ne, nechci.</a>					
+		</div>  
+		<div class="spaceSmall"></div>
+	</div>
+	<script>
+			var modal = document.getElementById('myModal36');					
+			window.onclick = function(event) {					
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+			}
+	</script>
+</div>
+
+
+
+				</div>		
 			</div>
 		</div>
     </section>

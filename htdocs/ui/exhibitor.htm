@@ -37,8 +37,8 @@
 										<a href="/loginE" class="btn btn-default login">Přihlašte se</a>
 									</span>';									
 								}else{
-								if($_SESSION.type == 'e'){
-									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Služby</a>						
+								if($_SESSION[type] === 'e'){
+									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Objednávkatra</a>						
 											<div class="wrapper-user-collapse dropdown-user" >					
 												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 											</div>';
@@ -341,12 +341,12 @@
 						<div class="circle"></div>
 						<div class="circle"></div>
 					</div>				
-                <form action="/registerE" method="post" name="reg_form" autocomplete=”off” >
-                        <div class="first-row" id="first-row">  
+                <form action="/registerE" method="post" name="reg_formE" autocomplete=”off” >
+                        <div class="first-row" id="first-rowE">  
 						  <div class="space"></div>
                           <div class="field-wrap">	
 							  <input type="login" name="login1" value="" style="display: none" /> 
-                              <input type="login" id="ver_login" name="username" placeholder='Přihlašovací jméno' onfocus="this.placeholder = 'Přihlašovací jméno';" onblur="this.placeholder = 'Přihlašovací jméno'"  autocomplete="off" required/>
+                              <input type="login" id="ver_loginE" name="username" placeholder='Přihlašovací jméno' onfocus="this.placeholder = 'Přihlašovací jméno';" onblur="this.placeholder = 'Přihlašovací jméno'"  autocomplete="off" required/>
                           </div>
             
                           <div class="field-wrap">
@@ -354,10 +354,10 @@
                               <input type="password" name="password" placeholder='Heslo' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Heslo'"  autocomplete="off" required/>
                           </div>
 						  <div class="spaceSmall"></div>	  
-                          <input id="reg_button1" type="button" value="Dále" onclick="verify_login()" >
+                          <input id="reg_button1" type="button" value="Dále" onclick="verify_login_e()" >
                         </div>
 
-                        <div class="second-row" id="second-row">
+                        <div class="second-row" id="second-rowE">
 							<div class="spaceSmall"></div>
                         	<div class="registration-heading">Údaje o firmě</div>
                             <div class="field-wrap">
@@ -372,10 +372,10 @@
                                 <input type="text"  id="reg_num" name="tel_num" placeholder='Tel. č.' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Tel. č.'"  required autocomplete="off"/>
                             </div>
 							<div class="spaceSmall"></div>
-                            <input id="reg_button2" type="button" onclick="next_reg_2()" value="Dále">
+                            <input id="reg_button2" type="button" onclick="next_reg_2_e()" value="Dále">
                         </div>
 
-                        <div class="third-row" id="third-row">
+                        <div class="third-row" id="third-rowE">
 							<div class="slim"></div>
                         	<div class="slim registration-heading">Sídlo</div>
                             <div class="field-wrap slim">
@@ -394,10 +394,10 @@
                                 <input type="text" name="country" placeholder='Země' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Země'"  required autocomplete="off"/>
                             </div>
 							<div class="spaceSmall"></div>
-                            <input id="reg_button3" type="button" onclick="next_reg_3()" value="Dále">
+                            <input id="reg_button3" type="button" onclick="next_reg_3_e()" value="Dále">
                         </div>
 
-                        <div class="fourth-row" id="fourth-row">
+                        <div class="fourth-row" id="fourth-rowE">
 							<div class="slim"></div>
                         	<div class="slim registration-heading">Kontaktní osoba</div>  
                             <div class="field-wrap slim">
@@ -416,7 +416,7 @@
                                 <input type="text" name="con_country" placeholder='Země' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Země'" required autocomplete="off"/>
                             </div>
 							<div class="spaceSmall"></div>
-                            <input id="register" name="submit" type="submit" value="Registruj">
+                            <input id="registerE" name="submit" type="submit" value="Registruj">
                     </div>
 					<script src="js/loginE.js"></script>
 					<script>

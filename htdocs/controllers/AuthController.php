@@ -112,7 +112,7 @@ class AuthController extends Controller{
 		$place = $this->f3->get('GET.place');
 		$id = $this->f3->get('GET.id');
 
-		$result = $this->db->exec('UPDATE vyst_info SET placeID=? WHERE id=?', $place, $id);
+		$result = $this->db->exec('UPDATE vyst_info SET placeID=? WHERE id=?', array(1=>$place, 2=>$id));
 		// TODO verify result?
 		echo 'success';
 	}
@@ -163,6 +163,7 @@ class AuthController extends Controller{
     	$this->f3->set('con_email', $info->con_email);
     	$this->f3->set('con_tel_num', $info->con_tel_num);
     	$this->f3->set('con_country', $info->con_country);
+		$this->f3->set('place_id', $info->placeID);
 
     	$address = new Address($this->db);
     	$address->getById($info->address_id);

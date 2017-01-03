@@ -17,7 +17,7 @@ class Controller {
 	
 		$f3=Base::instance();
 		$this->f3=$f3;
-
+		
 	    $db=new DB\SQL(
 	        $f3->get('devdb'),
 	        $f3->get('devdbusername'),
