@@ -29,7 +29,7 @@ class ParticipantController extends Controller{
         $info = new InfoP($this->db);
         $info->add($user->id);
 
-        $interest = new interest($this->db);
+        $interest = new Interest($this->db);
         $interest->add($user->id);
 
 		$this->f3->set('SESSION.user', $user->username);

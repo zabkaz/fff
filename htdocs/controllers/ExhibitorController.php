@@ -26,13 +26,13 @@ class ExhibitorController extends Controller{
         $user = new UserE($this->db);
         $user->add();
 
-        $address = new address($this->db);
+        $address = new Address($this->db);
         $address->add();
 
         $info = new InfoE($this->db);
         $info->add($user->id, $address->id);
 
-        $interest = new interest($this->db);
+        $interest = new Interest($this->db);
         $interest->add($user->id);
 		
 		$this->f3->set('SESSION.user', $user->username);

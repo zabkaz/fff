@@ -17,5 +17,9 @@ class MainController extends Controller{
 		$this->f3->set('title','Chyba');
         echo View::instance()->render('layout.htm');
 	}	
-	
+	function loginMobile(){
+		$this->f3->set('content','loginMobile.htm');
+		$this->f3->set('title','Login');
+        echo View::instance()->render('layout.htm');
+	}	
 }

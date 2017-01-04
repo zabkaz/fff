@@ -28,46 +28,6 @@
 					<li>
                         <a class="page-scroll" href="/#contact"><span>Kontakt</span></a>
                     </li>
-							<li>
-					<?php
-						if( $_SESSION === null ){
-								echo
-									'<span class="hidden-xs hidden-sm hidden-md">
-										<button class="btn btn-default dropdown-toggle login"
-										id="menuDrop" data-toggle="dropdown">Přihlašte se <span class="caret"></span></button>
-										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-											<li role="presentation" class="hidden-xs hidden-sm hidden-md">
-												<a role="menuitem" tabindex="-1" href="#"
-														onclick="document.getElementById(\'id01\').style.display=\'block\'">
-														Chci se zúčastnit</a>
-											</li>
-											<li role="presentation" class="visible-xs visible-sm visible-md">
-												<a href="/loginP" class="btn btn-default login">Chci se zúčastnit</a>
-											</li>
-											<li role="presentation" class="hidden-xs hidden-sm hidden-md">
-												<a role="menuitem" tabindex="-1" href="#"
-														onclick="document.getElementById(\'id03\').style.display=\'block\'">
-														Chci vystavovat</a>
-											</li>
-											<li role="presentation" class="visible-xs visible-sm visible-md">
-												<a href="/loginE" class="btn btn-default login">Chci vystavovat</a>
-											</li>
-										</ul>
-									</span>';									
-								}else{
-								if($_SESSION.type == 'e'){
-									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</a>						
-											<div class="wrapper-user-collapse dropdown-user" >					
-												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
-											</div>';
-								}else{
-									echo	'<a href="/participant/auth" class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</a>						
-											<div class="wrapper-user-collapse dropdown-user" >					
-												<a href="/participant/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
-											</div>';
-									}											
-								} ?>						
-                    </li>
 		      </div>
         </div>
     </nav>
@@ -86,7 +46,7 @@
 			<div class="table-reasons">	
 				<h1 class="text-center">Uups.</h1> 
 				<h5 class="text-center">Někde se stala chyba. Skuste to pozdeji.</h5>
-				<span class="spaceBigger"><img src="../ui/img/mascot/mascot05.png" class="img-responsive margin_center"/></span>
+				<span class="spaceBigger"><img src="../ui/img/mascot/mascot05.png" class="img-mascot margin_center"/></span>
 				<div class="spaceSmall"></div>
 			</div>
 		</div>

@@ -2,7 +2,71 @@
 
 <div id="page-top" class="index">
 
-    <?php echo $this->render(Base::instance()->get('navigation')); ?>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"><img src="ui/img/jobchS.png" class="mainLogo"></a>
+            </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a class="page-scroll" href="/"><span>Úvod</span></a>
+                    </li>
+                   <li>
+                        <a class="page-scroll" href="/participant"><span>Chci se zucastnit</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/exhibitor"><span>Chci vystavovat</span></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#info"><span>Kdy a kde</span></a>
+                    </li>                 
+					<li>
+                        <a class="page-scroll" href="#contact"><span>Kontakt</span></a>
+                    </li>
+					<li>
+					<?php
+						if($_SESSION[type] === 'e'){
+									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Služby</a>						
+											<div class="wrapper-user-collapse dropdown-user" >					
+												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';
+						}else if($_SESSION[type] === 'p'){
+									echo	'<a href="/participant/auth" class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</a>						
+											<div class="wrapper-user-collapse dropdown-user" >					
+												<a href="/participant/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
+											</div>';
+						}else{
+								echo
+									'<span class="page-scroll hidden-xs hidden-sm">
+										<button class="btn btn-default dropdown-toggle login page-scroll"
+										id="menuDrop" data-toggle="dropdown">Přihlašte se <span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+											<li role="presentation">
+												<a role="menuitem" tabindex="-1" href="#"
+														onclick="document.getElementById(\'id01\').style.display=\'block\'">
+														Chci se zúčastnit</a>
+											</li>
+											<li role="presentation">
+												<a role="menuitem" tabindex="-1" href="#"
+														onclick="document.getElementById(\'id03\').style.display=\'block\'">
+														Chci vystavovat</a>
+											</li>											
+										</ul>
+									</span>									
+									<span class="page-scroll visible-xs visible-sm">
+										<a class="btn btn-default login page-scroll" href="/loginMobile">Přihlašte se</a>
+									</span>';
+								} ?>					
+                    </li>
+		      </div>
+        </div>
+    </nav>
    
 	<!-- Login Form -->
 	<section class="bg-light-gray">		
@@ -64,6 +128,8 @@
                     <input type="text" name="con_country" placeholder='Země' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Země'" required autocomplete="off"/>
                 </div>
 				<div class="spaceSmall"></div>
+				<input id="registerE" name="submit" type="submit" value="Registruj">
+				
 				<script src="js/login.js"></script>
 				<script>
 					// Get the modal

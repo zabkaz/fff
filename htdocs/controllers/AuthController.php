@@ -30,7 +30,7 @@ class AuthController extends Controller{
 		$user = new UserP($this->db);
     	$user->getByName($name);
 
-    	$info = new infoP($this->db);
+    	$info = new InfoP($this->db);
     	$info->edit($user->id);    
 
     	$this->f3->reroute('/participant/auth');
@@ -85,7 +85,7 @@ class AuthController extends Controller{
 		$user = new UserE($this->db);
     	$user->getByName($name);
 
-    	$info = new infoE($this->db);
+    	$info = new InfoE($this->db);
     	$info->edit($user->id);
 
     	$address = new Address($this->db);
@@ -153,7 +153,7 @@ class AuthController extends Controller{
 		$user = new UserE($this->db);
     	$user->getByName($name);
 
-    	$info = new infoE($this->db);
+    	$info = new InfoE($this->db);
     	$info->getById($user->id);
 
     	$this->f3->set('c_name', $info->c_name);
@@ -200,7 +200,7 @@ class AuthController extends Controller{
 		$user = new UserP($this->db);
     	$user->getByName($name);
 
-    	$info = new infoP($this->db);
+    	$info = new InfoP($this->db);
     	$info->getById($user->id);
 
        	$this->f3->set('first_name', $info->first_name);

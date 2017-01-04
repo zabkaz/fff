@@ -30,43 +30,38 @@
                     </li>
 					<li>
 					<?php
-						if( $_SESSION === null ){
-								echo
-									'<span class="page-scroll">
-										<button class="btn btn-default dropdown-toggle login page-scroll"
-										id="menuDrop" data-toggle="dropdown">Přihlašte se <span class="caret"></span></button>
-										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-											<li role="presentation" class="hidden-xs hidden-sm hidden-md">
-												<a role="menuitem" tabindex="-1" href="#"
-														onclick="document.getElementById(\'id01\').style.display=\'block\'">
-														Chci se zúčastnit</a>
-											</li>
-											<li role="presentation" class="visible-xs visible-sm visible-md">
-												<a href="/loginP" class="btn btn-default login_mobile">Chci se zúčastnit</a>
-											</li>
-											<li role="presentation" class="hidden-xs hidden-sm hidden-md">
-												<a role="menuitem" tabindex="-1" href="#"
-														onclick="document.getElementById(\'id03\').style.display=\'block\'">
-														Chci vystavovat</a>
-											</li>
-											<li role="presentation" class="visible-xs visible-sm visible-md page-scroll">
-												<a href="/loginE" class="btn btn-default login_mobile">Chci vystavovat</a>
-											</li>
-										</ul>
-									</span>';									
-								}else{
-								if($_SESSION.type === 'e'){
-									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Objednávka</a>						
+						if($_SESSION[type] === 'e'){
+									echo 	'<a href="/exhibitor/auth" class="btn btn-default login page-scroll" type="button">Služby</a>						
 											<div class="wrapper-user-collapse dropdown-user" >					
 												<a href="/exhibitor/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 											</div>';
-								}else{
+						}else if($_SESSION[type] === 'p'){
 									echo	'<a href="/participant/auth" class="btn btn-default login page-scroll" type="button">'.$_SESSION[user].'</a>						
 											<div class="wrapper-user-collapse dropdown-user" >					
 												<a href="/participant/profile" class="padding-left">Profil</a><span class="text-inverse separator"> | </span><a href="/logout">Odhlásit</a>
 											</div>';
-									}											
-								} ?>						
+						}else{
+								echo
+									'<span class="page-scroll hidden-xs hidden-sm">
+										<button class="btn btn-default dropdown-toggle login page-scroll"
+										id="menuDrop" data-toggle="dropdown">Přihlašte se <span class="caret"></span></button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+											<li role="presentation">
+												<a role="menuitem" tabindex="-1" href="#"
+														onclick="document.getElementById(\'id01\').style.display=\'block\'">
+														Chci se zúčastnit</a>
+											</li>
+											<li role="presentation">
+												<a role="menuitem" tabindex="-1" href="#"
+														onclick="document.getElementById(\'id03\').style.display=\'block\'">
+														Chci vystavovat</a>
+											</li>											
+										</ul>
+									</span>									
+									<span class="page-scroll visible-xs visible-sm">
+										<a class="btn btn-default login page-scroll" href="/loginMobile">Přihlašte se</a>
+									</span>';
+								} ?>				
                     </li>
 		      </div>
         </div>
@@ -91,10 +86,7 @@
                 </form>
 				
 				<div class="wrapper">
-					<div class="registration-subheading">Jěšte nejste zaregistrovaný/á?</div>            
-					<div class="registration-wrapper" >             		
-						<a href="/registerE" onclick='processing()'><span class="registracia">Zaregistrujte se</span></a>						
-					</div>           
+					<div class="registration-subheading"><a href="/registerMobileE" class="underline">Jěšte nejsi zaregistrovaný/á?</a></div>     
 				</div> 
 				<div class="spaceBigger"></div>
         </div>	

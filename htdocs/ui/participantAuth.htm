@@ -6,13 +6,16 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="/"><img src="../ui/img/jobchS.png" class="mainLogo"></a>
             </div>
-			 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">                  
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">   
+					<li>
+                        <a class="page-scroll" href="/"><span>Úvod</span></a>
+                    </li>
 					<li>
                         <a class="page-scroll" href="/participant"><span>Chci se zúčastnit</span></a>
                     </li>
@@ -72,7 +75,7 @@
 						<h2 class="section-heading padding">Jak se připravit na JobChallenge?</h2>					
 					</div>	
 					<div class="col-lg-10 container2">
-						<h4 class="text-detailed">Účast na veletrhu vám může přinést spoustu cenných informací a&nbsp;zkušeností. Připravili jsme pro vás několik tipů, jak si ze&nbsp;setkání se zaměstnavateli odnést co nejvíce.</h4>          
+						<h4 class="text-detailed">Účast na veletrhu vám přinese spoustu cenných informací a&nbsp;zkušeností. Připravili jsme pro vás několik tipů, jak si ze&nbsp;setkání se zaměstnavateli odnést co nejvíce.</h4>          
 					</div>
 				</div>
 				<div class="row text-center reasons">
@@ -96,7 +99,7 @@
 						</div>
 					</div>               
 				</div>
-			
+			<div class="visible-xs visible-sm space"></div>
 				<div class="row text-center reasons">
 					<div class="col-sm-6 dashed3">
 						<div class="col-md-3 icon2">
@@ -131,7 +134,7 @@
 					<h2 class="programme-heading text-center">Doprovodný program</h2>					
 				</div>
 				<div class="col-lg-8 container2">
-					<h4 class="text-detailed">Doprovodný program se skládá z&nbsp;přednášek, seminářů a&nbsp;workshopů. Je rozdělen do 3&nbsp;části. Přihlašovaní je povinné pouze na část o zaměstnání.</h4>          
+					<h4 class="text-detailed">Doprovodný program se skládá z&nbsp;přednášek, seminářů a&nbsp;workshopů. Je rozdělen do 3&nbsp;části. Přihlašovaní je povinné pouze na část o&nbsp;zaměstnání.</h4>          
 				</div>
             </div>	
 						
@@ -146,8 +149,8 @@
 								$show_modal = false;
 								if($hash[0] == '0'){
 									echo '
-									<a class="button-free visible-xs visible-sm" role="button" href="/participant/1#programmeTable">Přihlaš se</a>
-									<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal31\').style.display=\'block\'">Přihlaš se</a>
+									<span class="visible-xs visible-sm"><a class="button-free" role="button" href="/participant/0#programmeTable">Přihlaš se</a></span>
+										<span class="hidden-xs hidden-sm"><a class="button-free" onclick="document.getElementById(\'myModal31\').style.display=\'block\'">Přihlaš se</a></span>
 										<div class="capacity">Kapacita: '.$capacity[0].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/0#programmeTable">Odhlaš se</a>										
@@ -160,8 +163,8 @@
 								<?php
 								if($hash[1] == '0'){
 									echo '
-										<a class="button-free visible-xs visible-sm" role="button" href="/participant/2#programmeTable">Přihlaš se</a>
-										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal32\').style.display=\'block\'">Přihlaš se</a>
+									<span class="visible-xs visible-sm"><a class="button-free" role="button" href="/participant/1#programmeTable">Přihlaš se</a></span>
+										<span class="hidden-xs hidden-sm"><a class="button-free" onclick="document.getElementById(\'myModal32\').style.display=\'block\'">Přihlaš se</a></span>
 										<div class="capacity">Kapacita: '.$capacity[1].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/1#programmeTable">Odhlaš se</a>
@@ -195,8 +198,8 @@
 							<?php
 								if($hash[4] == '0'){
 									echo '
-										<a class="button-free visible-xs visible-sm" role="button" href="/participant/4#programmeTable">Přihlaš se</a>
-										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal35\').style.display=\'block\'">Přihlaš se</a>
+										<span class="visible-xs visible-sm"><a class="button-free" role="button" href="/participant/4#programmeTable">Přihlaš se</a></span>
+										<span class="hidden-xs hidden-sm"><a class="button-free" onclick="document.getElementById(\'myModal35\').style.display=\'block\'">Přihlaš se</a></span>
 										<div class="capacity">Kapacita: '.$capacity[4].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/4#programmeTable">Odhlaš se</a>
@@ -209,8 +212,8 @@
 								<?php
 								if($hash[5] == '0'){
 									echo '
-										<a class="button-free visible-xs visible-sm" role="button" href="/participant/5#programmeTable">Přihlaš se</a>
-										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal33\').style.display=\'block\'">Přihlaš se</a>
+										<span class="visible-xs visible-sm"><a class="button-free" role="button" href="/participant/5#programmeTable">Přihlaš se</a></span>
+										<span class="hidden-xs hidden-sm"<a class="button-free" onclick="document.getElementById(\'myModal33\').style.display=\'block\'">Přihlaš se</a></span>
 										<div class="capacity">Kapacita: '.$capacity[5].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/5#programmeTable">Odhlaš se</a>
@@ -227,8 +230,8 @@
 								<?php
 								if($hash[6] == '0'){
 									echo '
-										<a class="button-free visible-xs visible-sm" role="button" href="/participant/6#programmeTable">Přihlaš se</a>
-										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal34\').style.display=\'block\'">Přihlaš se</a>
+										<span class="visible-xs visible-sm"><a class="button-free" role="button" href="/participant/6#programmeTable">Přihlaš se</a></span>
+										<span class="hidden-xs hidden-sm"><a class="button-free" onclick="document.getElementById(\'myModal34\').style.display=\'block\'">Přihlaš se</a></span>
 										<div class="capacity">Kapacita: '.$capacity[6].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/6#programmeTable">Odhlaš se</a>
@@ -249,8 +252,8 @@
 							<?php
 								if($hash[8] == '0'){
 									echo '
-										<a class="button-free visible-xs visible-sm" role="button" href="/participant/8#programmeTable">Přihlaš se</a>
-										<a class="hidden-xs hidden-sm button-free" onclick="document.getElementById(\'myModal36\').style.display=\'block\'">Přihlaš se</a>
+										<span class="visible-xs visible-sm"><a class="button-free" role="button" href="/participant/8#programmeTable">Přihlaš se</a></span>
+										<span class="hidden-xs hidden-sm"><a class="button-free" onclick="document.getElementById(\'myModal36\').style.display=\'block\'">Přihlaš se</a></span>
 										<div class="capacity">Kapacita:'.$capacity[8].'/50</div>';
 								}else{
 									echo '<a class="button-violet" role="button" href="/participant/8#programmeTable">Odhlaš se</a>
